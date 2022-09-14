@@ -2,8 +2,8 @@ import React from "react";
 import Header from "./components/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Documentation from './Documentation'
-import Component from './Component'
+import Documentation from './pages/Documentation'
+import Component from './pages/Component'
 
 const App = () => {
   return (

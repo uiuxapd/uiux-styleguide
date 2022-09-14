@@ -2,7 +2,7 @@ import React from 'react'
 
 const Documentation = () => {
   return (
-    <div>
+    <div className='text-primary'>
       ini Documentation
     </div>
   )
