@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-    html {
+  html {
     font-family: Roboto, sans-serif;
   }
+}
+
+/* Menu Active */
+li a.active {
+  color: #0057E7;
 }
