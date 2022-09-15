@@ -8,7 +8,23 @@
   }
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Menu Active */
 li a.active {
   color: #0057E7;
+}
+
+li a.active::before {
+  content: '';
+  width: 3px;
+  height: 40px;
+  background: #0057E7;
+  position: absolute;
+  left: 3px;
+  top: 0;
+  display: block;
 }

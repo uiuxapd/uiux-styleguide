@@ -15,27 +15,27 @@ const App = () => {
     const openMenu = document.querySelector('.menu-button')
     const closeMenu = document.querySelector('.close-menu')
     openMenu.onclick = () => {
-      setIsShow(true)
+      setIsShow(!isShow)
     }
     closeMenu.onclick = () => {
-      setIsShow(false)
+      setIsShow(!isShow)
     }
     document.onclick = (e) => {
       if (e.target.classList.contains('sidebar-wrapper') || e.target.classList.contains('menu-item')) {
-        setIsShow(false)
+        setIsShow(!isShow)
       }
     }
   });
 
   return (
     <BrowserRouter>
-      <main>
+      <main className="dark:bg-slate-800 dark:text-white">
         <Header />
         <div className="container max-w-full flex min-h-[calc(100vh_-_4rem)]">
-          <div className={`sidebar-wrapper w-full bg-black/20 backdrop-blur-sm absolute inset-y-0 transition-all ${isShow ? 'left-0' : '-left-full'} md:w-auto md:relative md:left-0 md:border-r md:border-slate-200`}>
+          <div className={`sidebar-wrapper w-full absolute inset-y-0 transition-all ${isShow ? 'bg-black/20 backdrop-blur-sm left-0' : '-left-full'} md:w-auto md:relative md:left-0 md:border-r md:border-primary/10`}>
             <Sidebar isShow={isShow}/>
           </div>
-          <div className="flex-1 py-6 px-10">
+          <div className="flex-1 p-6 md:px-10">
             <Routes>
               <Route path="/docs" element={<Documentation />} />
               <Route path="/component" element={<Component />} />
