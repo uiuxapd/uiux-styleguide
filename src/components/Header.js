@@ -53,8 +53,11 @@ const Header = () => {
   return (
     <nav className="border-b border-primary/10 sticky top-0 z-10">
       <div className="container px-4 h-16 max-w-full flex justify-between items-center bg-white/20 backdrop-blur-sm dark:bg-slate-900/20 md:px-6 lg:px-10">
-        <div className="text-l font-bold dark:text-white">
+        <div className="text-l font-bold flex items-center dark:text-white">
           UI/UIX Styleguide
+          <div className="ml-3 text-xs leading-5 font-normal text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20 gap-1">
+            made with love <span className="text-red-500">❤</span>
+          </div>
         </div>
         <div className="flex justify-between gap-4">
           <div className="cursor-pointer border-r border-primary/10 pr-4 search">

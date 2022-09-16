@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <main className="dark:bg-slate-900 dark:text-white/20 before:bg-[url(./assets/background.png)] before:bg-contain before:bg-no-repeat md:before:bg-right-top dark:before:opacity-30 before:w-[100vw] before:h-[100vh] before:absolute before:top-0 before:left-0">
+      <main className="dark:bg-slate-900 dark:text-white/20 before:bg-[url(./assets/background.png)] before:bg-contain before:bg-no-repeat md:before:bg-right-top dark:before:opacity-30 before:w-[100%] before:h-[100vh] before:absolute before:top-0 before:left-0">
         <Header />
         <div className="container max-w-full flex min-h-[calc(100vh_-_4rem)]">
           <div className={`sidebar-wrapper w-full fixed inset-y-0 transition-all z-30 md:z-0 ${isShow ? 'bg-slate-600/20 backdrop-blur-sm left-0' : '-left-full'} md:w-auto md:left-0 md:top-[65px] md:bottom-0 md:border-r md:border-primary/10`}>
