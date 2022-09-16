@@ -56,7 +56,7 @@ const Header = () => {
         <div className="text-l font-bold flex items-center dark:text-white">
           UI/UIX Styleguide
           <div className="ml-3 text-xs leading-5 font-normal text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20 gap-1">
-            made with love <span className="text-red-500">❤</span>
+            made with love <span className="text-red-500 animate-pulse">❤</span>
           </div>
         </div>
         <div className="flex justify-between gap-4">

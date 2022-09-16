@@ -16,8 +16,8 @@ const Sidebar = (param) => {
       category: "component",
       listMenu: [
         ["typography", "/typography"],
-        ["color", "/color"],
-        ["button", "/button"],
+        ["color", "/colors"],
+        ["button", "/buttons"],
       ],
     },
   ];
