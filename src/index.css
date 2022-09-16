@@ -18,11 +18,11 @@
 
   /* Layout */
   main {
-    @apply dark:bg-slate-900 dark:text-white/20 before:bg-[url(./assets/background.png)] before:bg-contain before:bg-no-repeat md:before:bg-right-top dark:before:opacity-30 before:w-[100%] before:h-[100vh] before:absolute before:top-0 before:left-0 before:-z-[1];
+    @apply dark:bg-slate-900 dark:text-white/20 before:bg-[url(./assets/background.svg)] before:bg-contain before:bg-no-repeat md:before:bg-right-top before:w-[100%] before:h-[100vh] before:absolute before:top-0 before:left-0;
   }
 
   .content-wrapper {
-    @apply container max-w-full flex min-h-[calc(100vh_-_4rem)];
+    @apply container max-w-full flex min-h-[calc(100vh_-_4rem)] relative;
   }
   
   .sidebar-wrapper  {
@@ -108,7 +108,7 @@
 
   /* Sidebar */
   aside {
-    @apply w-3/4 h-full px-4 py-14 bg-white dark:bg-slate-900 relative md:w-[240px] md:px-6 md:py-10 lg:w-[260px] lg:px-10;
+    @apply w-3/4 h-full px-4 py-14 bg-white dark:bg-slate-900 md:bg-transparent dark:md:bg-transparent relative md:w-[240px] md:px-6 md:py-10 lg:w-[260px] lg:px-10;
   }
 
   .close-menu {
@@ -119,7 +119,7 @@
     @apply h-6 w-6 text-current hover:text-primary;
   }
 
-  aside ul li {
+  aside > ul > li {
     @apply mb-6 relative before:w-[1px] before:bg-slate-200 dark:before:bg-slate-800 before:absolute before:top-1 before:bottom-0 before:left-1;
   }
 
