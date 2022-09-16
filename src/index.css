@@ -21,7 +21,7 @@ li a.active {
 li a.active::before {
   content: '';
   width: 3px;
-  height: 40px;
+  height: 32px;
   background: #0057E7;
   position: absolute;
   left: 3px;
