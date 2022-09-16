@@ -17,16 +17,13 @@ const Buttons = () => {
     </div>
     
     <div>
-        <h2 className="mb-6">Default Button</h2>
-        <div className="p-4 w-full bg-gray-50 rounded-t-xl border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
-            test
-        </div>
-        <div className="p-4 w-full border-x border-gray-200 dark:border-gray-600">
+        <h2 className="mb-8">Default Button</h2>
+        <div className="p-4 w-full rounded-t-xl border border-gray-200 dark:border-gray-600">
             <button type="button" className="py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-700">Button</button>
         </div>
         <div className="code-wrapper">
             <div className="relative border-gray-200 border-y border-x code-syntax dark:border-gray-600">
-                <div className="grid grid-cols-2 w-full bg-gray-50 rounded-t-md border-b border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+                <div className="grid grid-cols-2 w-full rounded-t-md border-b border-gray-200 dark:border-gray-600">
                     <ul className="flex text-sm font-medium text-center text-gray-500 dark:text-gray-400">
                         <li>
                             <span className="inline-block p-2 px-3 w-full text-gray-800 bg-gray-100 border-r border-gray-200 dark:text-white dark:bg-gray-800 dark:border-gray-600">HTML</span>
@@ -39,26 +36,22 @@ const Buttons = () => {
                         </button>
                     </div>
                 </div>
-                <div className="p-4 overflow-x-auto w-10 min-w-full">
+                <div className="p-4 overflow-x-auto w-10 min-w-full text-gray-600 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                         <pre>
                             <code data-lang="html">
-                                <span className="token text-blue-500 tag">
-                                    <span className="token punctuation text-gray-500">{"<"}</span>
-                                    <span>button</span>
-                                    <span className="token attr-name"> class</span>
-                                    <span className="token attr-value">
+                                <span className="tag">
+                                    <span className="punctuation">{"<"}</span>
+                                    button
+                                    <span className="attr-name"> class</span>
                                         <span className="token punctuation">=</span>
                                         <span className="token punctuation">"</span>
-                                    </span>
-                                    <span className="token punctuation">py-2 px-4 bg-blue-500 text-white rounded-lg</span>
-                                    <span className="token attr-value">
+                                        <span className="attr-value">py-2 px-4 bg-blue-500 text-white rounded-lg</span>
                                         <span className="token punctuation">"</span>
                                         <span className="token punctuation">{">"}</span>
                                         <span className="token punctuation">{"<"}</span>
                                         <span className="token punctuation">{"/"}</span>
-                                        <span>button</span>
+                                        button
                                         <span className="token punctuation">{">"}</span>
-                                    </span>
                                 </span>
                             </code>
                         </pre>
