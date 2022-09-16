@@ -6,6 +6,18 @@
   html {
     font-family: Roboto, sans-serif;
   }
+  h1 {
+    @apply text-4xl font-bold text-slate-900 dark:text-white;
+  }
+  h2 {
+    @apply text-3xl font-medium text-slate-900 dark:text-white;
+  }
+  h3 {
+    @apply text-2xl font-medium text-slate-900 dark:text-white;
+  }
+  p {
+    @apply text-base font-normal text-slate-700 dark:text-slate-300;
+  }
 }
 
 body {
