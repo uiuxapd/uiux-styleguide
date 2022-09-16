@@ -87,7 +87,7 @@ body {
   }
 
   .dark-mode-btn svg {
-    @apply absolute ease-in-out duration-300 delay-200;
+    @apply absolute ease-in-out duration-300 delay-100;
   }
 
   .header-bottom {
