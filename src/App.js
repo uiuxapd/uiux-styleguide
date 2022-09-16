@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Documentation from './pages/Documentation'
 import Component from './pages/Component'
+import Buttons from "./pages/Buttons";
 
 const App = () => {
   const [isShow, setIsShow] = useState(false)
@@ -39,6 +40,7 @@ const App = () => {
             <Routes>
               <Route path="/docs" element={<Documentation />} />
               <Route path="/component" element={<Component />} />
+              <Route path="/buttons" element={<Buttons />} />
             </Routes>
           </div>
         </div>
