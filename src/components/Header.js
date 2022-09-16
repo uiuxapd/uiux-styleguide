@@ -21,22 +21,6 @@ const Header = () => {
       body.classList.toggle("dark");
     };
 
-    // Breadcrumbs
-    const currentMenu = document.querySelector(".menu-item.active");
-    const breadcrumbs = document.querySelector(".breadcrumbs");
-    const categoryText = document.querySelector(".category");
-    const pageText = document.querySelector(".page");
-
-    if (currentMenu) {
-      categoryText.innerHTML = currentMenu.getAttribute("category");
-      pageText.innerHTML = currentMenu.textContent;
-      breadcrumbs.classList.remove("hidden");
-    }
-
-    if (!currentMenu) {
-      breadcrumbs.classList.add("hidden");
-    }
-
     // Search
     const btnSearch = document.querySelector(".search");
     btnSearch.onclick = () => {
