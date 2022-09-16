@@ -6,25 +6,140 @@
   html {
     font-family: Roboto, sans-serif;
   }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon {
+    @apply w-6 h-6 text-primary;
+  }
+
+  /* Layout */
+  main {
+    @apply dark:bg-slate-900 dark:text-white/20 before:bg-[url(./assets/background.svg)] before:bg-contain before:bg-no-repeat md:before:bg-right-top before:w-[100%] before:h-[100vh] before:absolute before:top-0 before:left-0;
+  }
+
+  .content-wrapper {
+    @apply container max-w-full flex min-h-[calc(100vh_-_4rem)] relative;
+  }
+  
+  .sidebar-wrapper  {
+    @apply w-full fixed inset-y-0 transition-all z-30 md:z-[5] md:w-auto md:top-[65px] md:bottom-0 md:border-r md:border-primary/10;
+  }
+  
+  .content {
+    @apply flex-1 p-6 md:px-10 md:ml-[240px] lg:ml-[260px];
+  }
+
+  /* Header */
+  nav {
+    @apply border-b border-primary/10 sticky top-0 z-10;
+  }
+
+  .header-top {
+    @apply container px-4 h-16 max-w-full flex justify-between items-center bg-white/20 backdrop-blur-sm dark:bg-slate-900/20 md:px-6 lg:px-10;
+  }
+
+  .logo-wrapper {
+    @apply font-bold flex items-center dark:text-white text-lg;
+  }
+
+  .tagline {
+    @apply ml-3 text-xs leading-5 font-normal text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20 gap-1;
+  }
+
+  .tagline span {
+    @apply text-red-500;
+  }
+
+  .tagline:hover span {
+    @apply animate-ping;
+  }
+
+  .header-action {
+    @apply flex justify-between gap-4;
+  }
+
+  .header-action svg {
+    @apply text-slate-900 dark:text-white hover:text-primary dark:hover:text-primary h-6 w-6;
+  }
+
+  .header-action .search {
+    @apply cursor-pointer border-r border-primary/10 pr-4;
+  }
+
+  .header-action .dark-mode-btn {
+    @apply w-6 h-6 overflow-hidden relative cursor-pointer;
+  }
+
+  .dark-mode-btn svg {
+    @apply absolute ease-in-out duration-300 delay-200;
+  }
+
+  .header-bottom {
+    @apply container px-4 max-w-full h-12 flex items-center gap-2 sticky top-16 bg-white/20 backdrop-blur-sm dark:bg-slate-900/20 before:absolute before:h-[1px] before:top-0 before:inset-x-4 before:bg-primary/10 md:hidden;
+  }
+
+  .menu-btn {
+    @apply p-1 cursor-pointer;
+  }
+
+  .menu-btn svg {
+    @apply text-slate-900 dark:text-white hover:text-primary h-[18px] w-[18px];
+  }
+
+  .breadcrumbs {
+    @apply flex items-center gap-1 text-sm capitalize;
+  }
+
+  .search-popup {
+    @apply bg-slate-900/20 backdrop-blur-[2px] fixed inset-0 p-6 flex justify-center items-center z-[999];
+  }
+
+  .search-box {
+    @apply w-full md:w-1/2 max-h-full overflow-auto bg-white shadow-sm rounded-lg py-2;
+  }
+
+  .search-box-header {
+    @apply flex justify-between items-center w-full border-b border-primary/10 h-10 px-4;
+  }
+
+  /* Sidebar */
+  aside {
+    @apply w-3/4 h-full px-4 py-14 bg-white dark:bg-slate-900 md:bg-transparent dark:md:bg-transparent relative md:w-[240px] md:px-6 md:py-10 lg:w-[260px] lg:px-10;
+  }
+
+  .close-menu {
+    @apply absolute right-4 top-4 cursor-pointer md:hidden;
+  }
+
+  .close-menu svg {
+    @apply h-6 w-6 text-current hover:text-primary;
+  }
+
+  aside > ul > li {
+    @apply mb-6 relative before:w-[1px] before:bg-slate-200 dark:before:bg-slate-800 before:absolute before:top-1 before:bottom-0 before:left-1;
+  }
+
+  aside li h6 {
+    @apply text-xs capitalize mb-3 flex items-center gap-2 text-slate-400 before:w-2 before:h-2 before:bg-slate-200 dark:before:bg-slate-800 before:rounded-full;
+  }
+
+  aside li .menu-item {
+    @apply capitalize h-8 mb-2 w-full flex items-center px-5 relative before:absolute before:top-0 before:left-[3px] before:w-[3px] before:h-8 before:bg-primary before:hidden hover:before:block dark:text-white;
+  }
+
+  li a.active {
+    @apply text-primary;
+  }
+  
+  li a.active::before {
+    @apply before:absolute w-[3px] h-8 bg-primary left-[3px] top-0 block;
+  }
+
+  /* Content */
+
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Menu Active */
-li a.active {
-  color: #0057E7;
-}
-
-li a.active::before {
-  content: '';
-  width: 3px;
-  height: 32px;
-  background: #0057E7;
-  position: absolute;
-  left: 3px;
-  top: 0;
-  display: block;
-}
