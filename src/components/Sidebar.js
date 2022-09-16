@@ -9,7 +9,7 @@ const Sidebar = (param) => {
       category: "getting started",
       listMenu: [
         ["introduction", "/intro"],
-        ["how to use", "/howtouse"]
+        ["documentation", "/documentation"]
       ],
     },
     {

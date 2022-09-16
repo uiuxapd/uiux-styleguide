@@ -36,9 +36,9 @@ const App = () => {
           <div className={`sidebar-wrapper w-full fixed inset-y-0 transition-all z-30 md:z-0 ${isShow ? 'bg-slate-600/20 backdrop-blur-sm left-0' : '-left-full'} md:w-auto md:left-0 md:top-[65px] md:bottom-0 md:border-r md:border-primary/10`}>
             <Sidebar isShow={isShow}/>
           </div>
-          <div className="flex-1 p-6 md:px-10" style={{"height":"2000px"}}>
+          <div className="flex-1 p-6 md:px-10 md:ml-[240px] lg:ml-[260px]" style={{"height":"2000px"}}>
             <Routes>
-              <Route path="/docs" element={<Documentation />} />
+              <Route path="/documentation" element={<Documentation />} />
               <Route path="/component" element={<Component />} />
               <Route path="/buttons" element={<Buttons />} />
             </Routes>
