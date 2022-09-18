@@ -1,0 +1,18 @@
+.token {
+  @apply text-slate-800 dark:text-slate-200;
+}
+.tag {
+  @apply text-pink-500 dark:text-pink-400;
+}
+.comment{
+    @apply text-slate-400;
+}
+.punctuation {
+  @apply text-slate-500;
+}
+.attr-name {
+  @apply text-emerald-700 dark:text-emerald-400;
+}
+.attr-value {
+  @apply text-blue-500 dark:text-blue-300;
+}
