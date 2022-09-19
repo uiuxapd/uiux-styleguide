@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Header from "./components/Header";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 // Pages
 import Sidebar from "./components/Sidebar";
@@ -11,25 +11,45 @@ import Buttons from "./pages/Buttons";
 const App = () => {
   const [isShow, setIsShow] = useState(false)
 
-  // Show / Hide Sidebar
   useEffect(() => {
+    // Sidebar
     const openMenu = document.querySelector('.menu-btn')
     const closeMenu = document.querySelector('.close-menu')
+
     openMenu.onclick = () => {
       setIsShow(!isShow)
     }
+
     closeMenu.onclick = () => {
       setIsShow(!isShow)
     }
+
     document.onclick = (e) => {
       if (e.target.classList.contains('sidebar-wrapper') || e.target.classList.contains('menu-item')) {
         setIsShow(false);
       }
     }
-  });
+    
+    // Breadcrumbs
+    const activeMenu = document.querySelector(".menu-item.active");
+    const breadcrumbs = document.querySelector(".breadcrumbs");
+    const categoryText = document.querySelector(".category");
+    const pageText = document.querySelector(".page");
+    
+    if (activeMenu) {
+      categoryText.innerHTML = activeMenu.getAttribute("category");
+      pageText.innerHTML = activeMenu.textContent;
+      breadcrumbs.classList.remove("hidden");
+    }
+    
+    if (!activeMenu) {
+      breadcrumbs.classList.add("hidden");
+    }
+
+  },[isShow]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <main>
         <Header />
         <div className="content-wrapper">
@@ -45,7 +65,7 @@ const App = () => {
           </div>
         </div>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

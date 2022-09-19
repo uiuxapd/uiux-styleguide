@@ -1,5 +1,6 @@
 @tailwind base;
-@tailwind components;
+@import "tailwindcss/components";
+@import "./styles/components.css";
 @tailwind utilities;
 
 @layer base {
@@ -18,38 +19,35 @@
   p {
     @apply text-base font-normal text-slate-700 dark:text-slate-300;
   }
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  main {
+    @apply dark:bg-slate-900 dark:text-white/20 before:bg-[url(./assets/background.svg)] before:bg-contain before:bg-no-repeat md:before:bg-right-top before:w-[100%] before:h-[100vh] before:absolute before:top-0 before:left-0;
+  }
+  nav {
+    @apply border-b border-primary/10 sticky top-0 z-10;
+  }
 
   .icon {
     @apply w-6 h-6 text-primary;
   }
 
   /* Layout */
-  main {
-    @apply dark:bg-slate-900 dark:text-white/20 before:bg-[url(./assets/background.svg)] before:bg-contain before:bg-no-repeat md:before:bg-right-top before:w-[100%] before:h-[100vh] before:absolute before:top-0 before:left-0;
-  }
-
   .content-wrapper {
     @apply container max-w-full flex min-h-[calc(100vh_-_4rem)] relative;
   }
-  
-  .sidebar-wrapper  {
+
+  .sidebar-wrapper {
     @apply w-full fixed inset-y-0 transition-all z-30 md:z-[5] md:w-auto md:top-[65px] md:bottom-0 md:border-r md:border-primary/10;
   }
-  
+
   .content {
     @apply flex-1 p-6 md:px-10 md:ml-[240px] lg:ml-[260px];
   }
 
   /* Header */
-  nav {
-    @apply border-b border-primary/10 sticky top-0 z-10;
-  }
-
   .header-top {
     @apply container px-4 h-16 max-w-full flex justify-between items-center bg-white/20 backdrop-blur-sm dark:bg-slate-900/20 md:px-6 lg:px-10;
   }
@@ -87,7 +85,7 @@ body {
   }
 
   .dark-mode-btn svg {
-    @apply absolute ease-in-out duration-300 delay-200;
+    @apply absolute ease-in-out duration-300 delay-100;
   }
 
   .header-bottom {
@@ -146,24 +144,8 @@ body {
   li a.active {
     @apply text-primary;
   }
-  
+
   li a.active::before {
     @apply before:absolute w-[3px] h-8 bg-primary left-[3px] top-0 block;
-  }
-
-}
-
-@layer components {
-  .tag {
-    @apply text-pink-500 dark:text-pink-400;
-  }
-  .punctuation {
-    @apply text-gray-500;
-  }
-  .attr-name {
-    @apply text-emerald-700 dark:text-emerald-400;
-  }
-  .attr-value {
-    @apply text-blue-500 dark:text-blue-300;
   }
 }

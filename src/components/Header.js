@@ -21,25 +21,6 @@ const Header = () => {
       body.classList.toggle("dark");
     };
 
-    // Breadcrumbs
-    const menuItems = document.querySelectorAll(".menu-item");
-    const breadcrumbs = document.querySelector(".breadcrumbs");
-    const categoryText = document.querySelector(".category");
-    const pageText = document.querySelector(".page");
-
-    menuItems.forEach((item) => {
-      item.onclick = () => {
-        const menuActive = item.classList.contains('active');
-        if (menuActive) {
-          categoryText.innerHTML = item.getAttribute("category");
-          pageText.innerHTML = item.textContent;
-          breadcrumbs.classList.remove("hidden");
-          breadcrumbs.classList.add("flex");
-        }
-        console.log(item.textContent)
-      }
-    })
-
     // Search
     const btnSearch = document.querySelector(".search");
     btnSearch.onclick = () => {
