@@ -7,6 +7,7 @@ import Sidebar from "./components/Sidebar";
 import Documentation from './pages/Documentation'
 import Component from './pages/Component'
 import Buttons from "./pages/Buttons";
+import Typography from "./pages/Typography";
 
 const App = () => {
   const [isShow, setIsShow] = useState(false)
@@ -61,6 +62,7 @@ const App = () => {
               <Route path="/documentation" element={<Documentation />} />
               <Route path="/component" element={<Component />} />
               <Route path="/buttons" element={<Buttons />} />
+              <Route path="/typography" element={<Typography />} />
             </Routes>
           </div>
         </div>
