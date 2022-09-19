@@ -1,18 +1,34 @@
 .token {
-  @apply text-slate-800 dark:text-slate-200;
+  @apply text-neutral-900 dark:text-neutral-200;
 }
 .tag {
   @apply text-pink-500 dark:text-pink-400;
 }
 .comment{
-    @apply text-slate-400;
+    @apply text-neutral-400;
 }
 .punctuation {
-  @apply text-slate-500;
+  @apply text-neutral-500;
 }
 .attr-name {
-  @apply text-emerald-700 dark:text-emerald-400;
+  @apply text-success-700 dark:text-success-400;
 }
 .attr-value {
-  @apply text-blue-500 dark:text-blue-300;
+  @apply text-primary-500 dark:text-primary-200;
+}
+
+.component-section {
+  @apply flex items-center flex-wrap md:justify-center gap-2 md:gap-4 p-4 w-full rounded-t-xl border border-neutral-200 dark:border-neutral-600 overflow-y-auto;
+}
+
+.mid-section {
+  @apply grid grid-cols-2 w-full border-x border-neutral-200 dark:border-neutral-600;
+}
+
+.example {
+  @apply flex text-sm p-2 font-medium text-center text-neutral-700 bg-neutral-50 border-r border-neutral-200 dark:text-white dark:bg-neutral-900 dark:border-neutral-600;
+}
+
+.code-section {
+  @apply p-4 overflow-x-auto w-64 min-w-full text-neutral-500 bg-neutral-50 dark:text-neutral-400 dark:bg-neutral-900;
 }
