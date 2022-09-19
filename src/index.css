@@ -29,11 +29,11 @@
   }
 
   h2 {
-    @apply text-3xl font-medium text-slate-900 dark:text-white;
+    @apply text-3xl font-medium text-slate-800 dark:text-white;
   }
 
   h3 {
-    @apply text-2xl font-medium text-slate-900 dark:text-white;
+    @apply text-2xl font-medium text-slate-800 dark:text-white;
   }
 
   p {
