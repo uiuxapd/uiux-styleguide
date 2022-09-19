@@ -6,11 +6,9 @@ import {
   SunIcon,
   MoonIcon,
 } from "@heroicons/react/24/outline";
-import Search from "./Search";
 
 const Header = () => {
   let [isDark, setIsDark] = useState(false);
-  let [isShow, setIsShow] = useState(false);
 
   useEffect(() => {
     // Dark Mode
@@ -20,19 +18,7 @@ const Header = () => {
       setIsDark(!isDark);
       body.classList.toggle("dark");
     };
-
-    // Search
-    const btnSearch = document.querySelector(".search");
-    btnSearch.onclick = () => {
-      setIsShow(true);
-    };
-
-    document.onclick = (e) => {
-      if (e.target.classList.contains('search-popup')) {
-        setIsShow(false)
-      }
-    }
-  }, [isDark, isShow]);
+  }, [isDark]);
 
   return (
     <nav>
@@ -63,7 +49,6 @@ const Header = () => {
           <span className="text-primary page"></span>
         </div>
       </div>
-      {isShow ? <Search /> : ""}
     </nav>
   );
 };
