@@ -49,13 +49,25 @@ const App = () => {
 
   },[isShow]);
 
+  document.onscroll = () => {
+    const positionScroll = window.scrollY
+    const navigation = document.querySelector('nav')
+    if (positionScroll > 40) {
+      navigation.classList.add('bg-white')
+      navigation.classList.add('dark:bg-slate-900')
+    } else {
+      navigation.classList.remove('bg-white')
+      navigation.classList.remove('dark:bg-slate-900')
+    }
+  }
+
   return (
     <HashRouter>
       <main>
         <Header />
         <div className="content-wrapper">
-          <div className={`sidebar-wrapper  ${isShow ? 'bg-slate-600/20 backdrop-blur-sm left-0' : '-left-full'} md:left-0 `}>
-            <Sidebar isShow={isShow}/>
+          <div className={`sidebar-wrapper ${isShow ? 'open' : ''}`}>
+            <Sidebar/>
           </div>
           <div className="content">
             <Routes>
