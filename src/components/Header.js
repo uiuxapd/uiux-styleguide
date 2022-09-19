@@ -22,20 +22,23 @@ const Header = () => {
     };
 
     // Breadcrumbs
-    const currentMenu = document.querySelector(".menu-item.active");
+    const menuItems = document.querySelectorAll(".menu-item");
     const breadcrumbs = document.querySelector(".breadcrumbs");
     const categoryText = document.querySelector(".category");
     const pageText = document.querySelector(".page");
 
-    if (currentMenu) {
-      categoryText.innerHTML = currentMenu.getAttribute("category");
-      pageText.innerHTML = currentMenu.textContent;
-      breadcrumbs.classList.remove("hidden");
-    }
-
-    if (!currentMenu) {
-      breadcrumbs.classList.add("hidden");
-    }
+    menuItems.forEach((item) => {
+      item.onclick = () => {
+        const menuActive = item.classList.contains('active');
+        if (menuActive) {
+          categoryText.innerHTML = item.getAttribute("category");
+          pageText.innerHTML = item.textContent;
+          breadcrumbs.classList.remove("hidden");
+          breadcrumbs.classList.add("flex");
+        }
+        console.log(item.textContent)
+      }
+    })
 
     // Search
     const btnSearch = document.querySelector(".search");
