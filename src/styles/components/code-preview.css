@@ -5,7 +5,7 @@
   @apply text-pink-500 dark:text-pink-400;
 }
 .comment{
-    @apply text-neutral-400;
+  @apply text-neutral-400;
 }
 .punctuation {
   @apply text-neutral-500;

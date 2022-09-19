@@ -101,7 +101,7 @@
   }
 
   .breadcrumbs {
-    @apply hidden items-center gap-1 text-sm capitalize;
+    @apply flex items-center gap-1 text-sm capitalize;
   }
 
   .search-popup {
