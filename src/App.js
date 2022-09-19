@@ -8,9 +8,11 @@ import Documentation from './pages/Documentation'
 import Component from './pages/Component'
 import Buttons from "./pages/Buttons";
 import Typography from "./pages/Typography";
+import Search from './components/Search'
 
 const App = () => {
   const [isShow, setIsShow] = useState(false)
+  const [search, setSearch] = useState(false)
 
   useEffect(() => {
     // Sidebar
@@ -23,12 +25,6 @@ const App = () => {
 
     closeMenu.onclick = () => {
       setIsShow(!isShow)
-    }
-
-    document.onclick = (e) => {
-      if (e.target.classList.contains('sidebar-wrapper') || e.target.classList.contains('menu-item')) {
-        setIsShow(false);
-      }
     }
     
     // Breadcrumbs
@@ -45,6 +41,22 @@ const App = () => {
     
     if (!activeMenu) {
       breadcrumbs.classList.add("hidden");
+    }
+
+    // Popup Search
+    const btnSearch = document.querySelector(".search");
+    btnSearch.onclick = () => {
+      setSearch(true);
+    };
+
+    document.onclick = (e) => {
+      if (e.target.classList.contains('sidebar-wrapper') || e.target.classList.contains('menu-item')) {
+        setIsShow(false);
+      }
+      
+      if (e.target.classList.contains('search-popup')) {
+        setSearch(false)
+      }
     }
 
   },[isShow]);
@@ -64,7 +76,7 @@ const App = () => {
   return (
     <HashRouter>
       <main>
-        <Header />
+        <Header/>
         <div className="content-wrapper">
           <div className={`sidebar-wrapper ${isShow ? 'open' : ''}`}>
             <Sidebar/>
@@ -78,6 +90,9 @@ const App = () => {
             </Routes>
           </div>
         </div>
+        {
+          search ? <Search /> : ''
+        }
       </main>
     </HashRouter>
   );
