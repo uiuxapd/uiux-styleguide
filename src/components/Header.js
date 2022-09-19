@@ -45,7 +45,7 @@ const Header = () => {
         </div>
         <div className="header-action">
           <div className="search">
-            <MagnifyingGlassIcon />
+            <MagnifyingGlassIcon className="stroke-neutral-600 dark:stroke-neutral-300"/>
           </div>
           <div className="dark-mode-btn">
             <SunIcon className={`${isDark ? "left-0" : "-left-full"}`} />
