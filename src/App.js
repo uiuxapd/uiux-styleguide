@@ -8,6 +8,7 @@ import Documentation from './pages/Documentation'
 import Component from './pages/Component'
 import Buttons from "./pages/Buttons";
 import Typography from "./pages/Typography";
+import Tables from "./pages/Tables";
 import Search from './components/Search'
 
 const App = () => {
@@ -87,6 +88,7 @@ const App = () => {
               <Route path="/component" element={<Component />} />
               <Route path="/buttons" element={<Buttons />} />
               <Route path="/typography" element={<Typography />} />
+              <Route path="/tables" element={<Tables />} />
             </Routes>
           </div>
         </div>
