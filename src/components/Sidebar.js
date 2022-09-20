@@ -2,7 +2,7 @@ import React from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 
-const Sidebar = (param) => {
+const Sidebar = () => {
   let key = 0;
   const menus = [
     {
@@ -23,9 +23,7 @@ const Sidebar = (param) => {
   ];
 
   return (
-    <aside
-      className={`${ param.isShow ? "origin-left ease-in-out duration-300 delay-300 left-0" : "-left-full" } md:left-0`}
-    >
+    <aside>
       <div className="close-menu">
         <XMarkIcon />
       </div>
