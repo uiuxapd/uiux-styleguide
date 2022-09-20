@@ -1,0 +1,31 @@
+:where(th,td):first-child {
+    @apply rounded-l;
+}
+
+:where(th,td):last-child {
+    @apply rounded-r;
+}
+
+table {
+    @apply border-separate border-spacing-x-0 border-spacing-y-2;
+}
+
+thead {
+    @apply h-10 bg-primary-500 text-neutral-50 text-left;
+}
+
+thead tr th {
+    @apply px-4;
+}
+
+tbody tr {
+    @apply h-10 bg-neutral-50;
+}
+
+tbody tr:hover td {
+    @apply bg-neutral-200;
+}
+
+tbody tr td {
+    @apply px-4;
+}

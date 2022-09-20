@@ -8,9 +8,12 @@ import Documentation from './pages/Documentation'
 import Component from './pages/Component'
 import Buttons from "./pages/Buttons";
 import Typography from "./pages/Typography";
+import Tables from "./pages/Tables";
+import Search from './components/Search'
 
 const App = () => {
   const [isShow, setIsShow] = useState(false)
+  const [search, setSearch] = useState(false)
 
   useEffect(() => {
     // Sidebar
@@ -23,12 +26,6 @@ const App = () => {
 
     closeMenu.onclick = () => {
       setIsShow(!isShow)
-    }
-
-    document.onclick = (e) => {
-      if (e.target.classList.contains('sidebar-wrapper') || e.target.classList.contains('menu-item')) {
-        setIsShow(false);
-      }
     }
     
     // Breadcrumbs
@@ -47,15 +44,43 @@ const App = () => {
       breadcrumbs.classList.add("hidden");
     }
 
+    // Popup Search
+    const btnSearch = document.querySelector(".search");
+    btnSearch.onclick = () => {
+      setSearch(true);
+    };
+
+    document.onclick = (e) => {
+      if (e.target.classList.contains('sidebar-wrapper') || e.target.classList.contains('menu-item')) {
+        setIsShow(false);
+      }
+      
+      if (e.target.classList.contains('search-popup')) {
+        setSearch(false)
+      }
+    }
+
   },[isShow]);
+
+  document.onscroll = () => {
+    const positionScroll = window.scrollY
+    const navigation = document.querySelector('nav')
+    if (positionScroll > 40) {
+      navigation.classList.add('bg-white')
+      navigation.classList.add('dark:bg-slate-900')
+    } else {
+      navigation.classList.remove('bg-white')
+      navigation.classList.remove('dark:bg-slate-900')
+    }
+  }
 
   return (
     <HashRouter>
       <main>
-        <Header />
+        <Header/>
         <div className="content-wrapper">
-          <div className={`sidebar-wrapper  ${isShow ? 'bg-slate-600/20 backdrop-blur-sm left-0' : '-left-full'} md:left-0 `}>
-            <Sidebar isShow={isShow}/>
+          <div className={`sidebar-wrapper ${isShow ? 'open' : ''}`}>
+            <Sidebar/>
           </div>
           <div className="content">
             <Routes>
@@ -63,9 +88,13 @@ const App = () => {
               <Route path="/component" element={<Component />} />
               <Route path="/buttons" element={<Buttons />} />
               <Route path="/typography" element={<Typography />} />
+              <Route path="/tables" element={<Tables />} />
             </Routes>
           </div>
         </div>
+        {
+          search ? <Search /> : ''
+        }
       </main>
     </HashRouter>
   );
