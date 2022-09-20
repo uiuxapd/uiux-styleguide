@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/uiux-styleguide/static/css/main.ebe73740.css",
-    "main.js": "/uiux-styleguide/static/js/main.d50be46d.js",
+    "main.css": "/uiux-styleguide/static/css/main.852ebdb2.css",
+    "main.js": "/uiux-styleguide/static/js/main.979ec2ae.js",
     "static/media/background.svg": "/uiux-styleguide/static/media/background.e5104396ac8eea6d132c.svg",
     "index.html": "/uiux-styleguide/index.html",
-    "main.ebe73740.css.map": "/uiux-styleguide/static/css/main.ebe73740.css.map",
-    "main.d50be46d.js.map": "/uiux-styleguide/static/js/main.d50be46d.js.map"
+    "main.852ebdb2.css.map": "/uiux-styleguide/static/css/main.852ebdb2.css.map",
+    "main.979ec2ae.js.map": "/uiux-styleguide/static/js/main.979ec2ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebe73740.css",
-    "static/js/main.d50be46d.js"
+    "static/css/main.852ebdb2.css",
+    "static/js/main.979ec2ae.js"
   ]
 }
