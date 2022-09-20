@@ -5,7 +5,7 @@
   @apply text-pink-500 dark:text-pink-400;
 }
 .comment{
-  @apply text-neutral-400;
+    @apply text-neutral-400 text-sm;
 }
 .punctuation {
   @apply text-neutral-500;
@@ -17,11 +17,14 @@
   @apply text-primary-500 dark:text-primary-200;
 }
 
+.overflow {
+  @apply overflow-x-auto w-64 min-w-full p-4 ;
+}
 .component-section {
-  @apply block md:justify-center gap-2 md:gap-4 p-4 w-full rounded-t-xl border border-neutral-200 dark:border-neutral-600 overflow-y-auto;
+  @apply flex flex-col items-center p-4 md:justify-center gap-4 w-full rounded-t-xl border border-neutral-200 dark:border-neutral-600 overflow-y-auto;
 }
 .component-block {
-  @apply flex items-center justify-start md:justify-center flex-wrap py-2 gap-2 md:gap-4;
+  @apply flex items-center justify-start md:justify-center flex-wrap gap-4;
 }
 .mid-section {
   @apply grid grid-cols-2 w-full border-x border-neutral-200 dark:border-neutral-600;
@@ -30,5 +33,5 @@
   @apply flex text-sm p-2 font-medium text-center text-neutral-700 bg-neutral-50 border-r border-neutral-200 dark:text-white dark:bg-neutral-900 dark:border-neutral-600;
 }
 .code-section {
-  @apply p-4 overflow-x-auto w-64 min-w-full text-neutral-500 bg-neutral-50 dark:text-neutral-400 dark:bg-neutral-900;
+  @apply text-neutral-500 dark:text-neutral-400;
 }
