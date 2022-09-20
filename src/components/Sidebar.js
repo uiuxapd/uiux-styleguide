@@ -18,6 +18,7 @@ const Sidebar = () => {
         ["typography", "/typography"],
         ["color", "/colors"],
         ["button", "/buttons"],
+        ["table", "/tables"],
       ],
     },
   ];
