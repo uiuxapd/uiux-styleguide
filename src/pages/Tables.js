@@ -20,7 +20,7 @@ const Tables = () => {
         {/* Table Start */}
       <div>
         <h3 className="mb-8">Basic Table</h3>
-        <div className="component-section">
+        <div className="component-section flex-none">
           <div className="component-block">
             <table className="w-full table-auto text-sm">
               <thead>
