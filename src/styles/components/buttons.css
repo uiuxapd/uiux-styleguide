@@ -1,17 +1,17 @@
 .btn-primary {
-    @apply bg-primary-500 text-white text-base font-medium rounded-lg shadow transition-all border-none hover:bg-primary-600  focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none;
+    @apply bg-primary-main text-white text-base font-medium rounded-lg shadow transition-all border-none hover:bg-primary-hover  focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none;
 }
 .btn-secondary {
-    @apply bg-neutral-50 text-primary-500 text-base font-medium rounded-lg shadow transition-all hover:bg-neutral-100/70 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none;
+    @apply bg-neutral-50 text-primary-main text-base font-medium rounded-lg shadow transition-all hover:bg-neutral-100/70 hover:text-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none;
 }
 .btn-outlined {
-    @apply bg-white border border-primary-500 text-primary-500 text-base font-medium rounded-lg shadow transition-all hover:bg-primary-50 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none;
+    @apply bg-white border border-primary-main text-primary-main text-base font-medium rounded-lg shadow transition-all hover:bg-primary-surface hover:text-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none;
 }
 .btn-error {
-    @apply bg-error-500 text-white text-base font-medium rounded-lg shadow transition-all hover:bg-error-600  focus:ring-4 focus:ring-error-100 focus:shadow-none focus:outline-none;
+    @apply bg-error-main text-white text-base font-medium rounded-lg shadow transition-all hover:bg-error-hover  focus:ring-4 focus:ring-error-focused focus:shadow-none focus:outline-none;
 }
 .btn-text {
-    @apply text-primary-500 text-base font-medium rounded-lg transition-all hover:text-primary-600  focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none;
+    @apply text-primary-main text-base font-medium rounded-lg transition-all hover:text-primary-hover  focus:ring-4 focus:ring-primary-focused focus:text-primary-pressed focus:outline-none;
 }
 .btn-disable {
     @apply bg-neutral-200 text-neutral-500 border border-neutral-300 text-base font-medium py-2 px-4 rounded-lg cursor-not-allowed focus:outline-none;
