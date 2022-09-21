@@ -11,7 +11,7 @@ table {
 }
 
 thead {
-    @apply h-10 bg-primary-500 text-neutral-50 text-left;
+    @apply h-10 bg-primary-main text-neutral-50 text-left;
 }
 
 thead tr th {

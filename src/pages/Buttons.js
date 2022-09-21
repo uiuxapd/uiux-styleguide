@@ -53,7 +53,7 @@ const Buttons = () => {
             </CopyToClipboard>
           </div>
         </div>
-        <div className="border border-neutral-200 dark:border-neutral-600 bg-neutral-50 dark:bg-neutral-900">
+        <div className="border border-neutral-200 dark:border-neutral-600">
           <div className="overflow">
             <pre className="code-section">
               <code data-lang="html">
