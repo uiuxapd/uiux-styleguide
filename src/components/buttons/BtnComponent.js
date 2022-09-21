@@ -1,4 +1,4 @@
-import { Fragment, React, useState } from "react";
+import { React, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import {
   btnDisable,
@@ -7,12 +7,16 @@ import {
   btnPrimary,
   btnSecondary,
   btnText,
-} from "../code-snippets/ButtonsSnippets";
-import { BtnCopied, BtnCopy, TabCodeActive, TabCodeInactive, TabPreviewActive, TabPreviewInactive } from "../components/BtnCond";
-import { BookmarkIcon } from "@heroicons/react/24/outline";
-import { Tab } from "@headlessui/react";
+} from "../../code-snippets/ButtonsSnippets";
+import { BtnCopied, BtnCopy } from "../../components/BtnCond";
+import {
+  BookmarkIcon,
+  EyeIcon,
+  CodeBracketIcon,
+} from "@heroicons/react/24/outline";
+import { Tabs, Tab } from "../../components/Tabs";
 
-const Buttons = () => {
+const BtnComponent = () => {
   const [isCopied, setIsCopied] = useState(false);
   const onCopyText = () => {
     setIsCopied(true);
@@ -23,50 +27,8 @@ const Buttons = () => {
 
   return (
     <>
-      <div className="pb-4 mb-8 border-b border-neutral-200 dark:border-neutral-800">
-        <h1 className="mb-4">Buttons</h1>
-        <p className="leading-relaxed dark:text-neutral-300">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-          suscipit magnam minima. Beatae deserunt perferendis aut ipsum labore,
-          nihil laborum sint, vitae aspernatur dolor quibusdam velit fugit
-          dolores cum, ad possimus maiores nulla? Ut, minus? Natus hic
-          necessitatibus, sapiente consectetur nihil ea suscipit itaque facere
-          recusandae architecto. Veniam, fuga nam?
-        </p>
-      </div>
-
       {/* Button Primary Start */}
-
-      <Tab.Group>
-      <div className="flex items-center justify-between">
-        <h4 className="text-lg md:text-2xl font-medium text-neutral-800 dark:text-neutral-50">Button Primary</h4>
-        <div className="flex items-center">
-      <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
-        <Tab as={Fragment}>
-          {({ selected }) => (
-            <div className="focus:outline-none"> {selected ? <TabPreviewActive/> : <TabPreviewInactive/>}</div>
-          )}
-          </Tab>
-          <Tab as={Fragment}>
-          {({ selected }) => (
-            <div className="focus:outline-none"> {selected ? <TabCodeActive/> : <TabCodeInactive/>}</div>
-          )}
-          </Tab>
-      </Tab.List>
-      <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-300 hidden sm:block"></div>
-      <CopyToClipboard text={btnPrimary} onCopy={onCopyText}>
-              <div className="hidden sm:flex items-center">
-                {isCopied ? <BtnCopied /> : <BtnCopy />}
-              </div>
-            </CopyToClipboard>
-      </div>
-      </div>
-      <Tab.Panels>
-        <Tab.Panel>Component 1</Tab.Panel>
-        <Tab.Panel>Component 2</Tab.Panel>
-      </Tab.Panels>
-    </Tab.Group>
-
+      <h3>Button Primary</h3>
       <div className="my-8">
         <div className="component-section">
           <div className="flex flex-col gap-4 w-fit items-center">
@@ -105,6 +67,11 @@ const Buttons = () => {
             <span className="example">Example Code</span>
           </div>
           <div className="flex justify-end">
+            <CopyToClipboard text={btnPrimary} onCopy={onCopyText}>
+              <div className="flex">
+                {isCopied ? <BtnCopied /> : <BtnCopy />}
+              </div>
+            </CopyToClipboard>
           </div>
         </div>
         <div className="border border-neutral-200 dark:border-neutral-600">
@@ -1230,4 +1197,4 @@ const Buttons = () => {
   );
 };
 
-export default Buttons;
+export default BtnComponent;

@@ -1,0 +1,9 @@
+.icon24 {
+    @apply w-6 h-6 stroke-2;
+}
+.icon20 {
+    @apply w-5 h-5 stroke-2;
+}
+.icon16 {
+    @apply w-4 h-4 stroke-2;
+}
