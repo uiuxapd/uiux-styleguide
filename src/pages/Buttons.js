@@ -1,7 +1,15 @@
 import { React, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { btnDisable, btnError, btnOutlined, btnPrimary, btnSecondary, btnText } from "../code-snippets/Buttons";
+import {
+  btnDisable,
+  btnError,
+  btnOutlined,
+  btnPrimary,
+  btnSecondary,
+  btnText,
+} from "../code-snippets/Buttons";
 import { BtnCopiedd, BtnCopyy } from "../components/BtnSnippet";
+import { BookmarkIcon } from "@heroicons/react/24/outline";
 
 const Buttons = () => {
   const [isCopied, setIsCopied] = useState(false);
@@ -30,15 +38,35 @@ const Buttons = () => {
       <h3>Button Primary</h3>
       <div className="my-8">
         <div className="component-section">
-          <div className="component-block">
+          <div className="flex flex-col gap-4 w-fit items-center">
             <button className="btn-primary small">Small</button>
-            <button className="btn-primary medium">Medium</button>
-            <button className="btn-primary large">Large</button>
-          </div>
-          <div className="component-block">
             <button className="btn-primary small pills">Small</button>
+            <button className="btn-primary icon-small">
+              <BookmarkIcon className="icon20" />
+            </button>
+            <button className="btn-primary icon-small pills">
+              <BookmarkIcon className="icon20" />
+            </button>
+          </div>
+          <div className="flex flex-col gap-4 w-fit items-center">
+            <button className="btn-primary medium">Medium</button>
             <button className="btn-primary medium pills">Medium</button>
+            <button className="btn-primary icon-medium">
+              <BookmarkIcon className="icon20" />
+            </button>
+            <button className="btn-primary icon-medium pills">
+              <BookmarkIcon className="icon20" />
+            </button>
+          </div>
+          <div className="flex flex-col gap-4 w-fit items-center">
+            <button className="btn-primary large">Large</button>
             <button className="btn-primary large pills">Large</button>
+            <button className="btn-primary icon-large">
+              <BookmarkIcon className="icon24" />
+            </button>
+            <button className="btn-primary icon-large pills">
+              <BookmarkIcon className="icon24" />
+            </button>
           </div>
         </div>
         <div className="mid-section">
@@ -69,7 +97,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-primary-500 text-white text-sm font-medium py-2 px-4 rounded-lg shadow transition-all hover:bg-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-primary-main text-white text-sm font-medium py-2 px-4
+                        rounded-lg shadow transition-all hover:bg-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -91,7 +122,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-primary-500 text-white text-base font-medium py-2 px-4 rounded-lg shadow transition-all hover:bg-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-primary-main text-white text-base font-medium py-2
+                        px-4 rounded-lg shadow transition-all
+                        hover:bg-primary-600 focus:ring-4 focus:ring-blue-300
+                        focus:shadow-none focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -113,7 +147,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-primary-500 text-white text-base font-medium py-2.5 px-4 rounded-lg shadow transition-all hover:bg-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-primary-main text-white text-base font-medium py-2.5
+                        px-4 rounded-lg shadow transition-all
+                        hover:bg-primary-600 focus:ring-4 focus:ring-blue-300
+                        focus:shadow-none focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -135,7 +172,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-primary-500 text-white text-sm font-medium py-2 px-4 rounded-full shadow transition-all hover:bg-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-primary-main text-white text-sm font-medium py-2 px-4
+                        rounded-full shadow transition-all hover:bg-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -157,7 +197,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-primary-500 text-white text-base font-medium py-2 px-4 rounded-full shadow transition-all hover:bg-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-primary-main text-white text-base font-medium py-2
+                        px-4 rounded-full shadow transition-all
+                        hover:bg-primary-600 focus:ring-4 focus:ring-blue-300
+                        focus:shadow-none focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -179,7 +222,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-primary-500 text-white text-base font-medium py-2.5 px-4 rounded-full shadow transition-all hover:bg-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-primary-main text-white text-base font-medium py-2.5
+                        px-4 rounded-full shadow transition-all
+                        hover:bg-primary-600 focus:ring-4 focus:ring-blue-300
+                        focus:shadow-none focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -199,7 +245,7 @@ const Buttons = () => {
       {/* Button Primary End */}
 
       {/* Button Secondary Start */}
-        <h3>Button Secondary</h3>
+      <h3>Button Secondary</h3>
       <div className="my-8">
         <div className="component-section">
           <div className="component-block">
@@ -209,9 +255,7 @@ const Buttons = () => {
           </div>
           <div className="component-block">
             <button className="btn-secondary small pills">Small</button>
-            <button className="btn-secondary medium pills">
-              Medium
-            </button>
+            <button className="btn-secondary medium pills">Medium</button>
             <button className="btn-secondary large pills">Large</button>
           </div>
         </div>
@@ -243,7 +287,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-50 text-primary-500 text-sm font-medium py-2 px-4 rounded-lg shadow transition-all hover:bg-neutral-100/70 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-neutral-50 text-primary-500 text-sm font-medium py-2
+                        px-4 rounded-lg shadow transition-all
+                        hover:bg-neutral-100/70 hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -265,7 +313,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-50 text-primary-500 text-base font-medium py-2 px-4 rounded-lg shadow transition-all hover:bg-neutral-100/70 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-neutral-50 text-primary-500 text-base font-medium
+                        py-2 px-4 rounded-lg shadow transition-all
+                        hover:bg-neutral-100/70 hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -287,7 +339,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-50 text-primary-500 text-base font-medium py-2.5 px-4 rounded-lg shadow transition-all hover:bg-neutral-100/70 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-neutral-50 text-primary-500 text-base font-medium
+                        py-2.5 px-4 rounded-lg shadow transition-all
+                        hover:bg-neutral-100/70 hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -309,7 +365,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-50 text-primary-500 text-sm font-medium py-2 px-4 rounded-full shadow transition-all hover:bg-neutral-100/70 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-neutral-50 text-primary-500 text-sm font-medium py-2
+                        px-4 rounded-full shadow transition-all
+                        hover:bg-neutral-100/70 hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -331,7 +391,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-50 text-primary-500 text-base font-medium py-2 px-4 rounded-full shadow transition-all hover:bg-neutral-100/70 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-neutral-50 text-primary-500 text-base font-medium
+                        py-2 px-4 rounded-full shadow transition-all
+                        hover:bg-neutral-100/70 hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -353,7 +417,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-50 text-primary-500 text-base font-medium py-2.5 px-4 rounded-full shadow transition-all hover:bg-neutral-100/70 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-neutral-50 text-primary-500 text-base font-medium
+                        py-2.5 px-4 rounded-full shadow transition-all
+                        hover:bg-neutral-100/70 hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -373,7 +441,7 @@ const Buttons = () => {
       {/* Button Secondary End */}
 
       {/* Button Oulined Start */}
-        <h3>Button Outlined</h3>
+      <h3>Button Outlined</h3>
       <div className="my-8">
         <div className="component-section">
           <div className="component-block">
@@ -415,7 +483,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-white border border-primary-500 text-primary-500 text-sm font-medium py-2 px-4 rounded-lg shadow transition-all hover:bg-primary-50/30 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-white border border-primary-500 text-primary-500
+                        text-sm font-medium py-2 px-4 rounded-lg shadow
+                        transition-all hover:bg-primary-50/30
+                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
+                        focus:shadow-none focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -437,7 +509,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-white border border-primary-500 text-primary-500 text-base font-medium py-2 px-4 rounded-lg shadow transition-all hover:bg-primary-50/30 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-white border border-primary-500 text-primary-500
+                        text-base font-medium py-2 px-4 rounded-lg shadow
+                        transition-all hover:bg-primary-50/30
+                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
+                        focus:shadow-none focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -459,7 +535,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-white border border-primary-500 text-primary-500 text-base font-medium py-2.5 px-4 rounded-lg shadow transition-all hover:bg-primary-50/30 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-white border border-primary-500 text-primary-500
+                        text-base font-medium py-2.5 px-4 rounded-lg shadow
+                        transition-all hover:bg-primary-50/30
+                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
+                        focus:shadow-none focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -481,7 +561,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-white border border-primary-500 text-primary-500 text-sm font-medium py-2 px-4 rounded-full shadow transition-all hover:bg-primary-50/30 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-white border border-primary-500 text-primary-500
+                        text-sm font-medium py-2 px-4 rounded-full shadow
+                        transition-all hover:bg-primary-50/30
+                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
+                        focus:shadow-none focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -503,7 +587,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-white border border-primary-500 text-primary-500 text-base font-medium py-2 px-4 rounded-full shadow transition-all hover:bg-primary-50/30 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-white border border-primary-500 text-primary-500
+                        text-base font-medium py-2 px-4 rounded-full shadow
+                        transition-all hover:bg-primary-50/30
+                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
+                        focus:shadow-none focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -525,7 +613,11 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-white border border-primary-500 text-primary-500 text-base font-medium py-2.5 px-4 rounded-full shadow transition-all hover:bg-primary-50/30 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none
+                        bg-white border border-primary-500 text-primary-500
+                        text-base font-medium py-2.5 px-4 rounded-full shadow
+                        transition-all hover:bg-primary-50/30
+                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
+                        focus:shadow-none focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -545,7 +637,7 @@ const Buttons = () => {
       {/* Button Oulined End */}
 
       {/* Button Error Start */}
-        <h3>Button Error State</h3>
+      <h3>Button Error State</h3>
       <div className="my-8">
         <div className="component-section">
           <div className="component-block">
@@ -587,7 +679,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-error-500 text-white text-sm font-medium py-2 px-4 rounded-lg shadow transition-all hover:bg-error-600 focus:ring-4 focus:ring-error-100 focus:shadow-none focus:outline-none
+                        bg-error-500 text-white text-sm font-medium py-2 px-4
+                        rounded-lg shadow transition-all hover:bg-error-600
+                        focus:ring-4 focus:ring-error-100 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -609,7 +704,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-error-500 text-white text-base font-medium py-2 px-4 rounded-lg shadow transition-all hover:bg-error-600 focus:ring-4 focus:ring-error-100 focus:shadow-none focus:outline-none
+                        bg-error-500 text-white text-base font-medium py-2 px-4
+                        rounded-lg shadow transition-all hover:bg-error-600
+                        focus:ring-4 focus:ring-error-100 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -631,7 +729,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-error-500 text-white text-base font-medium py-2.5 px-4 rounded-lg shadow transition-all hover:bg-error-600 focus:ring-4 focus:ring-error-100 focus:shadow-none focus:outline-none
+                        bg-error-500 text-white text-base font-medium py-2.5
+                        px-4 rounded-lg shadow transition-all hover:bg-error-600
+                        focus:ring-4 focus:ring-error-100 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -653,7 +754,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-error-500 text-white text-sm font-medium py-2 px-4 rounded-full shadow transition-all hover:bg-error-600 focus:ring-4 focus:ring-error-100 focus:shadow-none focus:outline-none
+                        bg-error-500 text-white text-sm font-medium py-2 px-4
+                        rounded-full shadow transition-all hover:bg-error-600
+                        focus:ring-4 focus:ring-error-100 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -675,7 +779,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-error-500 text-white text-base font-medium py-2 px-4 rounded-full shadow transition-all hover:bg-error-600 focus:ring-4 focus:ring-error-100 focus:shadow-none focus:outline-none
+                        bg-error-500 text-white text-base font-medium py-2 px-4
+                        rounded-full shadow transition-all hover:bg-error-600
+                        focus:ring-4 focus:ring-error-100 focus:shadow-none
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -697,7 +804,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-error-500 text-white text-base font-medium py-2.5 px-4 rounded-full shadow transition-all hover:bg-error-600 focus:ring-4 focus:ring-error-100 focus:shadow-none focus:outline-none
+                        bg-error-500 text-white text-base font-medium py-2.5
+                        px-4 rounded-full shadow transition-all
+                        hover:bg-error-600 focus:ring-4 focus:ring-error-100
+                        focus:shadow-none focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -717,7 +827,7 @@ const Buttons = () => {
       {/* Button Error End */}
 
       {/* Button Text Start */}
-        <h3>Button Text Only</h3>
+      <h3>Button Text Only</h3>
       <div className="my-8">
         <div className="component-section">
           <div className="component-block">
@@ -759,7 +869,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      text-primary-500 text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none
+                        text-primary-500 text-sm font-medium py-2 px-4
+                        rounded-lg transition-all hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -781,7 +894,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      text-primary-500 text-base font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none
+                        text-primary-500 text-base font-medium py-2 px-4
+                        rounded-lg transition-all hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -803,7 +919,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      text-primary-500 text-base font-medium py-2.5 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none
+                        text-primary-500 text-base font-medium py-2.5 px-4
+                        rounded-lg transition-all hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -825,7 +944,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      text-primary-500 text-sm font-medium py-2 px-4 rounded-full transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none
+                        text-primary-500 text-sm font-medium py-2 px-4
+                        rounded-full transition-all hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -847,7 +969,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      text-primary-500 text-base font-medium py-2 px-4 rounded-full transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none
+                        text-primary-500 text-base font-medium py-2 px-4
+                        rounded-full transition-all hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -869,7 +994,10 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      text-primary-500 text-base font-medium py-2.5 px-4 rounded-full transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none
+                        text-primary-500 text-base font-medium py-2.5 px-4
+                        rounded-full transition-all hover:text-primary-600
+                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
+                        focus:outline-none
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -889,7 +1017,7 @@ const Buttons = () => {
       {/* Button Text End */}
 
       {/* Button Disable Start */}
-        <h3>Button Disable</h3>
+      <h3>Button Disable</h3>
       <div className="my-8">
         <div className="component-section">
           <div className="component-block">
@@ -932,7 +1060,9 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-200 text-neutral-500 border border-neutral-300 text-sm font-medium py-2 px-4 rounded-lg cursor-not-allowed
+                        bg-neutral-200 text-neutral-500 border
+                        border-neutral-300 text-sm font-medium py-2 px-4
+                        rounded-lg cursor-not-allowed
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -954,7 +1084,9 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-200 text-neutral-500 border border-neutral-300 text-base font-medium py-2 px-4 rounded-lg cursor-not-allowed
+                        bg-neutral-200 text-neutral-500 border
+                        border-neutral-300 text-base font-medium py-2 px-4
+                        rounded-lg cursor-not-allowed
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -976,7 +1108,9 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-200 text-neutral-500 border border-neutral-300 text-base font-medium py-2.5 px-4 rounded-lg cursor-not-allowed
+                        bg-neutral-200 text-neutral-500 border
+                        border-neutral-300 text-base font-medium py-2.5 px-4
+                        rounded-lg cursor-not-allowed
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -998,7 +1132,9 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-200 text-neutral-500 border border-neutral-300 text-sm font-medium py-2 px-4 rounded-full cursor-not-allowed
+                        bg-neutral-200 text-neutral-500 border
+                        border-neutral-300 text-sm font-medium py-2 px-4
+                        rounded-full cursor-not-allowed
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -1020,7 +1156,9 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-200 text-neutral-500 border border-neutral-300 text-base font-medium py-2 px-4 rounded-full cursor-not-allowed
+                        bg-neutral-200 text-neutral-500 border
+                        border-neutral-300 text-base font-medium py-2 px-4
+                        rounded-full cursor-not-allowed
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>
@@ -1042,7 +1180,9 @@ const Buttons = () => {
                       <span className="punctuation">=</span>
                       <span className="punctuation">"</span>
                       <span className="attr-value">
-                      bg-neutral-200 text-neutral-500 border border-neutral-300 text-base font-medium py-2.5 px-4 rounded-full cursor-not-allowed
+                        bg-neutral-200 text-neutral-500 border
+                        border-neutral-300 text-base font-medium py-2.5 px-4
+                        rounded-full cursor-not-allowed
                       </span>
                       <span className="punctuation">"</span>
                       <span className="punctuation">{">"}</span>

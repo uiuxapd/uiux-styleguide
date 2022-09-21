@@ -11,7 +11,7 @@
     @apply bg-error-main text-white text-base font-medium rounded-lg shadow transition-all hover:bg-error-hover  focus:ring-4 focus:ring-error-focused focus:shadow-none focus:outline-none;
 }
 .btn-text {
-    @apply text-primary-main text-base font-medium rounded-lg transition-all hover:text-primary-hover  focus:ring-4 focus:ring-primary-focused focus:text-primary-pressed focus:outline-none;
+    @apply text-primary-main text-base font-medium rounded-lg transition-all hover:text-primary-hover  focus:ring-4 focus:ring-primary-focused focus:outline-none;
 }
 .btn-disable {
     @apply bg-neutral-200 text-neutral-500 border border-neutral-300 text-base font-medium py-2 px-4 rounded-lg cursor-not-allowed focus:outline-none;
@@ -30,4 +30,15 @@
 }
 .large {
     @apply py-2.5 px-4;
+}
+
+/* Button Icon Only */
+.icon-small {
+    @apply p-2;
+}
+.icon-medium {
+    @apply p-2.5;
+}
+.icon-large {
+    @apply p-2.5;
 }
