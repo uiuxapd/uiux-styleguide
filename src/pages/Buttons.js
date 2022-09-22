@@ -3,27 +3,135 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import {
   btnDisable,
   btnError,
+  btnFullRounded,
+  btnIconOnly,
+  btnIconOnlyRounded,
+  btnLeadIcon,
   btnOutlined,
   btnPrimary,
   btnSecondary,
   btnText,
+  btnTrailIcon,
 } from "../code-snippets/ButtonsSnippets";
-import { BtnCopied, BtnCopy, TabCodeActive, TabCodeInactive, TabPreviewActive, TabPreviewInactive } from "../components/BtnCond";
-import { BookmarkIcon } from "@heroicons/react/24/outline";
+import {
+  BtnCopied,
+  BtnCopy,
+  TabCodeActive,
+  TabCodeInactive,
+  TabPreviewActive,
+  TabPreviewInactive,
+} from "../components/BtnCond";
 import { Tab } from "@headlessui/react";
+import {
+  BtnDisable,
+  BtnError,
+  BtnFullRounded,
+  BtnIconOnly,
+  BtnIconOnlyRounded,
+  BtnLeadIcon,
+  BtnOutlined,
+  BtnPrimary,
+  BtnSecondary,
+  BtnText,
+  BtnTrailIcon,
+} from "../components/buttons/BtnComponent";
+import {
+  BtnDisableCode,
+  BtnErrorCode,
+  BtnFullRoundedCode,
+  BtnIconOnlyRoundedCode,
+  BtnLeadIconCode,
+  BtnOutlinedCode,
+  BtnPrimaryCode,
+  BtnSecondaryCode,
+  BtnTextCode,
+  BtnTrailIconCode,
+} from "../components/buttons/BtnCode";
 
 const Buttons = () => {
-  const [isCopied, setIsCopied] = useState(false);
-  const onCopyText = () => {
-    setIsCopied(true);
+  // Copy Trigger
+  const [isPrimaryCopied, setPrimaryCopy] = useState(false);
+  const onCopyPrimary = () => {
+    setPrimaryCopy(true);
     setTimeout(() => {
-      setIsCopied(false);
-    }, 2000);
+      setPrimaryCopy(false);
+    }, 1500);
+  };
+  const [isSecondaryCopied, setSecondaryCopy] = useState(false);
+  const onCopySecondary = () => {
+    setSecondaryCopy(true);
+    setTimeout(() => {
+      setSecondaryCopy(false);
+    }, 1500);
+  };
+  const [isOutlinedCopied, setOutlinedCopy] = useState(false);
+  const onCopyOutlined = () => {
+    setOutlinedCopy(true);
+    setTimeout(() => {
+      setOutlinedCopy(false);
+    }, 1500);
+  };
+  const [isErrorCopied, setErrorCopy] = useState(false);
+  const onCopyError = () => {
+    setErrorCopy(true);
+    setTimeout(() => {
+      setErrorCopy(false);
+    }, 1500);
+  };
+  const [isTextCopied, setTextCopy] = useState(false);
+  const onCopyText = () => {
+    setTextCopy(true);
+    setTimeout(() => {
+      setTextCopy(false);
+    }, 1500);
+  };
+  const [isBtnLeadIconCopied, setBtnLeadIconCopy] = useState(false);
+  const onCopyBtnLeadIcon = () => {
+    setBtnLeadIconCopy(true);
+    setTimeout(() => {
+      setBtnLeadIconCopy(false);
+    }, 1500);
+  };
+  const [isBtnTrailIconCopied, setBtnTrailIconCopy] = useState(false);
+  const onCopyBtnTrailIcon = () => {
+    setBtnTrailIconCopy(true);
+    setTimeout(() => {
+      setBtnTrailIconCopy(false);
+    }, 1500);
+  };
+  const [isDisableCopied, setDisableCopy] = useState(false);
+  const onCopyDisable = () => {
+    setDisableCopy(true);
+    setTimeout(() => {
+      setDisableCopy(false);
+    }, 1500);
+  };
+  const [isBtnRoundedCopied, setBtnRoundedCopy] = useState(false);
+  const onCopyBtnRounded = () => {
+    setBtnRoundedCopy(true);
+    setTimeout(() => {
+      setBtnRoundedCopy(false);
+    }, 1500);
+  };
+  const [isBtnIconOnlyCopied, setBtnIconOnlyCopy] = useState(false);
+  const onCopyBtnIconOnly = () => {
+    setBtnIconOnlyCopy(true);
+    setTimeout(() => {
+      setBtnIconOnlyCopy(false);
+    }, 1500);
+  };
+  const [isBtnIconOnlyRoundedCopied, setBtnIconOnlyRoundedCopy] =
+    useState(false);
+  const onCopyBtnIconOnlyRounded = () => {
+    setBtnIconOnlyRoundedCopy(true);
+    setTimeout(() => {
+      setBtnIconOnlyRoundedCopy(false);
+    }, 1500);
   };
 
   return (
     <>
-      <div className="pb-4 mb-8 border-b border-neutral-200 dark:border-neutral-800">
+      <div className="pb-4 mb-10 border-b border-neutral-200 dark:border-neutral-700">
         <h1 className="mb-4">Buttons</h1>
         <p className="leading-relaxed dark:text-neutral-300">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
@@ -35,1197 +143,564 @@ const Buttons = () => {
         </p>
       </div>
 
-      {/* Button Primary Start */}
-
-      <Tab.Group>
-      <div className="flex items-center justify-between">
-        <h4 className="text-lg md:text-2xl font-medium text-neutral-800 dark:text-neutral-50">Button Primary</h4>
-        <div className="flex items-center">
-      <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
-        <Tab as={Fragment}>
-          {({ selected }) => (
-            <div className="focus:outline-none"> {selected ? <TabPreviewActive/> : <TabPreviewInactive/>}</div>
-          )}
-          </Tab>
-          <Tab as={Fragment}>
-          {({ selected }) => (
-            <div className="focus:outline-none"> {selected ? <TabCodeActive/> : <TabCodeInactive/>}</div>
-          )}
-          </Tab>
-      </Tab.List>
-      <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-300 hidden sm:block"></div>
-      <CopyToClipboard text={btnPrimary} onCopy={onCopyText}>
-              <div className="hidden sm:flex items-center">
-                {isCopied ? <BtnCopied /> : <BtnCopy />}
+      <div className="flex flex-col gap-24">
+        {/* Button Primary Start */}
+        <div className="flex flex-col gap-4">
+          <Tab.Group>
+            <div className="flex items-center justify-between">
+              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                Button Primary
+              </h4>
+              <div className="flex items-center">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {selected ? (
+                          <TabPreviewActive />
+                        ) : (
+                          <TabPreviewInactive />
+                        )}
+                      </div>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                      </div>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <CopyToClipboard text={btnPrimary} onCopy={onCopyPrimary}>
+                  <div className="hidden sm:flex items-center">
+                    {isPrimaryCopied ? <BtnCopied /> : <BtnCopy />}
+                  </div>
+                </CopyToClipboard>
               </div>
-            </CopyToClipboard>
-      </div>
-      </div>
-      <Tab.Panels>
-        <Tab.Panel>Component 1</Tab.Panel>
-        <Tab.Panel>Component 2</Tab.Panel>
-      </Tab.Panels>
-    </Tab.Group>
+            </div>
+            <Tab.Panels>
+              <Tab.Panel>
+                <BtnPrimary />
+              </Tab.Panel>
+              <Tab.Panel>
+                <BtnPrimaryCode />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
+        </div>
+        {/* Button Primary End */}
 
-      <div className="my-8">
-        <div className="component-section">
-          <div className="flex flex-col gap-4 w-fit items-center">
-            <button className="btn-primary small">Small</button>
-            <button className="btn-primary small pills">Small</button>
-            <button className="btn-primary icon-small">
-              <BookmarkIcon className="icon20" />
-            </button>
-            <button className="btn-primary icon-small pills">
-              <BookmarkIcon className="icon20" />
-            </button>
-          </div>
-          <div className="flex flex-col gap-4 w-fit items-center">
-            <button className="btn-primary medium">Medium</button>
-            <button className="btn-primary medium pills">Medium</button>
-            <button className="btn-primary icon-medium">
-              <BookmarkIcon className="icon20" />
-            </button>
-            <button className="btn-primary icon-medium pills">
-              <BookmarkIcon className="icon20" />
-            </button>
-          </div>
-          <div className="flex flex-col gap-4 w-fit items-center">
-            <button className="btn-primary large">Large</button>
-            <button className="btn-primary large pills">Large</button>
-            <button className="btn-primary icon-large">
-              <BookmarkIcon className="icon24" />
-            </button>
-            <button className="btn-primary icon-large pills">
-              <BookmarkIcon className="icon24" />
-            </button>
-          </div>
-        </div>
-        <div className="mid-section">
-          <div className="flex ">
-            <span className="example">Example Code</span>
-          </div>
-          <div className="flex justify-end">
-          </div>
-        </div>
-        <div className="border border-neutral-200 dark:border-neutral-600">
-          <div className="overflow">
-            <pre className="code-section">
-              <code data-lang="html">
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-primary-main text-white text-sm font-medium py-2 px-4
-                        rounded-lg shadow transition-all hover:bg-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
+        {/* Button Secondary Start */}
+        <div className="flex flex-col gap-4">
+          <Tab.Group>
+            <div className="flex items-center justify-between">
+              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                Button Secondary
+              </h4>
+              <div className="flex items-center">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? (
+                          <TabPreviewActive />
+                        ) : (
+                          <TabPreviewInactive />
+                        )}
+                      </div>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                      </div>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <CopyToClipboard text={btnSecondary} onCopy={onCopySecondary}>
+                  <div className="hidden sm:flex items-center">
+                    {isSecondaryCopied ? <BtnCopied /> : <BtnCopy />}
                   </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-primary-main text-white text-base font-medium py-2
-                        px-4 rounded-lg shadow transition-all
-                        hover:bg-primary-600 focus:ring-4 focus:ring-blue-300
-                        focus:shadow-none focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-primary-main text-white text-base font-medium py-2.5
-                        px-4 rounded-lg shadow transition-all
-                        hover:bg-primary-600 focus:ring-4 focus:ring-blue-300
-                        focus:shadow-none focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation mr-4">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-primary-main text-white text-sm font-medium py-2 px-4
-                        rounded-full shadow transition-all hover:bg-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-primary-main text-white text-base font-medium py-2
-                        px-4 rounded-full shadow transition-all
-                        hover:bg-primary-600 focus:ring-4 focus:ring-blue-300
-                        focus:shadow-none focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-primary-main text-white text-base font-medium py-2.5
-                        px-4 rounded-full shadow transition-all
-                        hover:bg-primary-600 focus:ring-4 focus:ring-blue-300
-                        focus:shadow-none focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation mr-4">{">"}</span>
-                    </span>
-                  </div>
-                </div>
-              </code>
-            </pre>
-          </div>
-        </div>
-      </div>
-      {/* Button Primary End */}
-
-      {/* Button Secondary Start */}
-      <h3>Button Secondary</h3>
-      <div className="my-8">
-        <div className="component-section">
-          <div className="component-block">
-            <button className="btn-secondary small">Small</button>
-            <button className="btn-secondary medium">Medium</button>
-            <button className="btn-secondary large">Large</button>
-          </div>
-          <div className="component-block">
-            <button className="btn-secondary small pills">Small</button>
-            <button className="btn-secondary medium pills">Medium</button>
-            <button className="btn-secondary large pills">Large</button>
-          </div>
-        </div>
-        <div className="mid-section">
-          <div className="flex ">
-            <span className="example">Example Code</span>
-          </div>
-          <div className="flex justify-end">
-            <CopyToClipboard text={btnSecondary} onCopy={onCopyText}>
-              <div className="flex">
-                {isCopied ? <BtnCopied /> : <BtnCopy />}
+                </CopyToClipboard>
               </div>
-            </CopyToClipboard>
-          </div>
+            </div>
+            <Tab.Panels>
+              <Tab.Panel>
+                <BtnSecondary />
+              </Tab.Panel>
+              <Tab.Panel>
+                <BtnSecondaryCode />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
         </div>
-        <div className="border border-neutral-200 dark:border-neutral-600">
-          <div className="overflow">
-            <pre className="code-section">
-              <code data-lang="html">
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-50 text-primary-500 text-sm font-medium py-2
-                        px-4 rounded-lg shadow transition-all
-                        hover:bg-neutral-100/70 hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-50 text-primary-500 text-base font-medium
-                        py-2 px-4 rounded-lg shadow transition-all
-                        hover:bg-neutral-100/70 hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-50 text-primary-500 text-base font-medium
-                        py-2.5 px-4 rounded-lg shadow transition-all
-                        hover:bg-neutral-100/70 hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-50 text-primary-500 text-sm font-medium py-2
-                        px-4 rounded-full shadow transition-all
-                        hover:bg-neutral-100/70 hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-50 text-primary-500 text-base font-medium
-                        py-2 px-4 rounded-full shadow transition-all
-                        hover:bg-neutral-100/70 hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-50 text-primary-500 text-base font-medium
-                        py-2.5 px-4 rounded-full shadow transition-all
-                        hover:bg-neutral-100/70 hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation mr-4">{">"}</span>
-                    </span>
-                  </div>
-                </div>
-              </code>
-            </pre>
-          </div>
-        </div>
-      </div>
-      {/* Button Secondary End */}
+        {/* Button Secondary End */}
 
-      {/* Button Oulined Start */}
-      <h3>Button Outlined</h3>
-      <div className="my-8">
-        <div className="component-section">
-          <div className="component-block">
-            <button className="btn-outlined small">Small</button>
-            <button className="btn-outlined medium">Medium</button>
-            <button className="btn-outlined large">Large</button>
-          </div>
-          <div className="component-block">
-            <button className="btn-outlined small pills">Small</button>
-            <button className="btn-outlined medium pills">Medium</button>
-            <button className="btn-outlined large pills">Large</button>
-          </div>
-        </div>
-        <div className="mid-section">
-          <div className="flex ">
-            <span className="example">Example Code</span>
-          </div>
-          <div className="flex justify-end">
-            <CopyToClipboard text={btnOutlined} onCopy={onCopyText}>
-              <div className="flex">
-                {isCopied ? <BtnCopied /> : <BtnCopy />}
+        {/* Button Outlined Start */}
+        <div className="flex flex-col gap-4">
+          <Tab.Group>
+            <div className="flex items-center justify-between">
+              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                Button Outlined
+              </h4>
+              <div className="flex items-center">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? (
+                          <TabPreviewActive />
+                        ) : (
+                          <TabPreviewInactive />
+                        )}
+                      </div>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                      </div>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <CopyToClipboard text={btnOutlined} onCopy={onCopyOutlined}>
+                  <div className="hidden sm:flex items-center">
+                    {isOutlinedCopied ? <BtnCopied /> : <BtnCopy />}
+                  </div>
+                </CopyToClipboard>
               </div>
-            </CopyToClipboard>
-          </div>
+            </div>
+            <Tab.Panels>
+              <Tab.Panel>
+                <BtnOutlined />
+              </Tab.Panel>
+              <Tab.Panel>
+                <BtnOutlinedCode />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
         </div>
-        <div className="border border-neutral-200 dark:border-neutral-600">
-          <div className="overflow">
-            <pre className="code-section">
-              <code data-lang="html">
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-white border border-primary-500 text-primary-500
-                        text-sm font-medium py-2 px-4 rounded-lg shadow
-                        transition-all hover:bg-primary-50/30
-                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
-                        focus:shadow-none focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-white border border-primary-500 text-primary-500
-                        text-base font-medium py-2 px-4 rounded-lg shadow
-                        transition-all hover:bg-primary-50/30
-                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
-                        focus:shadow-none focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-white border border-primary-500 text-primary-500
-                        text-base font-medium py-2.5 px-4 rounded-lg shadow
-                        transition-all hover:bg-primary-50/30
-                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
-                        focus:shadow-none focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-white border border-primary-500 text-primary-500
-                        text-sm font-medium py-2 px-4 rounded-full shadow
-                        transition-all hover:bg-primary-50/30
-                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
-                        focus:shadow-none focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-white border border-primary-500 text-primary-500
-                        text-base font-medium py-2 px-4 rounded-full shadow
-                        transition-all hover:bg-primary-50/30
-                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
-                        focus:shadow-none focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-white border border-primary-500 text-primary-500
-                        text-base font-medium py-2.5 px-4 rounded-full shadow
-                        transition-all hover:bg-primary-50/30
-                        hover:text-primary-600 focus:ring-4 focus:ring-blue-300
-                        focus:shadow-none focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation mr-4">{">"}</span>
-                    </span>
-                  </div>
-                </div>
-              </code>
-            </pre>
-          </div>
-        </div>
-      </div>
-      {/* Button Oulined End */}
+        {/* Button Outlined End */}
 
-      {/* Button Error Start */}
-      <h3>Button Error State</h3>
-      <div className="my-8">
-        <div className="component-section">
-          <div className="component-block">
-            <button className="btn-error small">Small</button>
-            <button className="btn-error medium">Medium</button>
-            <button className="btn-error large">Large</button>
-          </div>
-          <div className="component-block">
-            <button className="btn-error small pills">Small</button>
-            <button className="btn-error medium pills">Medium</button>
-            <button className="btn-error large pills">Large</button>
-          </div>
-        </div>
-        <div className="mid-section">
-          <div className="flex ">
-            <span className="example">Example Code</span>
-          </div>
-          <div className="flex justify-end">
-            <CopyToClipboard text={btnError} onCopy={onCopyText}>
-              <div className="flex">
-                {isCopied ? <BtnCopied /> : <BtnCopy />}
+        {/* Button Error Start */}
+        <div className="flex flex-col gap-4">
+          <Tab.Group>
+            <div className="flex items-center justify-between">
+              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                Button Error
+              </h4>
+              <div className="flex items-center">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? (
+                          <TabPreviewActive />
+                        ) : (
+                          <TabPreviewInactive />
+                        )}
+                      </div>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                      </div>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <CopyToClipboard text={btnError} onCopy={onCopyError}>
+                  <div className="hidden sm:flex items-center">
+                    {isErrorCopied ? <BtnCopied /> : <BtnCopy />}
+                  </div>
+                </CopyToClipboard>
               </div>
-            </CopyToClipboard>
-          </div>
+            </div>
+            <Tab.Panels>
+              <Tab.Panel>
+                <BtnError />
+              </Tab.Panel>
+              <Tab.Panel>
+                <BtnErrorCode />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
         </div>
-        <div className="border border-neutral-200 dark:border-neutral-600">
-          <div className="overflow">
-            <pre className="code-section">
-              <code data-lang="html">
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-error-500 text-white text-sm font-medium py-2 px-4
-                        rounded-lg shadow transition-all hover:bg-error-600
-                        focus:ring-4 focus:ring-error-100 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-error-500 text-white text-base font-medium py-2 px-4
-                        rounded-lg shadow transition-all hover:bg-error-600
-                        focus:ring-4 focus:ring-error-100 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-error-500 text-white text-base font-medium py-2.5
-                        px-4 rounded-lg shadow transition-all hover:bg-error-600
-                        focus:ring-4 focus:ring-error-100 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-error-500 text-white text-sm font-medium py-2 px-4
-                        rounded-full shadow transition-all hover:bg-error-600
-                        focus:ring-4 focus:ring-error-100 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-error-500 text-white text-base font-medium py-2 px-4
-                        rounded-full shadow transition-all hover:bg-error-600
-                        focus:ring-4 focus:ring-error-100 focus:shadow-none
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-error-500 text-white text-base font-medium py-2.5
-                        px-4 rounded-full shadow transition-all
-                        hover:bg-error-600 focus:ring-4 focus:ring-error-100
-                        focus:shadow-none focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                </div>
-              </code>
-            </pre>
-          </div>
-        </div>
-      </div>
-      {/* Button Error End */}
+        {/* Button Error End */}
 
-      {/* Button Text Start */}
-      <h3>Button Text Only</h3>
-      <div className="my-8">
-        <div className="component-section">
-          <div className="component-block">
-            <button className="btn-text small">Small</button>
-            <button className="btn-text medium">Medium</button>
-            <button className="btn-text large">Large</button>
-          </div>
-          <div className="component-block">
-            <button className="btn-text small pills">Small</button>
-            <button className="btn-text medium pills">Medium</button>
-            <button className="btn-text large pills">Large</button>
-          </div>
-        </div>
-        <div className="mid-section">
-          <div className="flex ">
-            <span className="example">Example Code</span>
-          </div>
-          <div className="flex justify-end">
-            <CopyToClipboard text={btnText} onCopy={onCopyText}>
-              <div className="flex">
-                {isCopied ? <BtnCopied /> : <BtnCopy />}
+        {/* Button Text Start */}
+        <div className="flex flex-col gap-4">
+          <Tab.Group>
+            <div className="flex items-center justify-between">
+              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                Button Text Only
+              </h4>
+              <div className="flex items-center">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? (
+                          <TabPreviewActive />
+                        ) : (
+                          <TabPreviewInactive />
+                        )}
+                      </div>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                      </div>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <CopyToClipboard text={btnText} onCopy={onCopyText}>
+                  <div className="hidden sm:flex items-center">
+                    {isTextCopied ? <BtnCopied /> : <BtnCopy />}
+                  </div>
+                </CopyToClipboard>
               </div>
-            </CopyToClipboard>
-          </div>
+            </div>
+            <Tab.Panels>
+              <Tab.Panel>
+                <BtnText />
+              </Tab.Panel>
+              <Tab.Panel>
+                <BtnTextCode />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
         </div>
-        <div className="border border-neutral-200 dark:border-neutral-600">
-          <div className="overflow">
-            <pre className="code-section">
-              <code data-lang="html">
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        text-primary-500 text-sm font-medium py-2 px-4
-                        rounded-lg transition-all hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        text-primary-500 text-base font-medium py-2 px-4
-                        rounded-lg transition-all hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        text-primary-500 text-base font-medium py-2.5 px-4
-                        rounded-lg transition-all hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        text-primary-500 text-sm font-medium py-2 px-4
-                        rounded-full transition-all hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        text-primary-500 text-base font-medium py-2 px-4
-                        rounded-full transition-all hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        text-primary-500 text-base font-medium py-2.5 px-4
-                        rounded-full transition-all hover:text-primary-600
-                        focus:ring-4 focus:ring-blue-300 focus:text-primary-700
-                        focus:outline-none
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation mr-4">{">"}</span>
-                    </span>
-                  </div>
-                </div>
-              </code>
-            </pre>
-          </div>
-        </div>
-      </div>
-      {/* Button Text End */}
+        {/* Button Text End */}
 
-      {/* Button Disable Start */}
-      <h3>Button Disable</h3>
-      <div className="my-8">
-        <div className="component-section">
-          <div className="component-block">
-            <button className="btn-disable small">Small</button>
-            <button className="btn-disable medium">Medium</button>
-            <button className="btn-disable large">Large</button>
-          </div>
-          <div className="component-block">
-            <button className="btn-disable small pills">Small</button>
-            <button className="btn-disable medium pills">Medium</button>
-            <button className="btn-disable large pills">Large</button>
-          </div>
-        </div>
-
-        <div className="mid-section">
-          <div className="flex ">
-            <span className="example">Example Code</span>
-          </div>
-          <div className="flex justify-end">
-            <CopyToClipboard text={btnDisable} onCopy={onCopyText}>
-              <div className="flex">
-                {isCopied ? <BtnCopied /> : <BtnCopy />}
+        {/* Button Lead Icon Start */}
+        <div className="flex flex-col gap-4">
+          <Tab.Group>
+            <div className="flex items-center justify-between">
+              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                Button with Lead Icon
+              </h4>
+              <div className="flex items-center">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? (
+                          <TabPreviewActive />
+                        ) : (
+                          <TabPreviewInactive />
+                        )}
+                      </div>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                      </div>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <CopyToClipboard text={btnLeadIcon} onCopy={onCopyBtnLeadIcon}>
+                  <div className="hidden sm:flex items-center">
+                    {isBtnLeadIconCopied ? <BtnCopied /> : <BtnCopy />}
+                  </div>
+                </CopyToClipboard>
               </div>
-            </CopyToClipboard>
-          </div>
+            </div>
+            <Tab.Panels>
+              <Tab.Panel>
+                <BtnLeadIcon />
+              </Tab.Panel>
+              <Tab.Panel>
+                <BtnLeadIconCode />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
         </div>
-        <div className="border border-neutral-200 dark:border-neutral-600">
-          <div className="overflow">
-            <pre className="code-section">
-              <code data-lang="html">
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-200 text-neutral-500 border
-                        border-neutral-300 text-sm font-medium py-2 px-4
-                        rounded-lg cursor-not-allowed
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
+        {/* Button Lead Icon End */}
+
+        {/* Button Trail Icon Start */}
+        <div className="flex flex-col gap-4">
+          <Tab.Group>
+            <div className="flex items-center justify-between">
+              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                Button with Trail Icon
+              </h4>
+              <div className="flex items-center">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? (
+                          <TabPreviewActive />
+                        ) : (
+                          <TabPreviewInactive />
+                        )}
+                      </div>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                      </div>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <CopyToClipboard
+                  text={btnTrailIcon}
+                  onCopy={onCopyBtnTrailIcon}
+                >
+                  <div className="hidden sm:flex items-center">
+                    {isBtnTrailIconCopied ? <BtnCopied /> : <BtnCopy />}
                   </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-200 text-neutral-500 border
-                        border-neutral-300 text-base font-medium py-2 px-4
-                        rounded-lg cursor-not-allowed
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-200 text-neutral-500 border
-                        border-neutral-300 text-base font-medium py-2.5 px-4
-                        rounded-lg cursor-not-allowed
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Small 36px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-200 text-neutral-500 border
-                        border-neutral-300 text-sm font-medium py-2 px-4
-                        rounded-full cursor-not-allowed
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Small
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Medium 40px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-200 text-neutral-500 border
-                        border-neutral-300 text-base font-medium py-2 px-4
-                        rounded-full cursor-not-allowed
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Medium
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation">{">"}</span>
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="comment">
-                      {"<!-- Button Pill Large 44px -->"}
-                    </span>
-                    <span className="token">
-                      <span className="punctuation">{"<"}</span>
-                      <span className="tag">button&nbsp;</span>
-                      <span className="attr-name">class</span>
-                      <span className="punctuation">=</span>
-                      <span className="punctuation">"</span>
-                      <span className="attr-value">
-                        bg-neutral-200 text-neutral-500 border
-                        border-neutral-300 text-base font-medium py-2.5 px-4
-                        rounded-full cursor-not-allowed
-                      </span>
-                      <span className="punctuation">"</span>
-                      <span className="punctuation">{">"}</span>
-                      Large
-                      <span className="punctuation">{"<"}</span>
-                      <span className="punctuation">{"/"}</span>
-                      <span className="tag">button</span>
-                      <span className="punctuation mr-4">{">"}</span>
-                    </span>
-                  </div>
-                </div>
-              </code>
-            </pre>
-          </div>
+                </CopyToClipboard>
+              </div>
+            </div>
+            <Tab.Panels>
+              <Tab.Panel>
+                <BtnTrailIcon />
+              </Tab.Panel>
+              <Tab.Panel>
+                <BtnTrailIconCode />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
         </div>
+        {/* Button Trail Icon End */}
+
+        {/* Button Disable Start */}
+        <div className="flex flex-col gap-4">
+          <Tab.Group>
+            <div className="flex items-center justify-between">
+              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                Disable Button
+              </h4>
+              <div className="flex items-center">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? (
+                          <TabPreviewActive />
+                        ) : (
+                          <TabPreviewInactive />
+                        )}
+                      </div>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                      </div>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <CopyToClipboard text={btnDisable} onCopy={onCopyDisable}>
+                  <div className="hidden sm:flex items-center">
+                    {isDisableCopied ? <BtnCopied /> : <BtnCopy />}
+                  </div>
+                </CopyToClipboard>
+              </div>
+            </div>
+            <Tab.Panels>
+              <Tab.Panel>
+                <BtnDisable />
+              </Tab.Panel>
+              <Tab.Panel>
+                <BtnDisableCode />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
+        </div>
+        {/* Button Disable End */}
+
+        {/* Button Full Rounded Button Start */}
+        <div className="flex flex-col gap-4">
+          <Tab.Group>
+            <div className="flex items-center justify-between">
+              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                Full Rounded Button
+              </h4>
+              <div className="flex items-center">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? (
+                          <TabPreviewActive />
+                        ) : (
+                          <TabPreviewInactive />
+                        )}
+                      </div>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                      </div>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <CopyToClipboard
+                  text={btnFullRounded}
+                  onCopy={onCopyBtnRounded}
+                >
+                  <div className="hidden sm:flex items-center">
+                    {isBtnRoundedCopied ? <BtnCopied /> : <BtnCopy />}
+                  </div>
+                </CopyToClipboard>
+              </div>
+            </div>
+            <Tab.Panels>
+              <Tab.Panel>
+                <BtnFullRounded />
+              </Tab.Panel>
+              <Tab.Panel>
+                <BtnFullRoundedCode />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
+        </div>
+        {/* Button Full Rounded Button End */}
+
+        {/* Button Icon only Start */}
+        <div className="flex flex-col gap-4">
+          <Tab.Group>
+            <div className="flex items-center justify-between">
+              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                Button Icon Only
+              </h4>
+              <div className="flex items-center">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? (
+                          <TabPreviewActive />
+                        ) : (
+                          <TabPreviewInactive />
+                        )}
+                      </div>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                      </div>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <CopyToClipboard text={btnIconOnly} onCopy={onCopyBtnIconOnly}>
+                  <div className="hidden sm:flex items-center">
+                    {isBtnIconOnlyCopied ? <BtnCopied /> : <BtnCopy />}
+                  </div>
+                </CopyToClipboard>
+              </div>
+            </div>
+            <Tab.Panels>
+              <Tab.Panel>
+                <BtnIconOnly />
+              </Tab.Panel>
+              <Tab.Panel>
+                <BtnIconOnlyRoundedCode />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
+        </div>
+        {/* Button Icon only End */}
+
+        {/* Button Icon only Rounded Start */}
+        <div className="flex flex-col gap-4">
+          <Tab.Group>
+            <div className="flex items-center justify-between">
+              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                Button Icon Only Rounded
+              </h4>
+              <div className="flex items-center">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? (
+                          <TabPreviewActive />
+                        ) : (
+                          <TabPreviewInactive />
+                        )}
+                      </div>
+                    )}
+                  </Tab>
+                  <Tab as={Fragment}>
+                    {({ selected }) => (
+                      <div className="focus:outline-none">
+                        {" "}
+                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                      </div>
+                    )}
+                  </Tab>
+                </Tab.List>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <CopyToClipboard
+                  text={btnIconOnlyRounded}
+                  onCopy={onCopyBtnIconOnlyRounded}
+                >
+                  <div className="hidden sm:flex items-center">
+                    {isBtnIconOnlyRoundedCopied ? <BtnCopied /> : <BtnCopy />}
+                  </div>
+                </CopyToClipboard>
+              </div>
+            </div>
+            <Tab.Panels>
+              <Tab.Panel>
+                <BtnIconOnlyRounded />
+              </Tab.Panel>
+              <Tab.Panel>
+                <BtnIconOnlyRoundedCode />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
+        </div>
+        {/* Button Icon only Rounded End */}
       </div>
-      {/* Button Disable End */}
     </>
   );
 };
