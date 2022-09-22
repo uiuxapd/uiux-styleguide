@@ -6,7 +6,7 @@ import {
 } from "@heroicons/react/24/outline";
 import React from "react";
 
-function BtnCopy() {
+export const BtnCopy = () => {
   return (
     <button
       type="button"
@@ -16,7 +16,8 @@ function BtnCopy() {
     </button>
   );
 }
-function BtnCopied() {
+
+export const BtnCopied = () => {
   return (
     <button
       type="button"
@@ -27,7 +28,7 @@ function BtnCopied() {
   );
 }
 
-function TabPreviewActive() {
+export const TabPreviewActive = () => {
   return (
     <button
       type="button"
@@ -38,7 +39,7 @@ function TabPreviewActive() {
     </button>
   );
 }
-function TabPreviewInactive() {
+export const TabPreviewInactive = () => {
   return (
     <button
       type="button"
@@ -49,7 +50,7 @@ function TabPreviewInactive() {
     </button>
   );
 }
-function TabCodeActive() {
+export const TabCodeActive = () => {
   return (
     <button
       type="button"
@@ -60,7 +61,7 @@ function TabCodeActive() {
     </button>
   );
 }
-function TabCodeInactive() {
+export const TabCodeInactive = () => {
   return (
     <button
       type="button"
@@ -71,12 +72,3 @@ function TabCodeInactive() {
     </button>
   );
 }
-
-export {
-  BtnCopy,
-  BtnCopied,
-  TabPreviewActive,
-  TabPreviewInactive,
-  TabCodeActive,
-  TabCodeInactive,
-};

@@ -1,21 +1,5 @@
-import { Fragment, React, useState } from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import { Fragment, React } from "react";
 import {
-  btnDisable,
-  btnError,
-  btnFullRounded,
-  btnIconOnly,
-  btnIconOnlyRounded,
-  btnLeadIcon,
-  btnOutlined,
-  btnPrimary,
-  btnSecondary,
-  btnText,
-  btnTrailIcon,
-} from "../code-snippets/ButtonsSnippets";
-import {
-  BtnCopied,
-  BtnCopy,
   TabCodeActive,
   TabCodeInactive,
   TabPreviewActive,
@@ -47,88 +31,21 @@ import {
   BtnTextCode,
   BtnTrailIconCode,
 } from "../components/buttons/BtnCode";
+import {
+  BtnDisableCopy,
+  BtnErrorCopy,
+  BtnIconOnlyCopy,
+  BtnIconOnlyRoundedCopy,
+  BtnLeadIconCopy,
+  BtnOutlinedCopy,
+  BtnPrimaryCopy,
+  BtnRoundedCopy,
+  BtnSecondaryCopy,
+  BtnTextCopy,
+  BtnTrailIconCopy,
+} from "../components/buttons/BtnCopyAction";
 
 const Buttons = () => {
-  // Copy Trigger
-  const [isPrimaryCopied, setPrimaryCopy] = useState(false);
-  const onCopyPrimary = () => {
-    setPrimaryCopy(true);
-    setTimeout(() => {
-      setPrimaryCopy(false);
-    }, 1500);
-  };
-  const [isSecondaryCopied, setSecondaryCopy] = useState(false);
-  const onCopySecondary = () => {
-    setSecondaryCopy(true);
-    setTimeout(() => {
-      setSecondaryCopy(false);
-    }, 1500);
-  };
-  const [isOutlinedCopied, setOutlinedCopy] = useState(false);
-  const onCopyOutlined = () => {
-    setOutlinedCopy(true);
-    setTimeout(() => {
-      setOutlinedCopy(false);
-    }, 1500);
-  };
-  const [isErrorCopied, setErrorCopy] = useState(false);
-  const onCopyError = () => {
-    setErrorCopy(true);
-    setTimeout(() => {
-      setErrorCopy(false);
-    }, 1500);
-  };
-  const [isTextCopied, setTextCopy] = useState(false);
-  const onCopyText = () => {
-    setTextCopy(true);
-    setTimeout(() => {
-      setTextCopy(false);
-    }, 1500);
-  };
-  const [isBtnLeadIconCopied, setBtnLeadIconCopy] = useState(false);
-  const onCopyBtnLeadIcon = () => {
-    setBtnLeadIconCopy(true);
-    setTimeout(() => {
-      setBtnLeadIconCopy(false);
-    }, 1500);
-  };
-  const [isBtnTrailIconCopied, setBtnTrailIconCopy] = useState(false);
-  const onCopyBtnTrailIcon = () => {
-    setBtnTrailIconCopy(true);
-    setTimeout(() => {
-      setBtnTrailIconCopy(false);
-    }, 1500);
-  };
-  const [isDisableCopied, setDisableCopy] = useState(false);
-  const onCopyDisable = () => {
-    setDisableCopy(true);
-    setTimeout(() => {
-      setDisableCopy(false);
-    }, 1500);
-  };
-  const [isBtnRoundedCopied, setBtnRoundedCopy] = useState(false);
-  const onCopyBtnRounded = () => {
-    setBtnRoundedCopy(true);
-    setTimeout(() => {
-      setBtnRoundedCopy(false);
-    }, 1500);
-  };
-  const [isBtnIconOnlyCopied, setBtnIconOnlyCopy] = useState(false);
-  const onCopyBtnIconOnly = () => {
-    setBtnIconOnlyCopy(true);
-    setTimeout(() => {
-      setBtnIconOnlyCopy(false);
-    }, 1500);
-  };
-  const [isBtnIconOnlyRoundedCopied, setBtnIconOnlyRoundedCopy] =
-    useState(false);
-  const onCopyBtnIconOnlyRounded = () => {
-    setBtnIconOnlyRoundedCopy(true);
-    setTimeout(() => {
-      setBtnIconOnlyRoundedCopy(false);
-    }, 1500);
-  };
-
   return (
     <>
       <div className="pb-4 mb-10 border-b border-neutral-200 dark:border-neutral-700">
@@ -173,11 +90,7 @@ const Buttons = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
-                <CopyToClipboard text={btnPrimary} onCopy={onCopyPrimary}>
-                  <div className="hidden sm:flex items-center">
-                    {isPrimaryCopied ? <BtnCopied /> : <BtnCopy />}
-                  </div>
-                </CopyToClipboard>
+                <BtnPrimaryCopy />
               </div>
             </div>
             <Tab.Panels>
@@ -223,11 +136,7 @@ const Buttons = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
-                <CopyToClipboard text={btnSecondary} onCopy={onCopySecondary}>
-                  <div className="hidden sm:flex items-center">
-                    {isSecondaryCopied ? <BtnCopied /> : <BtnCopy />}
-                  </div>
-                </CopyToClipboard>
+                <BtnSecondaryCopy />
               </div>
             </div>
             <Tab.Panels>
@@ -273,11 +182,7 @@ const Buttons = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
-                <CopyToClipboard text={btnOutlined} onCopy={onCopyOutlined}>
-                  <div className="hidden sm:flex items-center">
-                    {isOutlinedCopied ? <BtnCopied /> : <BtnCopy />}
-                  </div>
-                </CopyToClipboard>
+                <BtnOutlinedCopy />
               </div>
             </div>
             <Tab.Panels>
@@ -323,11 +228,7 @@ const Buttons = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
-                <CopyToClipboard text={btnError} onCopy={onCopyError}>
-                  <div className="hidden sm:flex items-center">
-                    {isErrorCopied ? <BtnCopied /> : <BtnCopy />}
-                  </div>
-                </CopyToClipboard>
+                <BtnErrorCopy />
               </div>
             </div>
             <Tab.Panels>
@@ -373,11 +274,7 @@ const Buttons = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
-                <CopyToClipboard text={btnText} onCopy={onCopyText}>
-                  <div className="hidden sm:flex items-center">
-                    {isTextCopied ? <BtnCopied /> : <BtnCopy />}
-                  </div>
-                </CopyToClipboard>
+                <BtnTextCopy />
               </div>
             </div>
             <Tab.Panels>
@@ -423,11 +320,7 @@ const Buttons = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
-                <CopyToClipboard text={btnLeadIcon} onCopy={onCopyBtnLeadIcon}>
-                  <div className="hidden sm:flex items-center">
-                    {isBtnLeadIconCopied ? <BtnCopied /> : <BtnCopy />}
-                  </div>
-                </CopyToClipboard>
+                <BtnLeadIconCopy />
               </div>
             </div>
             <Tab.Panels>
@@ -473,14 +366,7 @@ const Buttons = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
-                <CopyToClipboard
-                  text={btnTrailIcon}
-                  onCopy={onCopyBtnTrailIcon}
-                >
-                  <div className="hidden sm:flex items-center">
-                    {isBtnTrailIconCopied ? <BtnCopied /> : <BtnCopy />}
-                  </div>
-                </CopyToClipboard>
+                <BtnTrailIconCopy />
               </div>
             </div>
             <Tab.Panels>
@@ -526,11 +412,7 @@ const Buttons = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
-                <CopyToClipboard text={btnDisable} onCopy={onCopyDisable}>
-                  <div className="hidden sm:flex items-center">
-                    {isDisableCopied ? <BtnCopied /> : <BtnCopy />}
-                  </div>
-                </CopyToClipboard>
+                <BtnDisableCopy />
               </div>
             </div>
             <Tab.Panels>
@@ -576,14 +458,7 @@ const Buttons = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
-                <CopyToClipboard
-                  text={btnFullRounded}
-                  onCopy={onCopyBtnRounded}
-                >
-                  <div className="hidden sm:flex items-center">
-                    {isBtnRoundedCopied ? <BtnCopied /> : <BtnCopy />}
-                  </div>
-                </CopyToClipboard>
+                <BtnRoundedCopy />
               </div>
             </div>
             <Tab.Panels>
@@ -629,11 +504,7 @@ const Buttons = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
-                <CopyToClipboard text={btnIconOnly} onCopy={onCopyBtnIconOnly}>
-                  <div className="hidden sm:flex items-center">
-                    {isBtnIconOnlyCopied ? <BtnCopied /> : <BtnCopy />}
-                  </div>
-                </CopyToClipboard>
+                <BtnIconOnlyCopy />
               </div>
             </div>
             <Tab.Panels>
@@ -679,14 +550,7 @@ const Buttons = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
-                <CopyToClipboard
-                  text={btnIconOnlyRounded}
-                  onCopy={onCopyBtnIconOnlyRounded}
-                >
-                  <div className="hidden sm:flex items-center">
-                    {isBtnIconOnlyRoundedCopied ? <BtnCopied /> : <BtnCopy />}
-                  </div>
-                </CopyToClipboard>
+                <BtnIconOnlyRoundedCopy />
               </div>
             </div>
             <Tab.Panels>

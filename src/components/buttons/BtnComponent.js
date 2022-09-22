@@ -1,7 +1,7 @@
 import React from "react";
 import { BeakerIcon } from "@heroicons/react/24/solid";
 
-const BtnPrimary = () => {
+export const BtnPrimary = () => {
   return (
     <div className="component-section">
       <div className="component-block">
@@ -13,7 +13,7 @@ const BtnPrimary = () => {
   );
 };
 
-const BtnSecondary = () => {
+export const BtnSecondary = () => {
   return (
     <div className="component-section">
       <div className="component-block">
@@ -25,7 +25,7 @@ const BtnSecondary = () => {
   );
 };
 
-const BtnOutlined = () => {
+export const BtnOutlined = () => {
   return (
     <div className="component-section">
       <div className="component-block">
@@ -37,7 +37,7 @@ const BtnOutlined = () => {
   );
 };
 
-const BtnError = () => {
+export const BtnError = () => {
   return (
     <div className="component-section">
       <div className="component-block">
@@ -49,7 +49,7 @@ const BtnError = () => {
   );
 };
 
-const BtnText = () => {
+export const BtnText = () => {
   return (
     <div className="component-section">
       <div className="component-block">
@@ -61,7 +61,7 @@ const BtnText = () => {
   );
 };
 
-const BtnLeadIcon = () => {
+export const BtnLeadIcon = () => {
   return (
     <div className="component-section">
       <div className="component-block">
@@ -81,7 +81,7 @@ const BtnLeadIcon = () => {
   );
 };
 
-const BtnTrailIcon = () => {
+export const BtnTrailIcon = () => {
   return (
     <div className="component-section">
       <div className="component-block">
@@ -100,7 +100,7 @@ const BtnTrailIcon = () => {
   );
 };
 
-const BtnDisable = () => {
+export const BtnDisable = () => {
   return (
     <div className="component-section">
       <div className="component-block">
@@ -113,7 +113,7 @@ const BtnDisable = () => {
   );
 };
 
-const BtnFullRounded = () => {
+export const BtnFullRounded = () => {
   return (
     <div className="component-section">
       <div className="component-block">
@@ -127,7 +127,7 @@ const BtnFullRounded = () => {
   );
 };
 
-const BtnIconOnly = () => {
+export const BtnIconOnly = () => {
   return (
     <div className="component-section">
       <div className="component-block">
@@ -145,7 +145,7 @@ const BtnIconOnly = () => {
   );
 };
 
-const BtnIconOnlyRounded = () => {
+export const BtnIconOnlyRounded = () => {
   return (
     <div className="component-section">
       <div className="component-block">
@@ -163,16 +163,3 @@ const BtnIconOnlyRounded = () => {
   );
 };
 
-export {
-  BtnPrimary,
-  BtnSecondary,
-  BtnOutlined,
-  BtnError,
-  BtnText,
-  BtnLeadIcon,
-  BtnTrailIcon,
-  BtnDisable,
-  BtnFullRounded,
-  BtnIconOnly,
-  BtnIconOnlyRounded,
-};
