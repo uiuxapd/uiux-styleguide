@@ -1,3 +1,26 @@
+.btn-primary {
+    @apply bg-primary-main text-white text-base font-medium rounded-lg shadow transition-all border-none hover:bg-primary-hover  focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none;
+}
+.btn-secondary {
+    @apply bg-neutral-50 text-primary-main text-base font-medium rounded-lg shadow transition-all hover:bg-neutral-100/70 hover:text-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none;
+}
+.btn-outlined {
+    @apply bg-white border border-primary-main text-primary-main text-base font-medium rounded-lg shadow transition-all hover:bg-primary-surface hover:text-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none;
+}
+.btn-error {
+    @apply bg-error-main text-white text-base font-medium rounded-lg shadow transition-all hover:bg-error-hover  focus:ring-4 focus:ring-error-focused focus:shadow-none focus:outline-none;
+}
+.btn-text {
+    @apply text-primary-main text-base font-medium rounded-lg transition-all hover:text-primary-hover  focus:ring-4 focus:ring-primary-focused focus:outline-none;
+}
+.btn-disable {
+    @apply bg-neutral-200 text-neutral-500 border border-neutral-300 text-base font-medium py-2 px-4 rounded-lg cursor-not-allowed focus:outline-none;
+}
+
+.pills {
+    @apply rounded-full;
+}
+
 /* Sizing */
 .small {
     @apply py-2 px-4 text-sm;
@@ -9,25 +32,13 @@
     @apply py-2.5 px-4;
 }
 
-.btn-primary {
-    @apply text-white font-medium bg-primary-500 rounded-lg shadow transition-all hover:bg-primary-600  focus:ring-4 focus:ring-blue-300;
+/* Button Icon Only */
+.icon-small {
+    @apply p-2;
 }
-.btn-secondary {
-    @apply text-primary-500 font-medium bg-neutral-50 rounded-lg shadow transition-all hover:bg-neutral-100 focus:ring-4 focus:ring-blue-300;
+.icon-medium {
+    @apply p-2.5;
 }
-.btn-outlined {
-    @apply text-primary-500 font-medium bg-white border border-blue-500 rounded-lg transition-all hover:bg-primary-50/40 focus:ring-4 focus:ring-blue-300;
-}
-.btn-error {
-    @apply text-white font-medium bg-error-500 rounded-lg shadow transition-all hover:bg-error-600 focus:ring-4 focus:ring-error-100;
-}
-.btn-text {
-    @apply text-neutral-900 font-medium bg-white rounded-lg transition-all hover:bg-neutral-100 focus:ring-4 focus:ring-neutral-200;
-}
-.btn-disable {
-    @apply text-neutral-500 font-medium bg-neutral-200 border border-neutral-300 rounded-lg cursor-not-allowed;
-}
-
-.pills {
-    @apply rounded-full;
+.icon-large {
+    @apply p-2.5;
 }
