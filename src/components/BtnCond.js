@@ -31,7 +31,7 @@ function TabPreviewActive() {
   return (
     <button
       type="button"
-      className="flex items-center gap-2 text-sm font-medium bg-white text-neutral-900 py-1.5 px-3 shadow rounded-md"
+      className="flex items-center gap-2 text-sm font-medium bg-white text-neutral-900 py-1.5 px-3 shadow rounded-md transition-all"
     >
       <EyeIcon className="icon20 text-primary-main" />
       <span className="hidden md:block">Preview</span>
@@ -42,7 +42,7 @@ function TabPreviewInactive() {
   return (
     <button
       type="button"
-      className="flex items-center gap-2 text-sm font-medium text-neutral-500 py-1.5 px-3 rounded-md"
+      className="flex items-center gap-2 text-sm font-medium text-neutral-500 py-1.5 px-3 rounded-md transition-all"
     >
       <EyeIcon className="icon20" />
       <span className="hidden md:block">Preview</span>
@@ -53,7 +53,7 @@ function TabCodeActive() {
   return (
     <button
       type="button"
-      className="flex items-center gap-2 text-sm font-medium bg-white text-neutral-900 py-1.5 px-3 shadow rounded-md"
+      className="flex items-center gap-2 text-sm font-medium bg-white text-neutral-900 py-1.5 px-3 shadow rounded-md transition-all"
     >
       <CodeBracketIcon className="icon20 text-primary-main" />
       <span className="hidden md:block">Code</span>
@@ -64,7 +64,7 @@ function TabCodeInactive() {
   return (
     <button
       type="button"
-      className="flex items-center gap-2 text-sm font-medium text-neutral-500 py-1.5 px-3 rounded-md"
+      className="flex items-center gap-2 text-sm font-medium text-neutral-500 py-1.5 px-3 rounded-md transition-all"
     >
       <CodeBracketIcon className="icon20" />
       <span className="hidden md:block">Code</span>
