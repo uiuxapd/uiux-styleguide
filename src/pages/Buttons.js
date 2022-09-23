@@ -23,6 +23,7 @@ import {
   BtnDisableCode,
   BtnErrorCode,
   BtnFullRoundedCode,
+  BtnIconOnlyCode,
   BtnIconOnlyRoundedCode,
   BtnLeadIconCode,
   BtnOutlinedCode,
@@ -69,7 +70,7 @@ const Buttons = () => {
                 Button Primary
               </h4>
               <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <div className="focus:outline-none">
@@ -89,7 +90,7 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnPrimaryCopy />
               </div>
             </div>
@@ -113,7 +114,7 @@ const Buttons = () => {
                 Button Secondary
               </h4>
               <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <div className="focus:outline-none">
@@ -135,7 +136,7 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnSecondaryCopy />
               </div>
             </div>
@@ -159,7 +160,7 @@ const Buttons = () => {
                 Button Outlined
               </h4>
               <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <div className="focus:outline-none">
@@ -181,7 +182,7 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnOutlinedCopy />
               </div>
             </div>
@@ -205,7 +206,7 @@ const Buttons = () => {
                 Button Error
               </h4>
               <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <div className="focus:outline-none">
@@ -227,7 +228,7 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnErrorCopy />
               </div>
             </div>
@@ -251,7 +252,7 @@ const Buttons = () => {
                 Button Text Only
               </h4>
               <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <div className="focus:outline-none">
@@ -273,7 +274,7 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnTextCopy />
               </div>
             </div>
@@ -297,7 +298,7 @@ const Buttons = () => {
                 Button with Lead Icon
               </h4>
               <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <div className="focus:outline-none">
@@ -319,7 +320,7 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnLeadIconCopy />
               </div>
             </div>
@@ -343,7 +344,7 @@ const Buttons = () => {
                 Button with Trail Icon
               </h4>
               <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <div className="focus:outline-none">
@@ -365,7 +366,7 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnTrailIconCopy />
               </div>
             </div>
@@ -389,7 +390,7 @@ const Buttons = () => {
                 Disable Button
               </h4>
               <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <div className="focus:outline-none">
@@ -411,7 +412,7 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnDisableCopy />
               </div>
             </div>
@@ -427,7 +428,7 @@ const Buttons = () => {
         </div>
         {/* Button Disable End */}
 
-        {/* Button Full Rounded Button Start */}
+        {/* Button Full Rounded Start */}
         <div className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
@@ -435,7 +436,7 @@ const Buttons = () => {
                 Full Rounded Button
               </h4>
               <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <div className="focus:outline-none">
@@ -457,7 +458,7 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnRoundedCopy />
               </div>
             </div>
@@ -471,7 +472,7 @@ const Buttons = () => {
             </Tab.Panels>
           </Tab.Group>
         </div>
-        {/* Button Full Rounded Button End */}
+        {/* Button Full Rounded End */}
 
         {/* Button Icon only Start */}
         <div className="flex flex-col gap-4">
@@ -481,7 +482,7 @@ const Buttons = () => {
                 Button Icon Only
               </h4>
               <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <div className="focus:outline-none">
@@ -503,7 +504,7 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnIconOnlyCopy />
               </div>
             </div>
@@ -512,7 +513,7 @@ const Buttons = () => {
                 <BtnIconOnly />
               </Tab.Panel>
               <Tab.Panel>
-                <BtnIconOnlyRoundedCode />
+                <BtnIconOnlyCode />
               </Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
@@ -527,7 +528,7 @@ const Buttons = () => {
                 Button Icon Only Rounded
               </h4>
               <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5">
+                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                   <Tab as={Fragment}>
                     {({ selected }) => (
                       <div className="focus:outline-none">
@@ -549,7 +550,7 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 hidden sm:block"></div>
+                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnIconOnlyRoundedCopy />
               </div>
             </div>

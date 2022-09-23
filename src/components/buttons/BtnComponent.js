@@ -104,9 +104,17 @@ export const BtnDisable = () => {
   return (
     <div className="component-section">
       <div className="component-block">
+        <button className="btn-disable small">Button Title</button>
         <button className="btn-disable medium">Button Title</button>
-        <button className="btn-disable medium flex items-center gap-2">
+        <button className="btn-disable large">Button Title</button>
+        <button className="btn-disable large flex items-center gap-2">
           <BeakerIcon className="icon20" /> Button Title
+        </button>
+        <button className="btn-disable p-2.5">
+          <BeakerIcon className="icon24" />
+        </button>
+        <button className="btn-disable p-2.5 rounded-full">
+          <BeakerIcon className="icon24" />
         </button>
       </div>
     </div>
@@ -162,4 +170,3 @@ export const BtnIconOnlyRounded = () => {
     </div>
   );
 };
-
