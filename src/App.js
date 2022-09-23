@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import { HashRouter, Routes, Route } from "react-router-dom";
 
 // Pages
 import Sidebar from "./components/Sidebar";
-import Documentation from './pages/Documentation'
-import Component from './pages/Component'
+import Documentation from "./pages/Documentation";
+import Component from "./pages/Component";
 import Buttons from "./pages/Buttons";
 import Typography from "./pages/Typography";
 import Tables from "./pages/Tables";
@@ -13,34 +13,34 @@ import Search from './components/Search'
 import Colors from "./pages/Colors";
 
 const App = () => {
-  const [isShow, setIsShow] = useState(false)
-  const [search, setSearch] = useState(false)
+  const [isShow, setIsShow] = useState(false);
+  const [search, setSearch] = useState(false);
 
   useEffect(() => {
     // Sidebar
-    const openMenu = document.querySelector('.menu-btn')
-    const closeMenu = document.querySelector('.close-menu')
+    const openMenu = document.querySelector(".menu-btn");
+    const closeMenu = document.querySelector(".close-menu");
 
     openMenu.onclick = () => {
-      setIsShow(!isShow)
-    }
+      setIsShow(!isShow);
+    };
 
     closeMenu.onclick = () => {
-      setIsShow(!isShow)
-    }
-    
+      setIsShow(!isShow);
+    };
+
     // Breadcrumbs
     const activeMenu = document.querySelector(".menu-item.active");
     const breadcrumbs = document.querySelector(".breadcrumbs");
     const categoryText = document.querySelector(".category");
     const pageText = document.querySelector(".page");
-    
+
     if (activeMenu) {
       categoryText.innerHTML = activeMenu.getAttribute("category");
       pageText.innerHTML = activeMenu.textContent;
       breadcrumbs.classList.remove("hidden");
     }
-    
+
     if (!activeMenu) {
       breadcrumbs.classList.add("hidden");
     }
@@ -52,36 +52,38 @@ const App = () => {
     };
 
     document.onclick = (e) => {
-      if (e.target.classList.contains('sidebar-wrapper') || e.target.classList.contains('menu-item')) {
+      if (
+        e.target.classList.contains("sidebar-wrapper") ||
+        e.target.classList.contains("menu-item")
+      ) {
         setIsShow(false);
       }
-      
-      if (e.target.classList.contains('search-popup')) {
-        setSearch(false)
-      }
-    }
 
-  },[isShow]);
+      if (e.target.classList.contains("search-popup")) {
+        setSearch(false);
+      }
+    };
+  }, [isShow]);
 
   document.onscroll = () => {
-    const positionScroll = window.scrollY
-    const navigation = document.querySelector('nav')
+    const positionScroll = window.scrollY;
+    const navigation = document.querySelector("nav");
     if (positionScroll > 40) {
-      navigation.classList.add('bg-white')
-      navigation.classList.add('dark:bg-slate-900')
+      navigation.classList.add("bg-white");
+      navigation.classList.add("dark:bg-slate-900");
     } else {
-      navigation.classList.remove('bg-white')
-      navigation.classList.remove('dark:bg-slate-900')
+      navigation.classList.remove("bg-white");
+      navigation.classList.remove("dark:bg-slate-900");
     }
-  }
+  };
 
   return (
     <HashRouter>
       <main>
-        <Header/>
+        <Header />
         <div className="content-wrapper">
-          <div className={`sidebar-wrapper ${isShow ? 'open' : ''}`}>
-            <Sidebar/>
+          <div className={`sidebar-wrapper ${isShow ? "open" : ""}`}>
+            <Sidebar />
           </div>
           <div className="content">
             <Routes>
@@ -94,9 +96,7 @@ const App = () => {
             </Routes>
           </div>
         </div>
-        {
-          search ? <Search /> : ''
-        }
+        {search ? <Search /> : ""}
       </main>
     </HashRouter>
   );
