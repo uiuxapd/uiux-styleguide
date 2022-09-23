@@ -9,9 +9,9 @@ export const btnSecondary = `
 <button class="bg-neutral-50 text-primary-main text-base py-2.5 px-5 rounded-lg shadow transition-all hover:bg-neutral-100 hover:text-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none">Button Title</button>`;
 
 export const btnOutlined = `
-<button class="bg-white border border-neutral-300 text-neutral-700 text-sm py-2 px-4 rounded-lg shadow transition-all hover:bg-neutral-100 hover:text-neutral-900 focus:ring-4 focus:ring-neutral-300 focus:shadow-none focus:outline-none">Button Title</button>
-<button class="bg-white border border-neutral-300 text-neutral-700 text-base py-2 px-4 rounded-lg shadow transition-all hover:bg-neutral-100 hover:text-neutral-900 focus:ring-4 focus:ring-neutral-300 focus:shadow-none focus:outline-none">Button Title</button>
-<button class="bg-white border border-neutral-300 text-neutral-700 text-base py-2.5 px-5 rounded-lg shadow transition-all hover:bg-neutral-100 hover:text-neutral-900 focus:ring-4 focus:ring-neutral-300 focus:shadow-none focus:outline-none">Button Title</button>`;
+<button class="bg-white text-neutral-700 text-sm py-2 px-4 outline outline-1 outline-neutral-300 rounded-lg shadow transition-all hover:bg-neutral-100 hover:text-neutral-900 focus:ring-4 focus:ring-neutral-300 focus:shadow-none focus:outline-none">Button Title</button>
+<button class="bg-white text-neutral-700 text-base py-2 px-4 outline outline-1 outline-neutral-300 rounded-lg shadow transition-all hover:bg-neutral-100 hover:text-neutral-900 focus:ring-4 focus:ring-neutral-300 focus:shadow-none focus:outline-none">Button Title</button>
+<button class="bg-white text-neutral-700 text-base py-2.5 px-5 outline outline-1 outline-neutral-300 rounded-lg shadow transition-all hover:bg-neutral-100 hover:text-neutral-900 focus:ring-4 focus:ring-neutral-300 focus:shadow-none focus:outline-none">Button Title</button>`;
 
 export const btnError = `
 <button class="bg-error-main text-white text-sm py-2 px-4 rounded-lg shadow transition-all hover:bg-error-hover focus:ring-4 focus:ring-error-focused focus:shadow-none focus:outline-none">Button Title</button>
@@ -56,9 +56,19 @@ export const btnTrailIcon = `
 </button>`;
 
 export const btnDisable = `
-<button class="bg-neutral-200 text-neutral-500 border border-neutral-300 text-sm py-2 px-4 rounded-lg cursor-not-allowed focus:outline-none">Button Title</button>
-<button class="bg-neutral-200 text-neutral-500 border border-neutral-300 text-base py-2 px-4 rounded-lg cursor-not-allowed focus:outline-none">Button Title</button>
-<button class="bg-neutral-200 text-neutral-500 border border-neutral-300 text-base  py-2.5 px-5 rounded-lg cursor-not-allowed focus:outline-none">Button Title</button>`;
+<button className="bg-neutral-200 text-neutral-500 outline outline-1 outline-neutral-300 py-2 px-4 text-sm rounded-lg cursor-not-allowed focus:outline-none">Button Title</button>
+<button className="bg-neutral-200 text-neutral-500 outline outline-1 outline-neutral-300 py-2 px-4 text-base rounded-lg cursor-not-allowed focus:outline-none">Button Title</button>
+<button className="bg-neutral-200 text-neutral-500 outline outline-1 outline-neutral-300 py-2.5 px-5 text-base rounded-lg cursor-not-allowed focus:outline-none">Button Title</button>
+<button className="flex items-center gap-2 bg-neutral-200 text-neutral-500 outline outline-1 outline-neutral-300 py-2.5 px-5 text-base rounded-lg cursor-not-allowed focus:outline-none">
+    <BeakerIcon className="w-5 h-5 stroke-2" /> 
+    Button Title
+</button>
+<button className="bg-neutral-200 text-neutral-500 outline outline-1 outline-neutral-300 p-2.5 rounded-lg cursor-not-allowed focus:outline-none">
+    <BeakerIcon className="w-6 h-6 stroke-2" />
+ </button>
+<button className="bg-neutral-200 text-neutral-500 outline outline-1 outline-neutral-300 p-2.5 rounded-full cursor-not-allowed focus:outline-none">
+    <BeakerIcon className="w-6 h-6 stroke-2" />
+</button>`;
 
 export const btnFullRounded = `
 <button class="bg-primary-main text-white text-sm py-2 px-4 rounded-full shadow transition-all border-none hover:bg-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none">Button Title</button>
