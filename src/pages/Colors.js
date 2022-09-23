@@ -1,4 +1,5 @@
-import React from "react";
+import { React, useRef } from "react";
+import BtnIndex from "../components/BtnIndex";
 
 const Colors = () => {
   let key = 0;
@@ -55,8 +56,15 @@ const Colors = () => {
     },
   ];
 
+  const toNeutralColor = useRef(null),
+    toPrimaryColor = useRef(null),
+    toSecondaryColor = useRef(null),
+    toSuccessColor = useRef(null),
+    toErrorColor = useRef(null);
+
   return (
     <>
+    <div className="content-left">
       <div className="pb-4 mb-10 border-b border-neutral-200 dark:border-neutral-700">
         <h1 className="mb-4">Colors</h1>
         <p className="leading-relaxed dark:text-neutral-300">
@@ -70,7 +78,7 @@ const Colors = () => {
       </div>
 
       <div className="flex flex-col gap-14">
-        <div className="flex flex-col gap-4">
+        <div ref={toNeutralColor} className="flex flex-col gap-4">
           <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
             Neutral Colors
           </h4>
@@ -90,7 +98,7 @@ const Colors = () => {
                       <div className="font-medium text-neutral-900 dark:text-neutral-200">
                         {name}
                       </div>
-                      <div className="text-neutral-700 dark:text-neutral-300">
+                      <div className="text-[0.70rem] text-neutral-700 dark:text-neutral-300">
                         {hex}
                       </div>
                     </div>
@@ -101,7 +109,7 @@ const Colors = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div ref={toPrimaryColor} className="flex flex-col gap-4">
           <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
             Primary Colors
           </h4>
@@ -121,7 +129,7 @@ const Colors = () => {
                       <div className="font-medium text-neutral-900 dark:text-neutral-200">
                         {name}
                       </div>
-                      <div className="text-neutral-700 dark:text-neutral-300">
+                      <div className="text-[0.70rem] text-neutral-700 dark:text-neutral-300">
                         {hex}
                       </div>
                     </div>
@@ -132,7 +140,7 @@ const Colors = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div ref={toSecondaryColor} className="flex flex-col gap-4">
           <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
             Secondary Colors
           </h4>
@@ -152,7 +160,7 @@ const Colors = () => {
                       <div className="font-medium text-neutral-900 dark:text-neutral-200">
                         {name}
                       </div>
-                      <div className="text-neutral-700 dark:text-neutral-300">
+                      <div className="text-[0.70rem] text-neutral-700 dark:text-neutral-300">
                         {hex}
                       </div>
                     </div>
@@ -163,7 +171,7 @@ const Colors = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div ref={toSuccessColor} className="flex flex-col gap-4">
           <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
             Success Colors
           </h4>
@@ -183,7 +191,7 @@ const Colors = () => {
                       <div className="font-medium text-neutral-900 dark:text-neutral-200">
                         {name}
                       </div>
-                      <div className="text-neutral-700 dark:text-neutral-300">
+                      <div className="text-[0.70rem] text-neutral-700 dark:text-neutral-300">
                         {hex}
                       </div>
                     </div>
@@ -194,7 +202,7 @@ const Colors = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div ref={toErrorColor} className="flex flex-col gap-4">
           <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
             Error Colors
           </h4>
@@ -214,7 +222,7 @@ const Colors = () => {
                       <div className="font-medium text-neutral-900 dark:text-neutral-200">
                         {name}
                       </div>
-                      <div className="text-neutral-700 dark:text-neutral-300">
+                      <div className="text-[0.70rem] text-neutral-700 dark:text-neutral-300">
                         {hex}
                       </div>
                     </div>
@@ -224,6 +232,17 @@ const Colors = () => {
             ))}
           </div>
         </div>
+      </div>
+      </div>
+      <div className="content-right">
+        <h6>on this page</h6>
+        <ul>
+          <li><BtnIndex reference={toNeutralColor} label="neutral colors" /></li>
+          <li><BtnIndex reference={toPrimaryColor} label="primary colors" /></li>
+          <li><BtnIndex reference={toSecondaryColor} label="secondary colors" /></li>
+          <li><BtnIndex reference={toSuccessColor} label="success colors" /></li>
+          <li><BtnIndex reference={toErrorColor} label="errorcolors" /></li>
+        </ul>
       </div>
     </>
   );

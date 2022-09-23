@@ -77,7 +77,7 @@ const Buttons = () => {
 
       <div className="flex flex-col gap-24">
         {/* Button Primary Start */}
-        <div className="flex flex-col gap-4">
+        <div ref={toPrimary} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
               <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -106,6 +106,7 @@ const Buttons = () => {
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnPrimaryCopy />
+                </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
@@ -120,7 +121,7 @@ const Buttons = () => {
           {/* Button Primary End */}
 
         {/* Button Secondary Start */}
-        <div className="flex flex-col gap-4">
+        <div ref={toSecondary} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
               <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -151,6 +152,7 @@ const Buttons = () => {
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnSecondaryCopy />
+                </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
@@ -165,7 +167,7 @@ const Buttons = () => {
           {/* Button Secondary End */}
 
         {/* Button Outlined Start */}
-        <div className="flex flex-col gap-4">
+        <div ref={toOutlined} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
               <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -196,6 +198,7 @@ const Buttons = () => {
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnOutlinedCopy />
+                </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
@@ -210,7 +213,7 @@ const Buttons = () => {
           {/* Button Outlined End */}
 
         {/* Button Error Start */}
-        <div className="flex flex-col gap-4">
+        <div ref={toError} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
               <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -241,6 +244,7 @@ const Buttons = () => {
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnErrorCopy />
+                </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
@@ -255,7 +259,7 @@ const Buttons = () => {
           {/* Button Error End */}
 
         {/* Button Text Start */}
-        <div className="flex flex-col gap-4">
+        <div ref={toTextOnly} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
               <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -286,6 +290,7 @@ const Buttons = () => {
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnTextCopy />
+                </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
@@ -300,7 +305,7 @@ const Buttons = () => {
           {/* Button Text End */}
 
         {/* Button Lead Icon Start */}
-        <div className="flex flex-col gap-4">
+        <div ref={toLeadIcon} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
               <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -331,6 +336,7 @@ const Buttons = () => {
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnLeadIconCopy />
+                </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
@@ -345,7 +351,7 @@ const Buttons = () => {
           {/* Button Lead Icon End */}
 
         {/* Button Trail Icon Start */}
-        <div className="flex flex-col gap-4">
+        <div ref={toTrailIcon} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
               <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -376,6 +382,7 @@ const Buttons = () => {
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnTrailIconCopy />
+                </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
@@ -390,7 +397,7 @@ const Buttons = () => {
           {/* Button Trail Icon End */}
 
         {/* Button Disable Start */}
-        <div className="flex flex-col gap-4">
+        <div ref={toDisabled} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
               <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -421,6 +428,7 @@ const Buttons = () => {
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnDisableCopy />
+                </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
@@ -436,7 +444,7 @@ const Buttons = () => {
 
 
         {/* Button Full Rounded Start */}
-        <div className="flex flex-col gap-4">
+        <div ref={toFullRounded} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
               <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -482,7 +490,7 @@ const Buttons = () => {
         {/* Button Full Rounded End */}
 
         {/* Button Icon only Start */}
-        <div className="flex flex-col gap-4">
+        <div ref={toIconOnly} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
               <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -528,7 +536,7 @@ const Buttons = () => {
         {/* Button Icon only End */}
 
         {/* Button Icon only Rounded Start */}
-        <div className="flex flex-col gap-4">
+        <div ref={toIconRounded} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
               <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -559,6 +567,7 @@ const Buttons = () => {
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnIconOnlyRoundedCopy />
+                </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
