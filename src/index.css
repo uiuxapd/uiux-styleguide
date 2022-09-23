@@ -46,7 +46,7 @@
   }
 
   main {
-    @apply dark:bg-slate-900 dark:text-white/20 before:bg-[url(./assets/background.svg)] before:bg-contain before:bg-no-repeat md:before:bg-right-top before:w-[100%] before:h-[100vh] before:absolute before:top-0 before:left-0;
+    @apply dark:bg-slate-900 dark:text-white/20 before:bg-[url(./assets/background-fix.svg)] before:bg-contain before:bg-no-repeat md:before:bg-right-top before:w-[100%] before:h-[100vh] before:absolute before:top-0 before:left-0;
   }
 
   /* Layout */
