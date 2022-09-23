@@ -63,8 +63,27 @@
   }
 
   .content-right {
-    @apply w-1/4 h-[calc(100vh_-_4rem)] ml-10 p-8 overflow-y-auto border-l border-primary-main/10 hidden empty:hidden md:sticky md:top-16
-    md:block
+    @apply w-1/3 lg:w-1/4 h-[calc(100vh_-_4rem)] ml-10 py-8 pl-6 overflow-y-auto border-l border-primary-main/10 hidden empty:hidden md:sticky md:top-16 md:block
+  }
+
+  .content-right h6 {
+    @apply capitalize font-semibold text-neutral-800 mb-6;
+  }
+
+  .content-right li {
+    @apply capitalize cursor-pointer mb-1;
+  }
+
+  .content-right li div {
+    @apply flex gap-2 ;
+  }
+
+  .content-right li:hover :where(div, svg) {
+    @apply text-primary-main;
+  }
+
+  .content-right li svg {
+    @apply w-4
   }
 
   /* Header */

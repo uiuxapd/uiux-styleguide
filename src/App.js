@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import { HashRouter, Routes, Route } from "react-router-dom";
 
-// Component
-
 // Pages
 import Sidebar from "./components/Sidebar";
 import Documentation from "./pages/Documentation";
@@ -87,20 +85,13 @@ const App = () => {
             <Sidebar />
           </div>
           <div className="content">
-            <div className="content-left">
-              <Routes>
-                <Route path="/documentation" element={<Documentation />} />
-                <Route path="/component" element={<Component />} />
-                <Route path="/buttons" element={<Buttons />} />
-                <Route path="/typography" element={<Typography />} />
-                <Route path="/tables" element={<Tables />} />
-              </Routes>
-            </div>
-            <div className="content-right">
-              {/* <Routes>
-                <Route path="/buttons" element={<BtnIndex />} />
-              </Routes> */}
-            </div>
+            <Routes>
+              <Route path="/documentation" element={<Documentation />} />
+              <Route path="/component" element={<Component />} />
+              <Route path="/buttons" element={<Buttons />} />
+              <Route path="/typography" element={<Typography />} />
+              <Route path="/tables" element={<Tables />} />
+            </Routes>
           </div>
         </div>
         {search ? <Search /> : ""}
