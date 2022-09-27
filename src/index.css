@@ -67,11 +67,11 @@
   }
 
   .content-right h6 {
-    @apply capitalize font-semibold text-neutral-800 mb-6;
+    @apply capitalize font-semibold text-neutral-800 mb-6 dark:text-neutral-300;
   }
 
   .content-right li {
-    @apply capitalize cursor-pointer mb-1;
+    @apply capitalize cursor-pointer mb-1 dark:text-neutral-100 dark:hover:text-primary-main;
   }
 
   .content-right li div {
@@ -79,7 +79,7 @@
   }
 
   .content-right li:hover :where(div, svg) {
-    @apply text-primary-main;
+    @apply text-primary-main dark:text-secondary-main;
   }
 
   .content-right li svg {

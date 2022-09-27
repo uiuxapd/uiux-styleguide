@@ -31,9 +31,11 @@ const BtnIndex = ({ reference, label }) => {
     const allBtnIndex = siblings(e.target.parentNode);
     allBtnIndex.forEach((item) => {
       item.children[0].classList.remove("text-primary-main");
+      item.children[0].classList.remove("dark:text-secondary-main");
     });
 
     e.target.classList.add("text-primary-main");
+    e.target.classList.add("dark:text-secondary-main");
   };
 
   return (
