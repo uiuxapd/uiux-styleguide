@@ -59,10 +59,17 @@ const App = () => {
         setIsShow(false);
       }
 
+      if (e.target.classList.contains("menu-item")) {
+        window.scrollTo({
+          top: 0
+        })
+      }
+
       if (e.target.classList.contains("search-popup")) {
         setSearch(false);
       }
     };
+
   }, [isShow]);
 
   document.onscroll = () => {

@@ -96,7 +96,7 @@ const Colors = () => {
                 {itemList.listColor.map(([className, colorName, hex]) => (
                   <div
                     key={indexList += 2}
-                    className={`flex-1 basis-1/6 ${itemList.title === "neutral colors" ? '' : 'first:basis-full'}`}
+                    className={`flex-1 ${itemList.title === "neutral colors" ? 'basis-1/6' : 'basis-1/4 md:first:basis-full'} md:basis-1/6 `}
                   >
                     <div className={`w-full h-10 mb-2 md:h-16 rounded-lg ${className}`}></div>
                     <div className="flex flex-col md:flex md:justify-between">
