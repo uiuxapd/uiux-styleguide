@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const BtnIndex = ({ reference, label }) => {
@@ -28,19 +28,13 @@ const BtnIndex = ({ reference, label }) => {
       return siblings;
     };
 
-    const allBtnIndex = siblings(e.target.parentNode)
+    const allBtnIndex = siblings(e.target.parentNode);
     allBtnIndex.forEach((item) => {
-      item.classList.remove("text-primary-main")
-    })
+      item.children[0].classList.remove("text-primary-main");
+    });
 
-    e.target.parentNode.classList.add("text-primary-main");
+    e.target.classList.add("text-primary-main");
   };
-
-  useEffect(() => {
-    // window.onscroll = () => {
-    //   window.scrollTo === reference.current.offsetTop ? console.log(true) : console.log(false)
-    // }
-  });
 
   return (
     <div onClick={handleClick}>
