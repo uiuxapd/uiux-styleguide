@@ -11,6 +11,7 @@ import Typography from "./pages/Typography";
 import Tables from "./pages/Tables";
 import Search from './components/Search'
 import Colors from "./pages/Colors";
+import Steper from "./pages/Steper";
 
 const App = () => {
   const [isShow, setIsShow] = useState(false);
@@ -93,6 +94,7 @@ const App = () => {
               <Route path="/buttons" element={<Buttons />} />
               <Route path="/typography" element={<Typography />} />
               <Route path="/tables" element={<Tables />} />
+              <Route path="/steper" element={<Steper />} />
             </Routes>
           </div>
         </div>
