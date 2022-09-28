@@ -24,7 +24,7 @@
   @apply flex flex-col gap-2 rounded-lg p-4 border border-neutral-200 dark:border-neutral-700;
 }
 .component-block {
-  @apply flex flex-col items-center gap-3 md:flex-row md:gap-8 md:justify-center;
+  @apply flex flex-col items-center gap-3;
 }
 .mid-section {
   @apply grid grid-cols-2 w-full border-x border-neutral-200 dark:border-neutral-600;

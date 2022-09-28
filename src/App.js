@@ -5,12 +5,12 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 // Pages
 import Sidebar from "./components/Sidebar";
 import Documentation from "./pages/Documentation";
-import Component from "./pages/Component";
 import Buttons from "./pages/Buttons";
 import Typography from "./pages/Typography";
 import Tables from "./pages/Tables";
 import Search from './components/Search'
 import Colors from "./pages/Colors";
+import Alerts from "./pages/Alerts";
 
 const App = () => {
   const [isShow, setIsShow] = useState(false);
@@ -88,9 +88,9 @@ const App = () => {
           <div className="content">
             <Routes>
               <Route path="/documentation" element={<Documentation />} />
-              <Route path="/component" element={<Component />} />
-              <Route path="/colors" element={<Colors />} />
+              <Route path="/alerts" element={<Alerts />} />
               <Route path="/buttons" element={<Buttons />} />
+              <Route path="/colors" element={<Colors />} />
               <Route path="/typography" element={<Typography />} />
               <Route path="/tables" element={<Tables />} />
             </Routes>
