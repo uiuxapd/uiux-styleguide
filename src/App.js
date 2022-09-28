@@ -11,6 +11,8 @@ import Tables from "./pages/Tables";
 import Search from './components/Search'
 import Colors from "./pages/Colors";
 import Alerts from "./pages/Alerts";
+import Steper from "./pages/Steper";
+
 
 const App = () => {
   const [isShow, setIsShow] = useState(false);
@@ -59,10 +61,17 @@ const App = () => {
         setIsShow(false);
       }
 
+      if (e.target.classList.contains("menu-item")) {
+        window.scrollTo({
+          top: 0
+        })
+      }
+
       if (e.target.classList.contains("search-popup")) {
         setSearch(false);
       }
     };
+
   }, [isShow]);
 
   document.onscroll = () => {
@@ -93,6 +102,7 @@ const App = () => {
               <Route path="/colors" element={<Colors />} />
               <Route path="/typography" element={<Typography />} />
               <Route path="/tables" element={<Tables />} />
+              <Route path="/steper" element={<Steper />} />
             </Routes>
           </div>
         </div>
