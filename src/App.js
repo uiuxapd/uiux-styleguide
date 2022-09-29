@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Pages
 import Sidebar from "./components/Sidebar";
@@ -12,6 +12,7 @@ import Search from './components/Search'
 import Colors from "./pages/Colors";
 import Alerts from "./pages/Alerts";
 import Steper from "./pages/Steper";
+import Introduction from "./pages/Introduction";
 
 
 const App = () => {
@@ -96,6 +97,8 @@ const App = () => {
           </div>
           <div className="content">
             <Routes>
+              <Route path="/" element={<Navigate to="/introduction" replace /> } />
+              <Route path="/introduction" element={<Introduction />} />
               <Route path="/documentation" element={<Documentation />} />
               <Route path="/alerts" element={<Alerts />} />
               <Route path="/buttons" element={<Buttons />} />

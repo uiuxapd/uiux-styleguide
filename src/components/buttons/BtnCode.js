@@ -419,7 +419,7 @@ export const BtnLeadIconCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation ">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
@@ -454,7 +454,7 @@ export const BtnLeadIconCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
@@ -488,7 +488,7 @@ export const BtnLeadIconCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation mr-4">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
@@ -712,7 +712,7 @@ export const BtnDisableCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation mr-4">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
@@ -745,7 +745,7 @@ export const BtnDisableCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
@@ -779,7 +779,7 @@ export const BtnDisableCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
@@ -902,7 +902,7 @@ export const BtnIconOnlyCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
@@ -935,7 +935,7 @@ export const BtnIconOnlyCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
@@ -967,7 +967,7 @@ export const BtnIconOnlyCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation mr-4">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
@@ -1010,7 +1010,7 @@ export const BtnIconOnlyRoundedCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
@@ -1043,7 +1043,7 @@ export const BtnIconOnlyRoundedCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
@@ -1075,7 +1075,7 @@ export const BtnIconOnlyRoundedCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation mr-4">{">"}</span>
               <br />
-              <span className="punctuation">{"<"}</span>
+              <span className="punctuation ml-4">{"<"}</span>
               <span className="tag">BeakerIcon&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
