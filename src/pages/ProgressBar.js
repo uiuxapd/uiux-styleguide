@@ -6,19 +6,14 @@ import {
   TabPreviewActive,
   TabPreviewInactive,
 } from "../components/BtnCond";
-import { PlayIcon } from "@heroicons/react/24/solid";
+import {
+  DefaultProgressBar,
+  ProgressBarWithText,
+} from "../components/progressbar/ProgressBarComponent";
 
 const ProgressBar = () => {
-  const [progress, setProgress] = useState(20);
-  const handleProgress = () => {
-    const frequency = (3 * 1000) / 100;
-    let defaultState = 20;
-    const interval = setInterval(() => {
-      if (defaultState >= 100) clearInterval(interval);
-      setProgress(defaultState);
-      defaultState++;
-    }, frequency);
-  };
+  const [progressPercentage, setProgressPercentage] = useState(20);
+
   return (
     <>
       <div className="content-left">
@@ -72,8 +67,23 @@ const ProgressBar = () => {
                   <div className="component-section">
                     <div className="component-block">
                       {/* <DefaultAlert /> */}
-                      <div className="bg-primary-border h-3 w-full rounded-full">
-                        <div className="bg-primary-main h-3 w-56 rounded-full sm:w-96"></div>
+                      <DefaultProgressBar percentage={progressPercentage} />
+                      <div class="group relative inline-block mt-12 w-full">
+                        <input
+                          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+                          type="range"
+                          name="points"
+                          min="0"
+                          max="100"
+                          value={progressPercentage}
+                          onChange={(e) => {
+                            setProgressPercentage(e.target.value);
+                          }}
+                        />
+                        <div class="absolute bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 whitespace-nowrap rounded-lg bg-neutral-900 py-2 px-4 text-xs font-medium text-white opacity-0 group-hover:opacity-100 transition-all delay-200">
+                          <span class="absolute -bottom-1 left-1/2 -z-10 h-5 w-5 -translate-x-1/2 rotate-45 rounded bg-neutral-900"></span>
+                          Slide me baby
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -84,9 +94,9 @@ const ProgressBar = () => {
               </Tab.Panels>
             </Tab.Group>
           </div>
-          {/* Default Progress Bar */}
+          {/* Default Progress Bar End*/}
 
-          {/* Default Progress Bar Start */}
+          {/* Progress Bar with Text Start */}
           <div className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center justify-between">
@@ -122,34 +132,7 @@ const ProgressBar = () => {
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block items-start">
-                      <div className="flex w-full justify-end">
-                        <div class="group relative inline-block">
-                          <button
-                            className="p-2 rounded-lg focus:ring-4 focus:ring-neutral-200 text-neutral-700"
-                            onClick={handleProgress}
-                          >
-                            <PlayIcon className="icon24" />
-                          </button>
-                          <div class="absolute bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 whitespace-nowrap rounded bg-neutral-900 py-2 px-4 text-xs font-medium text-white opacity-0 group-hover:opacity-100">
-                            <span class="absolute -bottom-1 left-1/2 -z-10 h-5 w-5 -translate-x-1/2 rotate-45 rounded bg-neutral-900"></span>
-                            Click me baby
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex justify-between w-full">
-                        <span className="font-medium text-primary-main dark:text-white">
-                          Uploading <span className="animate-pulse">...</span>
-                        </span>
-                        <span className="font-medium text-primary-main dark:text-white">
-                          {progress}%
-                        </span>
-                      </div>
-                      <div className="bg-primary-border h-3 w-full rounded-full">
-                        <div
-                          className="bg-primary-main h-3 w-1/5 rounded-full"
-                          style={{ width: `${progress}%` }}
-                        ></div>
-                      </div>
+                      <ProgressBarWithText />
                     </div>
                   </div>
                 </Tab.Panel>
@@ -159,7 +142,7 @@ const ProgressBar = () => {
               </Tab.Panels>
             </Tab.Group>
           </div>
-          {/* Default Progress Bar */}
+          {/* Progress Bar with Text Bar */}
         </div>
       </div>
     </>
