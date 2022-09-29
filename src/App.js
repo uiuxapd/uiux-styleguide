@@ -13,6 +13,7 @@ import Colors from "./pages/Colors";
 import Alerts from "./pages/Alerts";
 import Steper from "./pages/Steper";
 import Introduction from "./pages/Introduction";
+import ProgressBar from "./pages/ProgressBar";
 
 
 const App = () => {
@@ -103,6 +104,7 @@ const App = () => {
               <Route path="/alerts" element={<Alerts />} />
               <Route path="/buttons" element={<Buttons />} />
               <Route path="/colors" element={<Colors />} />
+              <Route path="/progressbar" element={<ProgressBar />} />
               <Route path="/typography" element={<Typography />} />
               <Route path="/tables" element={<Tables />} />
               <Route path="/steper" element={<Steper />} />
