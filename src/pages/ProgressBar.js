@@ -123,17 +123,17 @@ const ProgressBar = () => {
                   <div className="component-section">
                     <div className="component-block items-start">
                       <div className="flex w-full justify-end">
-                          <div class="group relative inline-block">
-                            <button
-                              className="p-2 rounded-lg focus:ring-4 focus:ring-neutral-200 text-neutral-700"
-                              onClick={handleProgress}
-                            >
-                              <PlayIcon className="icon24" />
-                            </button>
-                            <div class="absolute bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 whitespace-nowrap rounded bg-neutral-900 py-2 px-4 text-xs font-medium text-white opacity-0 group-hover:opacity-100">
-                              <span class="absolute -bottom-1 left-1/2 -z-10 h-5 w-5 -translate-x-1/2 rotate-45 rounded bg-neutral-900"></span>
-                              Click me baby
-                            </div>
+                        <div class="group relative inline-block">
+                          <button
+                            className="p-2 rounded-lg focus:ring-4 focus:ring-neutral-200 text-neutral-700"
+                            onClick={handleProgress}
+                          >
+                            <PlayIcon className="icon24" />
+                          </button>
+                          <div class="absolute bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 whitespace-nowrap rounded bg-neutral-900 py-2 px-4 text-xs font-medium text-white opacity-0 group-hover:opacity-100">
+                            <span class="absolute -bottom-1 left-1/2 -z-10 h-5 w-5 -translate-x-1/2 rotate-45 rounded bg-neutral-900"></span>
+                            Click me baby
+                          </div>
                         </div>
                       </div>
                       <div className="flex justify-between w-full">
