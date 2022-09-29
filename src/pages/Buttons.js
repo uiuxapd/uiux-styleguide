@@ -80,7 +80,7 @@ const Buttons = () => {
         <div ref={toPrimary} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                 Button Primary
               </h4>
               <div className="flex items-center">
@@ -104,16 +104,23 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnPrimaryCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
-                  <BtnPrimary />
+                  <div className="component-section">
+                    <div className="component-block sm:flex-row sm:justify-center">
+                    <BtnPrimary />
+                    </div>
+                  </div>
+
                 </Tab.Panel>
                 <Tab.Panel>
+                  <div className="overflow">
                   <BtnPrimaryCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -124,7 +131,7 @@ const Buttons = () => {
         <div ref={toSecondary} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                 Button Secondary
               </h4>
               <div className="flex items-center">
@@ -150,16 +157,23 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnSecondaryCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
-                  <BtnSecondary />
+                  <div className="component-section">
+                    <div className="component-block sm:flex-row sm:justify-center">
+                    <BtnSecondary />
+                    </div>
+                  </div>
+
                 </Tab.Panel>
                 <Tab.Panel>
+                  <div className="overflow">
                   <BtnSecondaryCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -170,7 +184,7 @@ const Buttons = () => {
         <div ref={toOutlined} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                 Button Outlined
               </h4>
               <div className="flex items-center">
@@ -196,16 +210,22 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnOutlinedCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
+                  <div className="component-section">
+                    <div className="component-block sm:flex-row sm:justify-center">
                   <BtnOutlined />
+                    </div>
+                  </div>
                 </Tab.Panel>
                 <Tab.Panel>
+                  <div className="overflow">
                   <BtnOutlinedCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -216,7 +236,7 @@ const Buttons = () => {
         <div ref={toError} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                 Button Error
               </h4>
               <div className="flex items-center">
@@ -242,16 +262,22 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnErrorCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
+                  <div className="component-section">
+                    <div className="component-block sm:flex-row sm:justify-center">
                   <BtnError />
+                    </div>
+                  </div>
                 </Tab.Panel>
                 <Tab.Panel>
+                  <div className="overflow">
                   <BtnErrorCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -262,7 +288,7 @@ const Buttons = () => {
         <div ref={toTextOnly} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                 Button Text Only
               </h4>
               <div className="flex items-center">
@@ -288,16 +314,22 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnTextCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
+                  <div className="component-section">
+                    <div className="component-block sm:flex-row sm:justify-center">
                   <BtnText />
+                    </div>
+                  </div>
                 </Tab.Panel>
-                <Tab.Panel>
+                <Tab.Panel className="overflow">
+                  <div>
                   <BtnTextCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -308,7 +340,7 @@ const Buttons = () => {
         <div ref={toLeadIcon} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                 Button with Lead Icon
               </h4>
               <div className="flex items-center">
@@ -334,16 +366,22 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnLeadIconCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
+                  <div className="component-section">
+                    <div className="component-block sm:flex-row sm:justify-center">
                   <BtnLeadIcon />
+                    </div>
+                  </div>
                 </Tab.Panel>
                 <Tab.Panel>
+                  <div className="overflow">
                   <BtnLeadIconCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -354,7 +392,7 @@ const Buttons = () => {
         <div ref={toTrailIcon} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                 Button with Trail Icon
               </h4>
               <div className="flex items-center">
@@ -380,16 +418,22 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnTrailIconCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
+                <div className="component-section">
+                    <div className="component-block sm:flex-row sm:justify-center">
                   <BtnTrailIcon />
+                  </div>
+                  </div>
                 </Tab.Panel>
                 <Tab.Panel>
+                  <div className="overflow">
                   <BtnTrailIconCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -400,7 +444,7 @@ const Buttons = () => {
         <div ref={toDisabled} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                 Disable Button
               </h4>
               <div className="flex items-center">
@@ -426,16 +470,22 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnDisableCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
+                <div className="component-section">
+                    <div className="component-block sm:flex-row sm:justify-center">
                   <BtnDisable />
+                  </div>
+                  </div>
                 </Tab.Panel>
                 <Tab.Panel>
+                  <div className="overflow">
                   <BtnDisableCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -447,7 +497,7 @@ const Buttons = () => {
         <div ref={toFullRounded} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                 Full Rounded Button
               </h4>
               <div className="flex items-center">
@@ -473,16 +523,22 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnRoundedCopy />
               </div>
             </div>
             <Tab.Panels>
               <Tab.Panel>
+                <div className="component-section">
+                <div className="component-block sm:flex-row sm:justify-center">
                 <BtnFullRounded />
+                  </div>
+                </div>
               </Tab.Panel>
               <Tab.Panel>
+                <div className="overflow">
                 <BtnFullRoundedCode />
+                </div>
               </Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
@@ -493,7 +549,7 @@ const Buttons = () => {
         <div ref={toIconOnly} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                 Button Icon Only
               </h4>
               <div className="flex items-center">
@@ -519,16 +575,22 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnIconOnlyCopy />
               </div>
             </div>
             <Tab.Panels>
               <Tab.Panel>
+                <div className="component-section">
+                  <div className="component-block sm:flex-row sm:justify-center">
                 <BtnIconOnly />
+                  </div>
+                </div>
               </Tab.Panel>
               <Tab.Panel>
+                <div className="overflow">
                 <BtnIconOnlyCode />
+                </div>
               </Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
@@ -539,7 +601,7 @@ const Buttons = () => {
         <div ref={toIconRounded} className="flex flex-col gap-4">
           <Tab.Group>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                 Button Icon Only Rounded
               </h4>
               <div className="flex items-center">
@@ -565,16 +627,22 @@ const Buttons = () => {
                     )}
                   </Tab>
                 </Tab.List>
-                <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                 <BtnIconOnlyRoundedCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel>
+                  <div className="component-section">
+                  <div className="component-block sm:flex-row sm:justify-center">
                   <BtnIconOnlyRounded />
+                  </div>
+                  </div>
                 </Tab.Panel>
                 <Tab.Panel>
+                  <div className="overflow">
                   <BtnIconOnlyRoundedCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>

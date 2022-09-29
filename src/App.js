@@ -5,12 +5,14 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 // Pages
 import Sidebar from "./components/Sidebar";
 import Documentation from "./pages/Documentation";
-import Component from "./pages/Component";
 import Buttons from "./pages/Buttons";
 import Typography from "./pages/Typography";
 import Tables from "./pages/Tables";
 import Search from './components/Search'
 import Colors from "./pages/Colors";
+import Alerts from "./pages/Alerts";
+import Steper from "./pages/Steper";
+
 
 const App = () => {
   const [isShow, setIsShow] = useState(false);
@@ -59,10 +61,17 @@ const App = () => {
         setIsShow(false);
       }
 
+      if (e.target.classList.contains("menu-item")) {
+        window.scrollTo({
+          top: 0
+        })
+      }
+
       if (e.target.classList.contains("search-popup")) {
         setSearch(false);
       }
     };
+
   }, [isShow]);
 
   document.onscroll = () => {
@@ -88,11 +97,12 @@ const App = () => {
           <div className="content">
             <Routes>
               <Route path="/documentation" element={<Documentation />} />
-              <Route path="/component" element={<Component />} />
-              <Route path="/colors" element={<Colors />} />
+              <Route path="/alerts" element={<Alerts />} />
               <Route path="/buttons" element={<Buttons />} />
+              <Route path="/colors" element={<Colors />} />
               <Route path="/typography" element={<Typography />} />
               <Route path="/tables" element={<Tables />} />
+              <Route path="/steper" element={<Steper />} />
             </Routes>
           </div>
         </div>
