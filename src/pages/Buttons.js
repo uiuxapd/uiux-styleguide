@@ -75,51 +75,50 @@ const Buttons = () => {
           </p>
         </div>
 
-      <div className="flex flex-col gap-24">
-        {/* Button Primary Start */}
-        <div ref={toPrimary} className="flex flex-col gap-4">
-          <Tab.Group>
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                Button Primary
-              </h4>
-              <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {selected ? (
-                          <TabPreviewActive />
-                        ) : (
-                          <TabPreviewInactive />
-                        )}
-                      </div>
-                    )}
-                  </Tab>
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                      </div>
-                    )}
-                  </Tab>
-                </Tab.List>
-                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                <BtnPrimaryCopy />
+        <div className="flex flex-col gap-24">
+          {/* Button Primary Start */}
+          <div ref={toPrimary} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Button Primary
+                </h4>
+                <div className="flex items-center">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <BtnPrimaryCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block sm:flex-row sm:justify-center">
-                    <BtnPrimary />
+                      <BtnPrimary />
                     </div>
                   </div>
-
                 </Tab.Panel>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="overflow">
-                  <BtnPrimaryCode />
+                    <BtnPrimaryCode />
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
@@ -127,52 +126,51 @@ const Buttons = () => {
           </div>
           {/* Button Primary End */}
 
-        {/* Button Secondary Start */}
-        <div ref={toSecondary} className="flex flex-col gap-4">
-          <Tab.Group>
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                Button Secondary
-              </h4>
-              <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? (
-                          <TabPreviewActive />
-                        ) : (
-                          <TabPreviewInactive />
-                        )}
-                      </div>
-                    )}
-                  </Tab>
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                      </div>
-                    )}
-                  </Tab>
-                </Tab.List>
-                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                <BtnSecondaryCopy />
+          {/* Button Secondary Start */}
+          <div ref={toSecondary} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Button Secondary
+                </h4>
+                <div className="flex items-center">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <BtnSecondaryCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block sm:flex-row sm:justify-center">
-                    <BtnSecondary />
+                      <BtnSecondary />
                     </div>
                   </div>
-
                 </Tab.Panel>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="overflow">
-                  <BtnSecondaryCode />
+                    <BtnSecondaryCode />
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
@@ -180,51 +178,51 @@ const Buttons = () => {
           </div>
           {/* Button Secondary End */}
 
-        {/* Button Outlined Start */}
-        <div ref={toOutlined} className="flex flex-col gap-4">
-          <Tab.Group>
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                Button Outlined
-              </h4>
-              <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? (
-                          <TabPreviewActive />
-                        ) : (
-                          <TabPreviewInactive />
-                        )}
-                      </div>
-                    )}
-                  </Tab>
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                      </div>
-                    )}
-                  </Tab>
-                </Tab.List>
-                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                <BtnOutlinedCopy />
+          {/* Button Outlined Start */}
+          <div ref={toOutlined} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Button Outlined
+                </h4>
+                <div className="flex items-center">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <BtnOutlinedCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block sm:flex-row sm:justify-center">
-                  <BtnOutlined />
+                      <BtnOutlined />
                     </div>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="overflow">
-                  <BtnOutlinedCode />
+                    <BtnOutlinedCode />
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
@@ -232,51 +230,51 @@ const Buttons = () => {
           </div>
           {/* Button Outlined End */}
 
-        {/* Button Error Start */}
-        <div ref={toError} className="flex flex-col gap-4">
-          <Tab.Group>
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                Button Error
-              </h4>
-              <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? (
-                          <TabPreviewActive />
-                        ) : (
-                          <TabPreviewInactive />
-                        )}
-                      </div>
-                    )}
-                  </Tab>
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                      </div>
-                    )}
-                  </Tab>
-                </Tab.List>
-                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                <BtnErrorCopy />
+          {/* Button Error Start */}
+          <div ref={toError} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Button Error
+                </h4>
+                <div className="flex items-center">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <BtnErrorCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block sm:flex-row sm:justify-center">
-                  <BtnError />
+                      <BtnError />
                     </div>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="overflow">
-                  <BtnErrorCode />
+                    <BtnErrorCode />
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
@@ -284,51 +282,51 @@ const Buttons = () => {
           </div>
           {/* Button Error End */}
 
-        {/* Button Text Start */}
-        <div ref={toTextOnly} className="flex flex-col gap-4">
-          <Tab.Group>
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                Button Text Only
-              </h4>
-              <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? (
-                          <TabPreviewActive />
-                        ) : (
-                          <TabPreviewInactive />
-                        )}
-                      </div>
-                    )}
-                  </Tab>
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                      </div>
-                    )}
-                  </Tab>
-                </Tab.List>
-                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                <BtnTextCopy />
+          {/* Button Text Start */}
+          <div ref={toTextOnly} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Button Text Only
+                </h4>
+                <div className="flex items-center">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <BtnTextCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block sm:flex-row sm:justify-center">
-                  <BtnText />
+                      <BtnText />
                     </div>
                   </div>
                 </Tab.Panel>
                 <Tab.Panel className="overflow">
                   <div>
-                  <BtnTextCode />
+                    <BtnTextCode />
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
@@ -336,51 +334,51 @@ const Buttons = () => {
           </div>
           {/* Button Text End */}
 
-        {/* Button Lead Icon Start */}
-        <div ref={toLeadIcon} className="flex flex-col gap-4">
-          <Tab.Group>
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                Button with Lead Icon
-              </h4>
-              <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? (
-                          <TabPreviewActive />
-                        ) : (
-                          <TabPreviewInactive />
-                        )}
-                      </div>
-                    )}
-                  </Tab>
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                      </div>
-                    )}
-                  </Tab>
-                </Tab.List>
-                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                <BtnLeadIconCopy />
+          {/* Button Lead Icon Start */}
+          <div ref={toLeadIcon} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Button with Lead Icon
+                </h4>
+                <div className="flex items-center">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <BtnLeadIconCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block sm:flex-row sm:justify-center">
-                  <BtnLeadIcon />
+                      <BtnLeadIcon />
                     </div>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="overflow">
-                  <BtnLeadIconCode />
+                    <BtnLeadIconCode />
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
@@ -388,51 +386,51 @@ const Buttons = () => {
           </div>
           {/* Button Lead Icon End */}
 
-        {/* Button Trail Icon Start */}
-        <div ref={toTrailIcon} className="flex flex-col gap-4">
-          <Tab.Group>
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                Button with Trail Icon
-              </h4>
-              <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? (
-                          <TabPreviewActive />
-                        ) : (
-                          <TabPreviewInactive />
-                        )}
-                      </div>
-                    )}
-                  </Tab>
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                      </div>
-                    )}
-                  </Tab>
-                </Tab.List>
-                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                <BtnTrailIconCopy />
+          {/* Button Trail Icon Start */}
+          <div ref={toTrailIcon} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Button with Trail Icon
+                </h4>
+                <div className="flex items-center">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <BtnTrailIconCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
-                <div className="component-section">
+                <Tab.Panel className="outline-none">
+                  <div className="component-section">
                     <div className="component-block sm:flex-row sm:justify-center">
-                  <BtnTrailIcon />
-                  </div>
+                      <BtnTrailIcon />
+                    </div>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="overflow">
-                  <BtnTrailIconCode />
+                    <BtnTrailIconCode />
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
@@ -440,51 +438,51 @@ const Buttons = () => {
           </div>
           {/* Button Trail Icon End */}
 
-        {/* Button Disable Start */}
-        <div ref={toDisabled} className="flex flex-col gap-4">
-          <Tab.Group>
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                Disable Button
-              </h4>
-              <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? (
-                          <TabPreviewActive />
-                        ) : (
-                          <TabPreviewInactive />
-                        )}
-                      </div>
-                    )}
-                  </Tab>
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                      </div>
-                    )}
-                  </Tab>
-                </Tab.List>
-                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                <BtnDisableCopy />
+          {/* Button Disable Start */}
+          <div ref={toDisabled} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Disable Button
+                </h4>
+                <div className="flex items-center">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <BtnDisableCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
-                <div className="component-section">
+                <Tab.Panel className="outline-none">
+                  <div className="component-section">
                     <div className="component-block sm:flex-row sm:justify-center">
-                  <BtnDisable />
-                  </div>
+                      <BtnDisable />
+                    </div>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="overflow">
-                  <BtnDisableCode />
+                    <BtnDisableCode />
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
@@ -492,156 +490,155 @@ const Buttons = () => {
           </div>
           {/* Button Disable End */}
 
-
-        {/* Button Full Rounded Start */}
-        <div ref={toFullRounded} className="flex flex-col gap-4">
-          <Tab.Group>
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                Full Rounded Button
-              </h4>
-              <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? (
-                          <TabPreviewActive />
-                        ) : (
-                          <TabPreviewInactive />
-                        )}
-                      </div>
-                    )}
-                  </Tab>
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                      </div>
-                    )}
-                  </Tab>
-                </Tab.List>
-                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                <BtnRoundedCopy />
-              </div>
-            </div>
-            <Tab.Panels>
-              <Tab.Panel>
-                <div className="component-section">
-                <div className="component-block sm:flex-row sm:justify-center">
-                <BtnFullRounded />
-                  </div>
-                </div>
-              </Tab.Panel>
-              <Tab.Panel>
-                <div className="overflow">
-                <BtnFullRoundedCode />
-                </div>
-              </Tab.Panel>
-            </Tab.Panels>
-          </Tab.Group>
-        </div>
-        {/* Button Full Rounded End */}
-
-        {/* Button Icon only Start */}
-        <div ref={toIconOnly} className="flex flex-col gap-4">
-          <Tab.Group>
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                Button Icon Only
-              </h4>
-              <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? (
-                          <TabPreviewActive />
-                        ) : (
-                          <TabPreviewInactive />
-                        )}
-                      </div>
-                    )}
-                  </Tab>
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                      </div>
-                    )}
-                  </Tab>
-                </Tab.List>
-                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                <BtnIconOnlyCopy />
-              </div>
-            </div>
-            <Tab.Panels>
-              <Tab.Panel>
-                <div className="component-section">
-                  <div className="component-block sm:flex-row sm:justify-center">
-                <BtnIconOnly />
-                  </div>
-                </div>
-              </Tab.Panel>
-              <Tab.Panel>
-                <div className="overflow">
-                <BtnIconOnlyCode />
-                </div>
-              </Tab.Panel>
-            </Tab.Panels>
-          </Tab.Group>
-        </div>
-        {/* Button Icon only End */}
-
-        {/* Button Icon only Rounded Start */}
-        <div ref={toIconRounded} className="flex flex-col gap-4">
-          <Tab.Group>
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                Button Icon Only Rounded
-              </h4>
-              <div className="flex items-center">
-                <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? (
-                          <TabPreviewActive />
-                        ) : (
-                          <TabPreviewInactive />
-                        )}
-                      </div>
-                    )}
-                  </Tab>
-                  <Tab as={Fragment}>
-                    {({ selected }) => (
-                      <div className="focus:outline-none">
-                        {" "}
-                        {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                      </div>
-                    )}
-                  </Tab>
-                </Tab.List>
-                <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                <BtnIconOnlyRoundedCopy />
+          {/* Button Full Rounded Start */}
+          <div ref={toFullRounded} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Full Rounded Button
+                </h4>
+                <div className="flex items-center">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <BtnRoundedCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
-                  <div className="component-block sm:flex-row sm:justify-center">
-                  <BtnIconOnlyRounded />
-                  </div>
+                    <div className="component-block sm:flex-row sm:justify-center">
+                      <BtnFullRounded />
+                    </div>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="overflow">
-                  <BtnIconOnlyRoundedCode />
+                    <BtnFullRoundedCode />
+                  </div>
+                </Tab.Panel>
+              </Tab.Panels>
+            </Tab.Group>
+          </div>
+          {/* Button Full Rounded End */}
+
+          {/* Button Icon only Start */}
+          <div ref={toIconOnly} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Button Icon Only
+                </h4>
+                <div className="flex items-center">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <BtnIconOnlyCopy />
+                </div>
+              </div>
+              <Tab.Panels>
+                <Tab.Panel className="outline-none">
+                  <div className="component-section">
+                    <div className="component-block sm:flex-row sm:justify-center">
+                      <BtnIconOnly />
+                    </div>
+                  </div>
+                </Tab.Panel>
+                <Tab.Panel className="outline-none">
+                  <div className="overflow">
+                    <BtnIconOnlyCode />
+                  </div>
+                </Tab.Panel>
+              </Tab.Panels>
+            </Tab.Group>
+          </div>
+          {/* Button Icon only End */}
+
+          {/* Button Icon only Rounded Start */}
+          <div ref={toIconRounded} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Button Icon Only Rounded
+                </h4>
+                <div className="flex items-center">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {" "}
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <BtnIconOnlyRoundedCopy />
+                </div>
+              </div>
+              <Tab.Panels>
+                <Tab.Panel className="outline-none">
+                  <div className="component-section">
+                    <div className="component-block sm:flex-row sm:justify-center">
+                      <BtnIconOnlyRounded />
+                    </div>
+                  </div>
+                </Tab.Panel>
+                <Tab.Panel className="outline-none">
+                  <div className="overflow">
+                    <BtnIconOnlyRoundedCode />
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
@@ -653,17 +650,42 @@ const Buttons = () => {
       <div className="content-right">
         <h6>on this page</h6>
         <ul>
-          <li><BtnIndex reference={toPrimary} label="button primary" /></li>
-          <li><BtnIndex reference={toSecondary} label="button secondary" /></li>
-          <li><BtnIndex reference={toOutlined} label="button Outlined" /></li>
-          <li><BtnIndex reference={toError} label="button Error" /></li>
-          <li><BtnIndex reference={toTextOnly} label="button text only" /></li>
-          <li><BtnIndex reference={toLeadIcon} label="button with lead icon" /></li>
-          <li><BtnIndex reference={toTrailIcon} label="button with trail icon" /></li>
-          <li><BtnIndex reference={toDisabled} label="button disabled" /></li>
-          <li><BtnIndex reference={toFullRounded} label="button full rounded" /></li>
-          <li><BtnIndex reference={toIconOnly} label="button icon only" /></li>
-          <li><BtnIndex reference={toIconRounded} label="button icon only rounded" /></li>
+          <li>
+            <BtnIndex reference={toPrimary} label="button primary" />
+          </li>
+          <li>
+            <BtnIndex reference={toSecondary} label="button secondary" />
+          </li>
+          <li>
+            <BtnIndex reference={toOutlined} label="button Outlined" />
+          </li>
+          <li>
+            <BtnIndex reference={toError} label="button Error" />
+          </li>
+          <li>
+            <BtnIndex reference={toTextOnly} label="button text only" />
+          </li>
+          <li>
+            <BtnIndex reference={toLeadIcon} label="button with lead icon" />
+          </li>
+          <li>
+            <BtnIndex reference={toTrailIcon} label="button with trail icon" />
+          </li>
+          <li>
+            <BtnIndex reference={toDisabled} label="button disabled" />
+          </li>
+          <li>
+            <BtnIndex reference={toFullRounded} label="button full rounded" />
+          </li>
+          <li>
+            <BtnIndex reference={toIconOnly} label="button icon only" />
+          </li>
+          <li>
+            <BtnIndex
+              reference={toIconRounded}
+              label="button icon only rounded"
+            />
+          </li>
         </ul>
       </div>
     </>

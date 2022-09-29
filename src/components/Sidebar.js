@@ -8,7 +8,7 @@ const Sidebar = () => {
     {
       category: "getting started",
       listMenu: [
-        ["introduction", "/intro"],
+        ["introduction", "/introduction"],
         ["documentation", "/documentation"],
       ],
     },

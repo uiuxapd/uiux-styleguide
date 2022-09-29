@@ -1,6 +1,14 @@
 import { Tab } from "@headlessui/react";
 import React, { Fragment } from "react";
 import {
+  AlertWithDescriptionCode,
+  DefaultAlertCode,
+} from "../components/alerts/AlertCode";
+import {
+  AlertDefaultCopy,
+  AlertWithDescriptionCopy,
+} from "../components/alerts/AlertCopyAction";
+import {
   AlertWithDescription,
   DefaultAlert,
 } from "../components/alerts/AlertsComponent";
@@ -57,19 +65,21 @@ const Alerts = () => {
                     </Tab>
                   </Tab.List>
                   <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                  {/* <BtnPrimaryCopy /> */}
+                  <AlertDefaultCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block">
                       <DefaultAlert />
                     </div>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>
-                  <div className="overflow">Test</div>
+                <Tab.Panel className="outline-none">
+                  <div className="overflow">
+                    <DefaultAlertCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -81,7 +91,7 @@ const Alerts = () => {
             <Tab.Group>
               <div className="flex items-center justify-between">
                 <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                  {/* Alert with Description */}
+                  Alert with Description
                 </h4>
                 <div className="flex items-center">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
@@ -105,19 +115,21 @@ const Alerts = () => {
                     </Tab>
                   </Tab.List>
                   <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                  {/* <BtnPrimaryCopy /> */}
+                  <AlertWithDescriptionCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block">
                       <AlertWithDescription />
                     </div>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>
-                  <div className="overflow">Test</div>
+                <Tab.Panel className="outline-none">
+                  <div className="overflow">
+                    <AlertWithDescriptionCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
