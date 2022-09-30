@@ -18,7 +18,7 @@ const Sidebar = () => {
         ["alerts", "/alerts"],
         ["buttons", "/buttons"],
         ["colors", "/colors"],
-        ["progressbar", "/progressbar"],
+        ["progress bar", "/progressbar"],
         ["typography", "/typography"],
         ["table", "/tables"],
         ["steper", "/steper"],
