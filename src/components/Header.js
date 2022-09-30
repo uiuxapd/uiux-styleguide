@@ -27,15 +27,16 @@ const Header = () => {
       <div className="header-top">
         <div className="logo-wrapper">
           <NavLink to="/introduction">
-          <div className="flex gap-2 mr-4">
-            <img src={logo} alt="UI/UX Logo" className="h-12" />
-            <div className="flex flex-col items-center">
-              <span className="text-2xl font-normal text-[#222D51] dark:text-white translate-y-1">
-                uiux
+            <div className="flex gap-4 mr-4 items-center">
+              <img
+                src={logo}
+                alt="UI/UX Logo"
+                className="h-10 -translate-y-1"
+              />
+              <span className="text-lg font-bold text-neutral-600 dark:text-neutral-50">
+                UI/UX IT APD
               </span>
-              <span className="text-xs font-bold text-[#A8A8A8]">IT APD</span>
             </div>
-          </div>
           </NavLink>
           <div className="tagline">
             made with love <span>❤</span>
