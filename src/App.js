@@ -14,6 +14,7 @@ import Alerts from "./pages/Alerts";
 import Steps from "./pages/Steps";
 import Introduction from "./pages/Introduction";
 import ProgressBar from "./pages/ProgressBar";
+import Accordion from "./pages/Accordion";
 
 
 const App = () => {
@@ -101,6 +102,7 @@ const App = () => {
               <Route path="/" element={<Navigate to="/introduction" replace /> } />
               <Route path="/introduction" element={<Introduction />} />
               <Route path="/documentation" element={<Documentation />} />
+              <Route path="/accordions" element={<Accordion />} />
               <Route path="/alerts" element={<Alerts />} />
               <Route path="/buttons" element={<Buttons />} />
               <Route path="/colors" element={<Colors />} />
