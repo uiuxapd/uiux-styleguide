@@ -42,7 +42,7 @@ const Tables = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">1</td>
                         <td className="px-4 text-neutral-900">Ahmad Hilwan Diwa</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -52,7 +52,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">2</td>
                         <td className="px-4 text-neutral-900">Arpin Hervian</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -62,7 +62,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">3</td>
                         <td className="px-4 text-neutral-900">Arvanzo Rifnazky</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -72,7 +72,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">4</td>
                         <td className="px-4 text-neutral-900">Aswin Santosa</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -82,7 +82,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">5</td>
                         <td className="px-4 text-neutral-900">Ilham Jaka Elandra</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -92,7 +92,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">6</td>
                         <td className="px-4 text-neutral-900">Juanda Esa Putra</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -102,7 +102,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">7</td>
                         <td className="px-4 text-neutral-900">Mohammad Fahmi Maulana</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -112,7 +112,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">8</td>
                         <td className="px-4 text-neutral-900">Musa Pardede</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -122,7 +122,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">9</td>
                         <td className="px-4 text-neutral-900">Piki Rahmadi</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -132,7 +132,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white">
+                      <tr className="h-[40px] bg-white">
                         <td className="px-4 text-neutral-900 rounded-bl">10</td>
                         <td className="px-4 text-neutral-900">Sonia</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -209,7 +209,7 @@ const Tables = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">1</td>
                         <td className="px-4 text-neutral-900">Ahmad Hilwan Diwa</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -225,7 +225,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">2</td>
                         <td className="px-4 text-neutral-900">Arpin Hervian</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -241,7 +241,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">3</td>
                         <td className="px-4 text-neutral-900">Arvanzo Rifnazky</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -257,7 +257,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">4</td>
                         <td className="px-4 text-neutral-900">Aswin Santosa</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -273,7 +273,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">5</td>
                         <td className="px-4 text-neutral-900">Ilham Jaka Elandra</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -289,7 +289,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">6</td>
                         <td className="px-4 text-neutral-900">Juanda Esa Putra</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -305,7 +305,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">7</td>
                         <td className="px-4 text-neutral-900">Mohammad Fahmi Maulana</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -321,7 +321,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">8</td>
                         <td className="px-4 text-neutral-900">Musa Pardede</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -337,7 +337,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white border-b border-neutral-200">
+                      <tr className="h-[40px] bg-white border-b border-neutral-200">
                         <td className="px-4 text-neutral-900">9</td>
                         <td className="px-4 text-neutral-900">Piki Rahmadi</td>
                         <td className="px-4 text-neutral-900">-</td>
@@ -353,7 +353,7 @@ const Tables = () => {
                           <EllipsisHorizontalIcon className="icon24" />
                         </td>
                       </tr>
-                      <tr className="h-[60px] bg-white">
+                      <tr className="h-[40px] bg-white">
                         <td className="px-4 text-neutral-900">10</td>
                         <td className="px-4 text-neutral-900">Sonia</td>
                         <td className="px-4 text-neutral-900">-</td>
