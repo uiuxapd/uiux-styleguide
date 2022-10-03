@@ -15,6 +15,7 @@ const Sidebar = () => {
     {
       category: "component",
       listMenu: [
+        ["accordions", "/accordions"],
         ["alerts", "/alerts"],
         ["buttons", "/buttons"],
         ["colors", "/colors"],
