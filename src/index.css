@@ -59,7 +59,7 @@
   }
 
   .content-left {
-    @apply flex-1 py-6;
+    @apply flex-1 py-6 mb-24;
   }
 
   .content-right {

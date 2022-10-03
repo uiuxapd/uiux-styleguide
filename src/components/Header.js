@@ -6,6 +6,8 @@ import {
   SunIcon,
   MoonIcon,
 } from "@heroicons/react/24/outline";
+import logo from "../assets/uiux-logo.svg";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   let [isDark, setIsDark] = useState(false);
@@ -24,18 +26,29 @@ const Header = () => {
     <nav>
       <div className="header-top">
         <div className="logo-wrapper">
-          UI/UIX Styleguide
+          <NavLink to="/introduction">
+            <div className="flex gap-4 mr-4 items-center">
+              <img
+                src={logo}
+                alt="UI/UX Logo"
+                className="h-10 -translate-y-1"
+              />
+              <span className="text-lg font-bold text-neutral-600 dark:text-neutral-50">
+                UI/UX IT APD
+              </span>
+            </div>
+          </NavLink>
           <div className="tagline">
             made with love <span>❤</span>
           </div>
         </div>
         <div className="header-action">
           <div className="search">
-            <MagnifyingGlassIcon className="stroke-neutral-600 dark:stroke-neutral-300"/>
+            <MagnifyingGlassIcon className="stroke-neutral-600 dark:stroke-neutral-300" />
           </div>
           <div className="dark-mode-btn">
             <SunIcon className={`${isDark ? "left-0" : "-left-full"}`} />
-            <MoonIcon className={`${isDark ? "-right-full" : "right-0"}`}/>
+            <MoonIcon className={`${isDark ? "-right-full" : "right-0"}`} />
           </div>
         </div>
       </div>

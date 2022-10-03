@@ -10,6 +10,14 @@ import {
   DefaultProgressBar,
   ProgressBarWithText,
 } from "../components/progressbar/ProgressBarComponent";
+import {
+  DefaultProgressCode,
+  ProgressWithTextCode,
+} from "../components/progressbar/ProgressCode";
+import {
+  ProgressDefaultCopy,
+  ProgressWithTextCopy,
+} from "../components/progressbar/ProgressCopyAction";
 
 const ProgressBar = () => {
   const [progressPercentage, setProgressPercentage] = useState(20);
@@ -59,14 +67,13 @@ const ProgressBar = () => {
                     </Tab>
                   </Tab.List>
                   <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                  {/* <AlertDefaultCopy /> */}
+                  <ProgressDefaultCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block">
-                      {/* <DefaultAlert /> */}
                       <DefaultProgressBar percentage={progressPercentage} />
                       <div class="group relative inline-block mt-12 w-full">
                         <input
@@ -80,8 +87,8 @@ const ProgressBar = () => {
                             setProgressPercentage(e.target.value);
                           }}
                         />
-                        <div class="absolute bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 whitespace-nowrap rounded-lg bg-neutral-900 py-2 px-4 text-xs font-medium text-white opacity-0 group-hover:opacity-100 transition-all delay-200">
-                          <span class="absolute -bottom-1 left-1/2 -z-10 h-5 w-5 -translate-x-1/2 rotate-45 rounded bg-neutral-900"></span>
+                        <div class="absolute hidden md:block bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 whitespace-nowrap rounded-lg bg-neutral-900 dark:bg-neutral-200 py-2 px-4 text-xs font-medium text-white dark:text-neutral-900 opacity-0 group-hover:opacity-100 transition-all delay-200">
+                          <span class="absolute -bottom-1 left-1/2 -z-10 h-6 w-6 -translate-x-1/2 rotate-45 rounded bg-neutral-900 dark:bg-neutral-200"></span>
                           Slide me baby
                         </div>
                       </div>
@@ -89,7 +96,9 @@ const ProgressBar = () => {
                   </div>
                 </Tab.Panel>
                 <Tab.Panel className="outline-none">
-                  <div className="overflow">{/* <DefaultAlertCode /> */}</div>
+                  <div className="overflow">
+                    <DefaultProgressCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -125,7 +134,7 @@ const ProgressBar = () => {
                     </Tab>
                   </Tab.List>
                   <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                  {/* <AlertDefaultCopy /> */}
+                  <ProgressWithTextCopy />
                 </div>
               </div>
               <Tab.Panels>
@@ -137,7 +146,9 @@ const ProgressBar = () => {
                   </div>
                 </Tab.Panel>
                 <Tab.Panel className="outline-none">
-                  <div className="overflow">{/* <DefaultAlertCode /> */}</div>
+                  <div className="overflow">
+                    <ProgressWithTextCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
