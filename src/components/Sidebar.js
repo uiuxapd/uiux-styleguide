@@ -21,7 +21,7 @@ const Sidebar = () => {
         ["progress bar", "/progressbar"],
         ["typography", "/typography"],
         ["table", "/tables"],
-        ["steper", "/steper"],
+        ["steps", "/steps"],
       ],
     },
   ];
