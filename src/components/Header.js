@@ -27,7 +27,7 @@ const Header = () => {
       <div className="header-top">
         <div className="logo-wrapper">
           <NavLink to="/introduction">
-            <div className="flex gap-4 mr-4 items-center">
+            <div className="flex gap-2 mr-4 items-center">
               <img
                 src={logo}
                 alt="UI/UX Logo"

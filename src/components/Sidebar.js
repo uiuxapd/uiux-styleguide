@@ -15,13 +15,14 @@ const Sidebar = () => {
     {
       category: "component",
       listMenu: [
+        ["accordions", "/accordions"],
         ["alerts", "/alerts"],
         ["buttons", "/buttons"],
         ["colors", "/colors"],
         ["progress bar", "/progressbar"],
         ["typography", "/typography"],
         ["table", "/tables"],
-        ["steper", "/steper"],
+        ["steps", "/steps"],
       ],
     },
   ];
