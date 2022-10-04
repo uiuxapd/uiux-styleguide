@@ -10,6 +10,10 @@ import {
   BasicTable,
   ScrollingTable,
 } from "../components/Table/TableComponent";
+import {
+  BasicTableCode,
+  ScrollingTableCode,
+} from "../components/Table/TableCode";
 import { React, useRef } from "react";
 import BtnIndex from "../components/BtnIndex";
 
@@ -73,11 +77,11 @@ const Tables = () => {
                     </div>
                 </Tab.Panel>
                 <Tab.Panel>
-                    <div className="component-section">
-                        <div className="component-block">
-                            <></>
-                        </div>
+                  <div className="component-section">
+                    <div className="component-block">
+                        <BasicTableCode />
                     </div>
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
               </Tab.Group>
@@ -128,7 +132,7 @@ const Tables = () => {
                     <Tab.Panel>
                       <div className="component-section">
                         <div className="component-block">
-                          <></>
+                          <ScrollingTableCode />
                         </div>
                       </div>
                     </Tab.Panel>
