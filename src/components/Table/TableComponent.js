@@ -133,7 +133,6 @@ const BasicTable = () => {
                     </div>
                 </div>
                     <div>
-                    <div>
                       <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         &#171;
                       </button>
@@ -156,7 +155,6 @@ const BasicTable = () => {
                         &#187;
                       </button>
                     </div>
-                  </div>
             </div>
         </>
     );
@@ -359,7 +357,6 @@ const ScrollingTable = () => {
                     </div>
                 </div>
                     <div>
-                    <div>
                       <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         &#171;
                       </button>
@@ -382,8 +379,8 @@ const ScrollingTable = () => {
                         &#187;
                       </button>
                     </div>
-                  </div>
             </div>
+            
         </>        
     );
 };  

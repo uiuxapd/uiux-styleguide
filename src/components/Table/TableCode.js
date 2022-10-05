@@ -6,194 +6,229 @@ const BasicTableCode = () => {
             <pre>
                 <code lang="html">
                     <div className="flex flex-col">
-                        <span className="comment">{"<!-- Simple -->"}</span>
+                        <span className="comment">{"<!-- Basic -->"}</span>
                         <span className="token">
                             <span className="punctuation">{"<"}</span>
-                            <span className="tag">ul&nbsp;</span>
+                            <span className="tag">table&nbsp;</span>
                             <span className="attr-name">class</span>
                             <span className="punctuation">=</span>
                             <span className="punctuation">"</span>
                             <span className="attr-value">
-                                flex items-center
+                                w-max sm:w-full table-auto text-sm
                             </span>
                             <span className="punctuation">"</span>
                             <span className="punctuation">{">"}</span>
                             <br/>
-                            {/* Step 1 */}
+
+                            <pre className="ml-5">
+                                <span className="punctuation">{"<"}</span>
+                                <span className="tag">thead&nbsp;</span>
+                                <span className="attr-name">class</span>
+                                <span className="punctuation">=</span>
+                                <span className="punctuation">"</span>
+                                <span className="attr-value">
+                                    h-12 bg-primary-surface text-primary-main text-left
+                                </span>
+                                <span className="punctuation">"</span>
+                                <span className="punctuation">{">"}</span>
+                                <br/>
                                 <pre className="ml-5">
                                     <span className="punctuation">{"<"}</span>
-                                    <span className="tag">li</span>
+                                    <span className="tag">tr</span>
                                     <span className="punctuation">{">"}</span>
-                                    <br/>
+                                    <br />
                                     <pre className="ml-5">
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">div&nbsp;</span>
+                                        <span className="tag">th&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            h-2 w-60 bg-primary-main border border-primary-main rounded-full mr-3.5 mb-4
+                                            px-4 rounded-tl
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Label</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">div</span>
+                                        <span className="tag">th</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="comment ml-2">{"<-- First Column -->"}</span>
+                                        <br />
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="tag">th&nbsp;</span>
+                                        <span className="attr-name">class</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            px-4
+                                        </span>
+                                        <span className="punctuation">"</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Label</span>
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="punctuation">{"/"}</span>
+                                        <span className="tag">th</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <br />
+                                        <span>...</span>
+                                        <br />
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="tag">th&nbsp;</span>
+                                        <span className="attr-name">class</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            px-4
+                                        </span>
+                                        <span className="punctuation">"</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Label</span>
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="punctuation">{"/"}</span>
+                                        <span className="tag">th</span>
                                         <span className="punctuation">{">"}</span>
                                         <br />
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">label&nbsp;</span>
+                                        <span className="tag">th&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            text-base font-bold text-primary-main
+                                            px-4 rounded-tr text-center
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
-                                        <span className="punctuation">Step 1</span>
+                                        <span className="punctuation">Label</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">label</span>
+                                        <span className="tag">th</span>
                                         <span className="punctuation">{">"}</span>
+                                        <span className="comment ml-2">{"<-- Action Last Column -->"}</span>
                                     </pre>
                                     <span className="punctuation">{"<"}</span>
                                     <span className="punctuation">{"/"}</span>
-                                    <span className="tag">li</span>
+                                    <span className="tag">tr</span>
                                     <span className="punctuation">{">"}</span>
                                 </pre>
-                                {/* Step 2 */}
+                                <span className="punctuation">{"<"}</span>
+                                <span className="punctuation">{"/"}</span>
+                                <span className="tag">thead</span>
+                                <span className="punctuation">{">"}</span>                                    
+                            </pre>
+
+                            <pre className="ml-5">
+                                <span className="punctuation">{"<"}</span>
+                                <span className="tag">tbody</span>
+                                <span className="punctuation">{">"}</span>
+                                <br/>
                                 <pre className="ml-5">
+                                    <span>...</span>
+                                    <br />
                                     <span className="punctuation">{"<"}</span>
-                                    <span className="tag">li</span>
+                                    <span className="tag">tr&nbsp;</span>
+                                    <span className="attr-name">class</span>
+                                    <span className="punctuation">=</span>
+                                    <span className="punctuation">"</span>
+                                    <span className="attr-value">
+                                        h-10 bg-white border-b border-neutral-200
+                                    </span>
+                                    <span className="punctuation">"</span>
                                     <span className="punctuation">{">"}</span>
-                                    <br/>
+                                    <br />
                                     <pre className="ml-5">
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">div&nbsp;</span>
+                                        <span className="tag">td&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            h-2 w-60 bg-primary-main border border-primary-main rounded-full mr-3.5 mb-4
+                                            px-4 text-neutral-900
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Data</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">div</span>
+                                        <span className="tag">td</span>
                                         <span className="punctuation">{">"}</span>
                                         <br />
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">label&nbsp;</span>
+                                        <span className="tag">td&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            text-base font-bold text-primary-main
+                                            px-4 text-neutral-900
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
-                                        <span className="punctuation">Step 2</span>
+                                        <span className="punctuation">Data</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">label</span>
+                                        <span className="tag">td</span>
                                         <span className="punctuation">{">"}</span>
-                                    </pre>
-                                    <span className="punctuation">{"<"}</span>
-                                    <span className="punctuation">{"/"}</span>
-                                    <span className="tag">li</span>
-                                    <span className="punctuation">{">"}</span>
-                                </pre>
-                                {/* Step 3 */}
-                                <pre className="ml-5">
-                                    <span className="punctuation">{"<"}</span>
-                                    <span className="tag">li</span>
-                                    <span className="punctuation">{">"}</span>
-                                    <br/>
-                                    <pre className="ml-5">
+                                        <br />
+                                        <span>...</span>
+                                        <br />
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">div&nbsp;</span>
+                                        <span className="tag">td&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            h-2 w-60 bg-primary-focused border border-primary-focused rounded-full mr-3.5 mb-4
+                                            px-4 text-neutral-900
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Data</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">div</span>
+                                        <span className="tag">td</span>
                                         <span className="punctuation">{">"}</span>
                                         <br />
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">label&nbsp;</span>
+                                        <span className="tag">td&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            text-base font-normal text-primary-focused
+                                            px-4 text-neutral-900
+                                        </span>
+                                        <span className="tag">&nbsp;</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-name">align</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            center
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
-                                        <span className="punctuation">Step 3</span>
+                                        <span className="punctuation">Data</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">label</span>
+                                        <span className="tag">td</span>
                                         <span className="punctuation">{">"}</span>
+                                        <span className="comment ml-2">{"<-- Action Last Column -->"}</span>
                                     </pre>
                                     <span className="punctuation">{"<"}</span>
                                     <span className="punctuation">{"/"}</span>
-                                    <span className="tag">li</span>
+                                    <span className="tag">tr</span>
                                     <span className="punctuation">{">"}</span>
+                                    <br />
+                                    <span>...</span>
                                 </pre>
-                                {/* Step 4 */}
-                                <pre className="ml-5">
-                                    <span className="punctuation">{"<"}</span>
-                                    <span className="tag">li</span>
-                                    <span className="punctuation">{">"}</span>
-                                    <br/>
-                                    <pre className="ml-5">
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="tag">div&nbsp;</span>
-                                        <span className="attr-name">class</span>
-                                        <span className="punctuation">=</span>
-                                        <span className="punctuation">"</span>
-                                        <span className="attr-value">
-                                            h-2 w-60 bg-primary-focused border border-primary-focused rounded-full mr-3.5 mb-4
-                                        </span>
-                                        <span className="punctuation">"</span>
-                                        <span className="punctuation">{">"}</span>
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="punctuation">{"/"}</span>
-                                        <span className="tag">div</span>
-                                        <span className="punctuation">{">"}</span>
-                                        <br />
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="tag">label&nbsp;</span>
-                                        <span className="attr-name">class</span>
-                                        <span className="punctuation">=</span>
-                                        <span className="punctuation">"</span>
-                                        <span className="attr-value">
-                                            text-base font-normal text-primary-focused
-                                        </span>
-                                        <span className="punctuation">"</span>
-                                        <span className="punctuation">{">"}</span>
-                                        <span className="punctuation">Step 4</span>
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="punctuation">{"/"}</span>
-                                        <span className="tag">label</span>
-                                        <span className="punctuation">{">"}</span>
-                                    </pre>
-                                    <span className="punctuation">{"<"}</span>
-                                    <span className="punctuation">{"/"}</span>
-                                    <span className="tag">li</span>
-                                    <span className="punctuation">{">"}</span>
-                                </pre>
+                                <span className="punctuation">{"<"}</span>
+                                <span className="punctuation">{"/"}</span>
+                                <span className="tag">tbody</span>
+                                <span className="punctuation">{">"}</span>                                    
+                            </pre>
+
+
                             <span className="punctuation">{"<"}</span>
                             <span className="punctuation">{"/"}</span>
-                            <span className="tag">ul</span>
+                            <span className="tag">table</span>
                             <span className="punctuation">{">"}</span>
                         </span>
                     </div>
@@ -202,413 +237,255 @@ const BasicTableCode = () => {
         </div>
     );
 };
+
 const ScrollingTableCode = () => {
-    return(
+    return (
         <div className="overflow">
             <pre>
                 <code lang="html">
                     <div className="flex flex-col">
-                        <span className="comment">{"<!-- Step Circle -->"}</span>
+                        <span className="comment">{"<!-- Basic -->"}</span>
                         <span className="token">
                             <span className="punctuation">{"<"}</span>
-                            <span className="tag">ul&nbsp;</span>
+                            <span className="tag">div&nbsp;</span>
                             <span className="attr-name">class</span>
                             <span className="punctuation">=</span>
                             <span className="punctuation">"</span>
                             <span className="attr-value">
-                                flex items-center
+                                w-[calc(100vw_-_90vw)] min-w-full overflow-x-auto rounded
                             </span>
                             <span className="punctuation">"</span>
-                            <span className="punctuation ">{">"}</span>
-                            <br />
-                            {/* step 1 */}
+                            <span className="punctuation">{">"}</span>
+                            <br/>
+
+                            <pre className="ml-5">
+                            <span className="punctuation">{"<"}</span>
+                            <span className="tag">table&nbsp;</span>
+                            <span className="attr-name">class</span>
+                            <span className="punctuation">=</span>
+                            <span className="punctuation">"</span>
+                            <span className="attr-value">
+                                w-max text-sm
+                            </span>
+                            <span className="punctuation">"</span>
+                            <span className="punctuation">{">"}</span>
+                            <br/>
+
                             <pre className="ml-5">
                                 <span className="punctuation">{"<"}</span>
-                                <span className="tag">li</span>
+                                <span className="tag">thead&nbsp;</span>
+                                <span className="attr-name">class</span>
+                                <span className="punctuation">=</span>
+                                <span className="punctuation">"</span>
+                                <span className="attr-value">
+                                    h-12 bg-primary-surface text-primary-main text-left
+                                </span>
+                                <span className="punctuation">"</span>
                                 <span className="punctuation">{">"}</span>
+                                <br/>
                                 <pre className="ml-5">
                                     <span className="punctuation">{"<"}</span>
-                                    <span className="tag">div&nbsp;</span>
-                                    <span className="attr-name">class</span>
-                                    <span className="punctuation">=</span>
-                                    <span className="punctuation">"</span>
-                                    <span className="attr-value">
-                                        flex justify-center items-center mb-5
-                                    </span>
-                                    <span className="punctuation">"</span>
+                                    <span className="tag">tr</span>
                                     <span className="punctuation">{">"}</span>
+                                    <br />
                                     <pre className="ml-5">
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">div&nbsp;</span>
+                                        <span className="tag">th&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            flex items-center
+                                            px-4
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
-                                        <pre className="ml-5">
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="tag">span&nbsp;</span>
-                                            <span className="attr-name">class</span>
-                                            <span className="punctuation">=</span>
-                                            <span className="punctuation">"</span>
-                                            <span className="attr-value">
-                                                h-8 w-8 flex justify-center items-center bg-white border 
-                                                border-solid rounded-full border-primary-main text-primary-main
-                                            </span>
-                                            <span className="punctuation">"</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <pre className="ml-5">
-                                                <span className="punctuation">{"<"}</span>
-                                                <span className="tag">CheckIcon&nbsp;</span>
-                                                <span className="attr-name">class</span>
-                                                <span className="punctuation">=</span>
-                                                <span className="punctuation">"</span>
-                                                <span className="attr-value">
-                                                    icon16
-                                                </span>
-                                                <span className="punctuation">{"/"}</span>
-                                                <span className="punctuation">{">"}</span>
-                                            </pre>
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="punctuation">{"/"}</span>
-                                            <span className="tag">span</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <br />
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="tag">span&nbsp;</span>
-                                            <span className="attr-name">class</span>
-                                            <span className="punctuation">=</span>
-                                            <span className="punctuation">"</span>
-                                            <span className="attr-value">
-                                                mx-3.5 text-primary-main text-base font-normal
-                                            </span>
-                                            <span className="punctuation">"</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <span className="punctuation">Pertama</span>
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="punctuation">{"/"}</span>
-                                            <span className="tag">span</span>
-                                            <span className="punctuation">{">"}</span>
-                                        </pre>
+                                        <span className="punctuation">Label</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">div</span>
+                                        <span className="tag">th</span>
                                         <span className="punctuation">{">"}</span>
-                                    </pre>
-                                    <pre className="ml-5">
+                                        <span className="comment ml-2">{"<-- First Column -->"}</span>
+                                        <br />
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">span&nbsp;</span>
+                                        <span className="tag">th&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            h-px w-40 bg-primary-main border border-primary-main rounded-full mr-3.5
+                                            px-4
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Label</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">span</span>
+                                        <span className="tag">th</span>
                                         <span className="punctuation">{">"}</span>
+                                        <br />
+                                        <span>...</span>
+                                        <br />
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="tag">th&nbsp;</span>
+                                        <span className="attr-name">class</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            px-4
+                                        </span>
+                                        <span className="punctuation">"</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Label</span>
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="punctuation">{"/"}</span>
+                                        <span className="tag">th</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <br />
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="tag">th&nbsp;</span>
+                                        <span className="attr-name">class</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            px-4 text-center
+                                        </span>
+                                        <span className="punctuation">"</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Label</span>
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="punctuation">{"/"}</span>
+                                        <span className="tag">th</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="comment ml-2">{"<-- Action Last Column -->"}</span>
                                     </pre>
                                     <span className="punctuation">{"<"}</span>
                                     <span className="punctuation">{"/"}</span>
-                                    <span className="tag">div</span>
+                                    <span className="tag">tr</span>
                                     <span className="punctuation">{">"}</span>
                                 </pre>
                                 <span className="punctuation">{"<"}</span>
                                 <span className="punctuation">{"/"}</span>
-                                <span className="tag">li</span>
-                                <span className="punctuation">{">"}</span>
+                                <span className="tag">thead</span>
+                                <span className="punctuation">{">"}</span>                                    
                             </pre>
-                            {/* Step 2 */}
+
                             <pre className="ml-5">
                                 <span className="punctuation">{"<"}</span>
-                                <span className="tag">li</span>
+                                <span className="tag">tbody</span>
                                 <span className="punctuation">{">"}</span>
+                                <br/>
                                 <pre className="ml-5">
+                                    <span>...</span>
+                                    <br />
                                     <span className="punctuation">{"<"}</span>
-                                    <span className="tag">div&nbsp;</span>
+                                    <span className="tag">tr&nbsp;</span>
                                     <span className="attr-name">class</span>
                                     <span className="punctuation">=</span>
                                     <span className="punctuation">"</span>
                                     <span className="attr-value">
-                                        flex justify-center items-center mb-5
+                                        h-10 bg-white border-b border-neutral-200
                                     </span>
                                     <span className="punctuation">"</span>
                                     <span className="punctuation">{">"}</span>
+                                    <br />
                                     <pre className="ml-5">
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">div&nbsp;</span>
+                                        <span className="tag">td&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            flex items-center
+                                            px-4 text-neutral-900
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
-                                        <pre className="ml-5">
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="tag">span&nbsp;</span>
-                                            <span className="attr-name">class</span>
-                                            <span className="punctuation">=</span>
-                                            <span className="punctuation">"</span>
-                                            <span className="attr-value">
-                                                h-8 w-8 flex justify-center items-center bg-primary-main border 
-                                                border-solid rounded-full border-primary-main text-white
-                                            </span>
-                                            <span className="punctuation">"</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <pre className="ml-5">
-                                                <span className="punctuation">2</span>
-                                            </pre>
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="punctuation">{"/"}</span>
-                                            <span className="tag">span</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <br />
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="tag">span&nbsp;</span>
-                                            <span className="attr-name">class</span>
-                                            <span className="punctuation">=</span>
-                                            <span className="punctuation">"</span>
-                                            <span className="attr-value">
-                                                mx-3.5 text-primary-main text-base font-bold
-                                            </span>
-                                            <span className="punctuation">"</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <span className="punctuation">Kedua</span>
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="punctuation">{"/"}</span>
-                                            <span className="tag">span</span>
-                                            <span className="punctuation">{">"}</span>
-                                        </pre>
+                                        <span className="punctuation">Data</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">div</span>
+                                        <span className="tag">td</span>
                                         <span className="punctuation">{">"}</span>
-                                    </pre>
-                                    <pre className="ml-5">
+                                        <br />
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">span&nbsp;</span>
+                                        <span className="tag">td&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            h-px w-40 bg-primary-focused border border-primary-focused rounded-full mr-3.5
+                                            px-4 text-neutral-900
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Data</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">span</span>
+                                        <span className="tag">td</span>
                                         <span className="punctuation">{">"}</span>
-                                    </pre>
-                                    <span className="punctuation">{"<"}</span>
-                                    <span className="punctuation">{"/"}</span>
-                                    <span className="tag">div</span>
-                                    <span className="punctuation">{">"}</span>
-                                </pre>
-                                <span className="punctuation">{"<"}</span>
-                                <span className="punctuation">{"/"}</span>
-                                <span className="tag">li</span>
-                                <span className="punctuation">{">"}</span>
-                            </pre>
-                            {/* Step 3 */}
-                            <pre className="ml-5">
-                                <span className="punctuation">{"<"}</span>
-                                <span className="tag">li</span>
-                                <span className="punctuation">{">"}</span>
-                                <pre className="ml-5">
-                                    <span className="punctuation">{"<"}</span>
-                                    <span className="tag">div&nbsp;</span>
-                                    <span className="attr-name">class</span>
-                                    <span className="punctuation">=</span>
-                                    <span className="punctuation">"</span>
-                                    <span className="attr-value">
-                                        flex justify-center items-center mb-5
-                                    </span>
-                                    <span className="punctuation">"</span>
-                                    <span className="punctuation">{">"}</span>
-                                    <pre className="ml-5">
+                                        <br />
+                                        <span>...</span>
+                                        <br />
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">div&nbsp;</span>
+                                        <span className="tag">td&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            flex items-center
+                                            px-4 text-neutral-900
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
-                                        <pre className="ml-5">
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="tag">span&nbsp;</span>
-                                            <span className="attr-name">class</span>
-                                            <span className="punctuation">=</span>
-                                            <span className="punctuation">"</span>
-                                            <span className="attr-value">
-                                                h-8 w-8 flex justify-center items-center bg-primary-focused border 
-                                                border-solid rounded-full border-primary-focused text-white
-                                            </span>
-                                            <span className="punctuation">"</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <pre className="ml-5">
-                                                <span className="punctuation">3</span>
-                                            </pre>
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="punctuation">{"/"}</span>
-                                            <span className="tag">span</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <br />
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="tag">span&nbsp;</span>
-                                            <span className="attr-name">class</span>
-                                            <span className="punctuation">=</span>
-                                            <span className="punctuation">"</span>
-                                            <span className="attr-value">
-                                                mx-3.5 text-primary-focused text-base font-normal
-                                            </span>
-                                            <span className="punctuation">"</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <span className="punctuation">Ketiga</span>
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="punctuation">{"/"}</span>
-                                            <span className="tag">span</span>
-                                            <span className="punctuation">{">"}</span>
-                                        </pre>
+                                        <span className="punctuation">Data</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">div</span>
+                                        <span className="tag">td</span>
                                         <span className="punctuation">{">"}</span>
-                                    </pre>
-                                    <pre className="ml-5">
+                                        <br />
                                         <span className="punctuation">{"<"}</span>
-                                        <span className="tag">span&nbsp;</span>
+                                        <span className="tag">td&nbsp;</span>
                                         <span className="attr-name">class</span>
                                         <span className="punctuation">=</span>
                                         <span className="punctuation">"</span>
                                         <span className="attr-value">
-                                            h-px w-40 bg-primary-focused border border-primary-focused rounded-full mr-3.5
+                                            px-4 text-neutral-900
+                                        </span>
+                                        <span className="tag">&nbsp;</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-name">align</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            center
                                         </span>
                                         <span className="punctuation">"</span>
                                         <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Data</span>
                                         <span className="punctuation">{"<"}</span>
                                         <span className="punctuation">{"/"}</span>
-                                        <span className="tag">span</span>
+                                        <span className="tag">td</span>
                                         <span className="punctuation">{">"}</span>
+                                        <span className="comment ml-2">{"<-- Action Last Column -->"}</span>
                                     </pre>
                                     <span className="punctuation">{"<"}</span>
                                     <span className="punctuation">{"/"}</span>
-                                    <span className="tag">div</span>
+                                    <span className="tag">tr</span>
                                     <span className="punctuation">{">"}</span>
+                                    <br />
+                                    <span>...</span>
                                 </pre>
                                 <span className="punctuation">{"<"}</span>
                                 <span className="punctuation">{"/"}</span>
-                                <span className="tag">li</span>
-                                <span className="punctuation">{">"}</span>
+                                <span className="tag">tbody</span>
+                                <span className="punctuation">{">"}</span>                                    
                             </pre>
-                            {/* Step 4 */}
-                            <pre className="ml-5">
-                                <span className="punctuation">{"<"}</span>
-                                <span className="tag">li</span>
-                                <span className="punctuation">{">"}</span>
-                                <pre className="ml-5">
-                                    <span className="punctuation">{"<"}</span>
-                                    <span className="tag">div&nbsp;</span>
-                                    <span className="attr-name">class</span>
-                                    <span className="punctuation">=</span>
-                                    <span className="punctuation">"</span>
-                                    <span className="attr-value">
-                                        flex justify-center items-center mb-5
-                                    </span>
-                                    <span className="punctuation">"</span>
-                                    <span className="punctuation">{">"}</span>
-                                    <pre className="ml-5">
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="tag">div&nbsp;</span>
-                                        <span className="attr-name">class</span>
-                                        <span className="punctuation">=</span>
-                                        <span className="punctuation">"</span>
-                                        <span className="attr-value">
-                                            flex items-center
-                                        </span>
-                                        <span className="punctuation">"</span>
-                                        <span className="punctuation">{">"}</span>
-                                        <pre className="ml-5">
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="tag">span&nbsp;</span>
-                                            <span className="attr-name">class</span>
-                                            <span className="punctuation">=</span>
-                                            <span className="punctuation">"</span>
-                                            <span className="attr-value">
-                                                h-8 w-8 flex justify-center items-center bg-primary-focused border 
-                                                border-solid rounded-full border-primary-focused text-white
-                                            </span>
-                                            <span className="punctuation">"</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <pre className="ml-5">
-                                                <span className="punctuation">4</span>
-                                            </pre>
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="punctuation">{"/"}</span>
-                                            <span className="tag">span</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <br />
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="tag">span&nbsp;</span>
-                                            <span className="attr-name">class</span>
-                                            <span className="punctuation">=</span>
-                                            <span className="punctuation">"</span>
-                                            <span className="attr-value">
-                                                mx-3.5 text-primary-focused text-base font-normal
-                                            </span>
-                                            <span className="punctuation">"</span>
-                                            <span className="punctuation">{">"}</span>
-                                            <span className="punctuation">Keempat</span>
-                                            <span className="punctuation">{"<"}</span>
-                                            <span className="punctuation">{"/"}</span>
-                                            <span className="tag">span</span>
-                                            <span className="punctuation">{">"}</span>
-                                        </pre>
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="punctuation">{"/"}</span>
-                                        <span className="tag">div</span>
-                                        <span className="punctuation">{">"}</span>
-                                    </pre>
-                                    <pre className="ml-5">
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="tag">span&nbsp;</span>
-                                        <span className="attr-name">class</span>
-                                        <span className="punctuation">=</span>
-                                        <span className="punctuation">"</span>
-                                        <span className="attr-value">
-                                            h-px w-40 bg-primary-focused border border-primary-focused rounded-full mr-3.5
-                                        </span>
-                                        <span className="punctuation">"</span>
-                                        <span className="punctuation">{">"}</span>
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="punctuation">{"/"}</span>
-                                        <span className="tag">span</span>
-                                        <span className="punctuation">{">"}</span>
-                                    </pre>
-                                    <span className="punctuation">{"<"}</span>
-                                    <span className="punctuation">{"/"}</span>
-                                    <span className="tag">div</span>
-                                    <span className="punctuation">{">"}</span>
-                                </pre>
-                                <span className="punctuation">{"<"}</span>
-                                <span className="punctuation">{"/"}</span>
-                                <span className="tag">li</span>
-                                <span className="punctuation">{">"}</span>
-                            </pre>
+
+
                             <span className="punctuation">{"<"}</span>
                             <span className="punctuation">{"/"}</span>
-                            <span className="tag">ul</span>
+                            <span className="tag">table</span>
+                            <span className="punctuation">{">"}</span>
+                            </pre>
+
+                            <span className="punctuation">{"<"}</span>
+                            <span className="punctuation">{"/"}</span>
+                            <span className="tag">div</span>
                             <span className="punctuation">{">"}</span>
                         </span>
                     </div>
