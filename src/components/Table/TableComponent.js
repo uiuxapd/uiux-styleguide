@@ -1,5 +1,5 @@
 import React from "react";
-import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
+import { EllipsisHorizontalIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const BasicTable = () => {
     return (
@@ -125,33 +125,37 @@ const BasicTable = () => {
                 <div>
                     <div>
                         Rows per Page
-                        <select className="bg-white border border-primary-500 text-neutral-900 text-sm font-medium p-2 rounded-lg shadow transition-all hover:bg-primary-50/30 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none mx-2">
-                        <option>10</option>
-                        <option>25</option>
-                        </select>
+                        <div className="relative inline-block text-left">
+                            <div className="mx-2">
+                            <button type="button" className="inline-flex w-full justify-center items-center rounded-lg border border-gray-300 bg-white p-2 text-sm font-medium text-neutral-700 shadow transition-all hover:bg-neutral-100 hover:text-neutral-900 focus:outline-none focus:ring-4 focus:ring-neutral-300 focus:shadow-none" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                10
+                                <ChevronDownIcon className="icon16 ml-1" />
+                            </button>
+                            </div>
+                        </div>
                         1-10 of 100 records
                     </div>
                 </div>
-                    <div>
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                    <div className="flex gap-1">
+                      <button className="text-neutral-500 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         &#171;
                       </button>
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                      <button className="text-neutral-500 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         &#8249;
                       </button>
-                      <button className="bg-primary-main text-white text-sm font-medium py-2 px-4 rounded-lg shadow transition-all hover:bg-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none">
+                      <button className="bg-primary-main text-white text-sm font-medium py-2 px-3 rounded-lg shadow transition-all hover:bg-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none">
                         1
                       </button> 
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                      <button className="text-neutral-500 outline outline-1 outline-neutral-300 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         2
                       </button>
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                      <button className="text-neutral-500 outline outline-1 outline-neutral-300 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         3
                       </button>
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                      <button className="text-neutral-500 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         &#8250;
                       </button>
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                      <button className="text-neutral-500 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         &#187;
                       </button>
                     </div>
@@ -349,33 +353,37 @@ const ScrollingTable = () => {
                 <div>
                     <div>
                         Rows per Page
-                        <select className="bg-white border border-primary-500 text-neutral-900 text-sm font-medium p-2 rounded-lg shadow transition-all hover:bg-primary-50/30 hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none mx-2">
-                        <option>10</option>
-                        <option>25</option>
-                        </select>
+                        <div className="relative inline-block text-left">
+                            <div className="mx-2">
+                            <button type="button" className="inline-flex w-full justify-center items-center rounded-lg border border-gray-300 bg-white p-2 text-sm font-medium text-neutral-700 shadow transition-all hover:bg-neutral-100 hover:text-neutral-900 focus:outline-none focus:ring-4 focus:ring-neutral-300 focus:shadow-none" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                10
+                                <ChevronDownIcon className="icon16 ml-1" />
+                            </button>
+                            </div>
+                        </div>
                         1-10 of 100 records
                     </div>
                 </div>
-                    <div>
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                <div className="flex gap-1">
+                      <button className="text-neutral-500 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         &#171;
                       </button>
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                      <button className="text-neutral-500 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         &#8249;
                       </button>
-                      <button className="bg-primary-main text-white text-sm font-medium py-2 px-4 rounded-lg shadow transition-all hover:bg-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none">
+                      <button className="bg-primary-main text-white text-sm font-medium py-2 px-3 rounded-lg shadow transition-all hover:bg-primary-600 focus:ring-4 focus:ring-blue-300 focus:shadow-none focus:outline-none">
                         1
                       </button> 
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                      <button className="text-neutral-500 outline outline-1 outline-neutral-300 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         2
                       </button>
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                      <button className="text-neutral-500 outline outline-1 outline-neutral-300 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         3
                       </button>
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                      <button className="text-neutral-500 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         &#8250;
                       </button>
-                      <button className="text-primary-main text-sm font-medium py-2 px-4 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
+                      <button className="text-neutral-500 text-sm font-medium py-2 px-3 rounded-lg transition-all hover:text-primary-600 focus:ring-4 focus:ring-blue-300 focus:text-primary-700 focus:outline-none">
                         &#187;
                       </button>
                     </div>
