@@ -1,4 +1,3 @@
-import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
 import {
   TabCodeActive,
   TabCodeInactive,
@@ -14,6 +13,10 @@ import {
   BasicTableCode,
   ScrollingTableCode,
 } from "../components/Table/TableCode";
+import { 
+  BasicTableCopy,
+  ScrollingTableCopy,
+} from "../components/Table/TableCopyAction";
 import { React, useRef } from "react";
 import BtnIndex from "../components/BtnIndex";
 
@@ -67,7 +70,7 @@ const Tables = () => {
                       </Tab>
                   </Tab.List>
                   <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                  <></>
+                    <BasicTableCopy />
                 </div>
               </div>
               <Tab.Panels>
@@ -120,7 +123,7 @@ const Tables = () => {
                         </Tab>
                     </Tab.List>
                     <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                      <></>
+                      <ScrollingTableCopy />
                     </div>
                   </div>
                   <Tab.Panels>

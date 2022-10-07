@@ -153,6 +153,68 @@ const BasicTableCode = () => {
                                         <span className="tag">td</span>
                                         <span className="punctuation">{">"}</span>
                                         <br />
+                                        <span>...</span>
+                                        <br />
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="tag">td&nbsp;</span>
+                                        <span className="attr-name">class</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            px-4 text-neutral-900
+                                        </span>
+                                        <span className="punctuation">"</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Data</span>
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="punctuation">{"/"}</span>
+                                        <span className="tag">td</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <br />
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="tag">td&nbsp;</span>
+                                        <span className="attr-name">class</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            px-4 text-neutral-900
+                                        </span>
+                                        <span className="tag">&nbsp;</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-name">align</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            center
+                                        </span>
+                                        <span className="punctuation">"</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Data</span>
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="punctuation">{"/"}</span>
+                                        <span className="tag">td</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="comment ml-2">{"<-- Action Last Column -->"}</span>
+                                    </pre>
+                                    <span className="punctuation">{"<"}</span>
+                                    <span className="punctuation">{"/"}</span>
+                                    <span className="tag">tr</span>
+                                    <span className="punctuation">{">"}</span>
+                                    <br />
+                                    <span className="punctuation">{"<"}</span>
+                                    <span className="tag">tr&nbsp;</span>
+                                    <span className="attr-name">class</span>
+                                    <span className="punctuation">=</span>
+                                    <span className="punctuation">"</span>
+                                    <span className="attr-value">
+                                        h-10 bg-white
+                                    </span>
+                                    <span className="punctuation">"</span>
+                                    <span className="punctuation">{">"}</span>
+                                    
+                                    <span className="comment ml-2">{"<-- Last Row -->"}</span>
+                                    <br />
+                                    <pre className="ml-5">
                                         <span className="punctuation">{"<"}</span>
                                         <span className="tag">td&nbsp;</span>
                                         <span className="attr-name">class</span>
@@ -210,14 +272,12 @@ const BasicTableCode = () => {
                                         <span className="punctuation">{"/"}</span>
                                         <span className="tag">td</span>
                                         <span className="punctuation">{">"}</span>
-                                        <span className="comment ml-2">{"<-- Action Last Column -->"}</span>
                                     </pre>
                                     <span className="punctuation">{"<"}</span>
                                     <span className="punctuation">{"/"}</span>
                                     <span className="tag">tr</span>
                                     <span className="punctuation">{">"}</span>
                                     <br />
-                                    <span>...</span>
                                 </pre>
                                 <span className="punctuation">{"<"}</span>
                                 <span className="punctuation">{"/"}</span>
@@ -244,7 +304,7 @@ const ScrollingTableCode = () => {
             <pre>
                 <code lang="html">
                     <div className="flex flex-col">
-                        <span className="comment">{"<!-- Basic -->"}</span>
+                        <span className="comment">{"<!-- Scrolling -->"}</span>
                         <span className="token">
                             <span className="punctuation">{"<"}</span>
                             <span className="tag">div&nbsp;</span>
@@ -305,22 +365,6 @@ const ScrollingTableCode = () => {
                                         <span className="tag">th</span>
                                         <span className="punctuation">{">"}</span>
                                         <span className="comment ml-2">{"<-- First Column -->"}</span>
-                                        <br />
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="tag">th&nbsp;</span>
-                                        <span className="attr-name">class</span>
-                                        <span className="punctuation">=</span>
-                                        <span className="punctuation">"</span>
-                                        <span className="attr-value">
-                                            px-4
-                                        </span>
-                                        <span className="punctuation">"</span>
-                                        <span className="punctuation">{">"}</span>
-                                        <span className="punctuation">Label</span>
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="punctuation">{"/"}</span>
-                                        <span className="tag">th</span>
-                                        <span className="punctuation">{">"}</span>
                                         <br />
                                         <span>...</span>
                                         <br />
@@ -387,23 +431,7 @@ const ScrollingTableCode = () => {
                                     <span className="punctuation">"</span>
                                     <span className="punctuation">{">"}</span>
                                     <br />
-                                    <pre className="ml-5">
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="tag">td&nbsp;</span>
-                                        <span className="attr-name">class</span>
-                                        <span className="punctuation">=</span>
-                                        <span className="punctuation">"</span>
-                                        <span className="attr-value">
-                                            px-4 text-neutral-900
-                                        </span>
-                                        <span className="punctuation">"</span>
-                                        <span className="punctuation">{">"}</span>
-                                        <span className="punctuation">Data</span>
-                                        <span className="punctuation">{"<"}</span>
-                                        <span className="punctuation">{"/"}</span>
-                                        <span className="tag">td</span>
-                                        <span className="punctuation">{">"}</span>
-                                        <br />
+                                    <pre className="ml-5">                                        
                                         <span className="punctuation">{"<"}</span>
                                         <span className="tag">td&nbsp;</span>
                                         <span className="attr-name">class</span>
@@ -462,6 +490,82 @@ const ScrollingTableCode = () => {
                                         <span className="tag">td</span>
                                         <span className="punctuation">{">"}</span>
                                         <span className="comment ml-2">{"<-- Action Last Column -->"}</span>
+                                    </pre>
+                                    <span className="punctuation">{"<"}</span>
+                                    <span className="punctuation">{"/"}</span>
+                                    <span className="tag">tr</span>
+                                    <span className="punctuation">{">"}</span>
+                                    <br />
+                                    <span className="punctuation">{"<"}</span>
+                                    <span className="tag">tr&nbsp;</span>
+                                    <span className="attr-name">class</span>
+                                    <span className="punctuation">=</span>
+                                    <span className="punctuation">"</span>
+                                    <span className="attr-value">
+                                        h-10 bg-white
+                                    </span>
+                                    <span className="punctuation">"</span>
+                                    <span className="punctuation">{">"}</span>                                                                        
+                                    <span className="comment ml-2">{"<-- Last Row -->"}</span>
+                                    <br />
+                                    <pre className="ml-5">                                        
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="tag">td&nbsp;</span>
+                                        <span className="attr-name">class</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            px-4 text-neutral-900
+                                        </span>
+                                        <span className="punctuation">"</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Data</span>
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="punctuation">{"/"}</span>
+                                        <span className="tag">td</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <br />
+                                        <span>...</span>
+                                        <br />
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="tag">td&nbsp;</span>
+                                        <span className="attr-name">class</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            px-4 text-neutral-900
+                                        </span>
+                                        <span className="punctuation">"</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Data</span>
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="punctuation">{"/"}</span>
+                                        <span className="tag">td</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <br />
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="tag">td&nbsp;</span>
+                                        <span className="attr-name">class</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            px-4 text-neutral-900
+                                        </span>
+                                        <span className="tag">&nbsp;</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-name">align</span>
+                                        <span className="punctuation">=</span>
+                                        <span className="punctuation">"</span>
+                                        <span className="attr-value">
+                                            center
+                                        </span>
+                                        <span className="punctuation">"</span>
+                                        <span className="punctuation">{">"}</span>
+                                        <span className="punctuation">Data</span>
+                                        <span className="punctuation">{"<"}</span>
+                                        <span className="punctuation">{"/"}</span>
+                                        <span className="tag">td</span>
+                                        <span className="punctuation">{">"}</span>
                                     </pre>
                                     <span className="punctuation">{"<"}</span>
                                     <span className="punctuation">{"/"}</span>
