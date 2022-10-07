@@ -1,11 +1,12 @@
 import { Tab } from "@headlessui/react";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import {
   TabCodeActive,
   TabCodeInactive,
   TabPreviewActive,
   TabPreviewInactive,
 } from "../components/BtnCond";
+import BtnIndex from "../components/BtnIndex";
 import {
   DefaultProgressBar,
   ProgressBarWithText,
@@ -20,6 +21,8 @@ import {
 } from "../components/progressbar/ProgressCopyAction";
 
 const ProgressBar = () => {
+  const toDefaultProgressbar = useRef(null),
+    toProgressbarWithText = useRef(null);
   const [progressPercentage, setProgressPercentage] = useState(20);
 
   return (
@@ -39,13 +42,13 @@ const ProgressBar = () => {
 
         <div className="flex flex-col gap-24">
           {/* Default Progress Bar Start */}
-          <div className="flex flex-col gap-4">
+          <div ref={toDefaultProgressbar} className="flex flex-col gap-4">
             <Tab.Group>
-              <div className="flex items-center justify-between">
-                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <div className="flex items-center gap-2">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
                   Default Progress Bar
                 </h4>
-                <div className="flex items-center">
+                <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                     <Tab as={Fragment}>
                       {({ selected }) => (
@@ -66,7 +69,7 @@ const ProgressBar = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                   <ProgressDefaultCopy />
                 </div>
               </div>
@@ -106,13 +109,13 @@ const ProgressBar = () => {
           {/* Default Progress Bar End*/}
 
           {/* Progress Bar with Text Start */}
-          <div className="flex flex-col gap-4">
+          <div ref={toProgressbarWithText} className="flex flex-col gap-4">
             <Tab.Group>
-              <div className="flex items-center justify-between">
-                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              <div className="flex items-center gap-2">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
                   Progress Bar with Text
                 </h4>
-                <div className="flex items-center">
+                <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                     <Tab as={Fragment}>
                       {({ selected }) => (
@@ -133,7 +136,7 @@ const ProgressBar = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="mx-2 sm:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
                   <ProgressWithTextCopy />
                 </div>
               </div>
@@ -155,6 +158,24 @@ const ProgressBar = () => {
           </div>
           {/* Progress Bar with Text Bar */}
         </div>
+      </div>
+
+      <div className="content-right">
+        <h6>on this page</h6>
+        <ul>
+          <li>
+            <BtnIndex
+              reference={toDefaultProgressbar}
+              label="default accordion"
+            />
+          </li>
+          <li>
+            <BtnIndex
+              reference={toProgressbarWithText}
+              label="bordered accordion"
+            />
+          </li>
+        </ul>
       </div>
     </>
   );
