@@ -14,7 +14,7 @@ export const ProgressDefaultCopy = () => {
 
   return (
     <CopyToClipboard text={defaultProgressBar} onCopy={onCopyProgressDefault}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isProgressDefaultCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -32,7 +32,7 @@ export const ProgressWithTextCopy = () => {
 
   return (
     <CopyToClipboard text={progressWithText} onCopy={onCopyProgressWithText}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isProgressWithTextCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>

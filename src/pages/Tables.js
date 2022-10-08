@@ -69,7 +69,7 @@ const Tables = () => {
                           )}
                       </Tab>
                   </Tab.List>
-                  <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                     <BasicTableCopy />
                 </div>
               </div>
@@ -122,7 +122,7 @@ const Tables = () => {
                             )}
                         </Tab>
                     </Tab.List>
-                    <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                    <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                       <ScrollingTableCopy />
                     </div>
                   </div>
@@ -148,7 +148,7 @@ const Tables = () => {
       </div>
 
       <div className="content-right">
-      <h6>on this page</h6>
+      <h6>On this page</h6>
         <ul>
           <li><BtnIndex reference={toBasicTable} label="basic table" /></li>
           <li><BtnIndex reference={toScrollingTable} label="scrolling table" /></li>

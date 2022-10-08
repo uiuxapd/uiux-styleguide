@@ -39,7 +39,7 @@ const BtnIndex = ({ reference, label }) => {
   };
 
   return (
-    <div onClick={handleClick}>
+    <div onClick={handleClick} className="text-neutral-600 dark:text-neutral-400">
       <ArrowLongRightIcon />
       {label}
     </div>

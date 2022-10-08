@@ -69,7 +69,7 @@ const ProgressBar = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <ProgressDefaultCopy />
                 </div>
               </div>
@@ -133,7 +133,7 @@ const ProgressBar = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <ProgressWithTextCopy />
                 </div>
               </div>
@@ -158,7 +158,7 @@ const ProgressBar = () => {
       </div>
 
       <div className="content-right">
-        <h6>on this page</h6>
+        <h6>On this page</h6>
         <ul>
           <li>
             <BtnIndex

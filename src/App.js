@@ -16,6 +16,7 @@ import Introduction from "./pages/Introduction";
 import ProgressBar from "./pages/ProgressBar";
 import Accordion from "./pages/Accordion";
 import Tooltips from "./pages/Tooltips";
+import Breadcrumbs from "./pages/Breadcrumbs";
 
 
 const App = () => {
@@ -105,6 +106,7 @@ const App = () => {
               <Route path="/documentation" element={<Documentation />} />
               <Route path="/accordions" element={<Accordion />} />
               <Route path="/alerts" element={<Alerts />} />
+              <Route path="/breadcrumbs" element={<Breadcrumbs />} />
               <Route path="/buttons" element={<Buttons />} />
               <Route path="/colors" element={<Colors />} />
               <Route path="/progressbar" element={<ProgressBar />} />

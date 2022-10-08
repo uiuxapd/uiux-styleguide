@@ -19,7 +19,7 @@ const SimpleStepCopy = () => {
   
     return (
       <CopyToClipboard text={simpleStep} onCopy={onCopySimple}>
-        <div className="hidden sm:flex items-center">
+        <div className="hidden md:flex items-center">
           {isSimpleStepCopied ? <BtnCopied /> : <BtnCopy />}
         </div>
       </CopyToClipboard>
@@ -37,7 +37,7 @@ const StepMiniCopy = () => {
   
     return (
       <CopyToClipboard text={stepMini} onCopy={onCopyMini}>
-        <div className="hidden sm:flex items-center">
+        <div className="hidden md:flex items-center">
           {isStepMiniCopied ? <BtnCopied /> : <BtnCopy />}
         </div>
       </CopyToClipboard>
@@ -55,7 +55,7 @@ const StepCircleCopy = () => {
   
     return (
       <CopyToClipboard text={stepCircle} onCopy={onCopyCircle}>
-        <div className="hidden sm:flex items-center">
+        <div className="hidden md:flex items-center">
           {isStepCircleCopied ? <BtnCopied /> : <BtnCopy />}
         </div>
       </CopyToClipboard>
@@ -73,7 +73,7 @@ const StepVerticalCopy = () => {
   
     return (
       <CopyToClipboard text={stepVertical} onCopy={onCopyVertical}>
-        <div className="hidden sm:flex items-center">
+        <div className="hidden md:flex items-center">
           {isStepVerticalCopied ? <BtnCopied /> : <BtnCopy />}
         </div>
       </CopyToClipboard>

@@ -14,7 +14,7 @@ const TooltipsCopyAction = () => {
 
   return (
     <CopyToClipboard text={tooltipSnippets} onCopy={onCopyTooltip}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isTooltipCopy ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>

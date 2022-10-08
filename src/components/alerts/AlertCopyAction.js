@@ -13,7 +13,7 @@ export const AlertDefaultCopy = () => {
   };
   return (
     <CopyToClipboard text={alertDefault} onCopy={onCopyAlertDefault}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isAlertDefaultCopy ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -33,7 +33,7 @@ export const AlertWithDescriptionCopy = () => {
       text={alertWithDescription}
       onCopy={onCopyAlertDescription}
     >
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isAlertDescriptionCopy ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>

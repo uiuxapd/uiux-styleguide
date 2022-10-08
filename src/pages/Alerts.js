@@ -67,7 +67,7 @@ const Alerts = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <AlertDefaultCopy />
                 </div>
               </div>
@@ -142,7 +142,7 @@ const Alerts = () => {
       </div>
 
       <div className="content-right">
-        <h6>on this page</h6>
+        <h6>On this page</h6>
         <ul>
           <li>
             <BtnIndex reference={toDefaultAlert} label="default alert" />

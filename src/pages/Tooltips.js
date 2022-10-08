@@ -32,7 +32,7 @@ const Tooltips = () => {
             <Tab.Group>
               <div className="flex items-center gap-2">
                 <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Tooltips
+                  Default Tooltips
                 </h4>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
@@ -55,14 +55,14 @@ const Tooltips = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <TooltipsCopyAction />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-evenly">
+                    <div className="component-block">
                       <TooltipsComponent />
                     </div>
                   </div>

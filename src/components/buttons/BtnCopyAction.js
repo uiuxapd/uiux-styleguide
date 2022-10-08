@@ -26,7 +26,7 @@ export const BtnPrimaryCopy = () => {
 
   return (
     <CopyToClipboard text={btnPrimary} onCopy={onCopyPrimary}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isBtnPrimaryCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -44,7 +44,7 @@ export const BtnSecondaryCopy = () => {
 
   return (
     <CopyToClipboard text={btnSecondary} onCopy={onCopySecondary}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isBtnSecondaryCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -62,7 +62,7 @@ export const BtnOutlinedCopy = () => {
 
   return (
     <CopyToClipboard text={btnOutlined} onCopy={onCopyOutlined}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isBtnOutlinedCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -80,7 +80,7 @@ export const BtnErrorCopy = () => {
 
   return (
     <CopyToClipboard text={btnError} onCopy={onCopyError}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isBtnErrorCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -98,7 +98,7 @@ export const BtnTextCopy = () => {
 
   return (
     <CopyToClipboard text={btnText} onCopy={onCopyText}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isBtnTextCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -116,7 +116,7 @@ export const BtnLeadIconCopy = () => {
 
   return (
     <CopyToClipboard text={btnLeadIcon} onCopy={onCopyBtnLeadIcon}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isBtnLeadIconCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -134,7 +134,7 @@ export const BtnTrailIconCopy = () => {
 
   return (
     <CopyToClipboard text={btnTrailIcon} onCopy={onCopyBtnTrailIcon}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isBtnTrailIconCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -152,7 +152,7 @@ export const BtnDisableCopy = () => {
 
   return (
     <CopyToClipboard text={btnDisable} onCopy={onCopyDisable}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isBtnDisableCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -170,7 +170,7 @@ export const BtnRoundedCopy = () => {
 
   return (
     <CopyToClipboard text={btnFullRounded} onCopy={onCopyBtnRounded}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isBtnRoundedCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -188,7 +188,7 @@ export const BtnIconOnlyCopy = () => {
 
   return (
     <CopyToClipboard text={btnIconOnly} onCopy={onCopyBtnIconOnly}>
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isBtnIconOnlyCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>
@@ -210,7 +210,7 @@ export const BtnIconOnlyRoundedCopy = () => {
       text={btnIconOnlyRounded}
       onCopy={onCopyBtnIconOnlyRounded}
     >
-      <div className="hidden sm:flex items-center">
+      <div className="hidden md:flex items-center">
         {isBtnIconOnlyRoundedCopied ? <BtnCopied /> : <BtnCopy />}
       </div>
     </CopyToClipboard>

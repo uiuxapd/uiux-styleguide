@@ -1,37 +1,29 @@
-import React from "react";
+import { Tab } from "@headlessui/react";
+import React, { Fragment } from "react";
+import {
+  DefaultBreadcrumbs,
+  SlashBreadcrumbs,
+  SolidBgBreadcrumbs,
+} from "../components/breadcrumbs.js/BreadcrumbsComponent";
+import {
+  DefaultBreadcrumbsCopy,
+  SlashBreadcrumbsCopy,
+  SolidBgBreadcrumbsCopy,
+} from "../components/breadcrumbs.js/BreadcrumbsCopyAction";
 import {
   TabCodeActive,
   TabCodeInactive,
   TabPreviewActive,
   TabPreviewInactive,
 } from "../components/BtnCond";
-import { Tab } from "@headlessui/react";
-import {
-  StepCircle,
-  StepMini,
-  StepVertical,
-  SimpleStep,
-} from "../components/steper/StepComponent";
-import {
-  StepCircleCode,
-  StepMiniCode,
-  SimpleStepCode,
-  VerticalCircleCode,
-} from "../components/steper/StepCode";
-import {
-  StepMiniCopy,
-  SimpleStepCopy,
-  StepCircleCopy,
-  StepVerticalCopy,
-} from "../components/steper/StepCopyAction";
 
-const Steper = () => {
+const Breadcrumbs = () => {
   return (
     <>
       <div className="content-left">
-        <div className="pb-4 mb-10 border-b border-slate-200 dark:border-slate-800">
-          <h1 className="mb-4">Steps</h1>
-          <p className="leading-relaxed dark:text-slate-300">
+        <div className="pb-4 mb-10 border-b border-neutral-200 dark:border-neutral-700">
+          <h1 className="mb-4">Breadcrumbs</h1>
+          <p className="leading-relaxed dark:text-neutral-300">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
             suscipit magnam minima. Beatae deserunt perferendis aut ipsum
             labore, nihil laborum sint, vitae aspernatur dolor quibusdam velit
@@ -42,16 +34,16 @@ const Steper = () => {
         </div>
 
         <div className="flex flex-col gap-24">
-          {/* Simple  */}
+          {/* Start */}
           <div className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
-                <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Simple
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
+                  Default Breadcrumbs
                 </h4>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                    <Tab>
+                    <Tab as={Fragment}>
                       {({ selected }) => (
                         <div className="focus:outline-none">
                           {selected ? (
@@ -62,7 +54,7 @@ const Steper = () => {
                         </div>
                       )}
                     </Tab>
-                    <Tab>
+                    <Tab as={Fragment}>
                       {({ selected }) => (
                         <div className="focus:outline-none">
                           {selected ? <TabCodeActive /> : <TabCodeInactive />}
@@ -71,88 +63,35 @@ const Steper = () => {
                     </Tab>
                   </Tab.List>
                   <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
-                  <SimpleStepCopy />
+                  <DefaultBreadcrumbsCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block">
-                      <SimpleStep />
+                      <DefaultBreadcrumbs />
                     </div>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>
-                  <div className="component-section">
-                    <div className="component-block">
-                      <SimpleStepCode />
-                    </div>
-                  </div>
+                <Tab.Panel className="outline-none">
+                  <div className="overflow">{/* <TooltipsCode /> */}</div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
           </div>
-          {/* Circle */}
-          <div className="flex flex-col gap-4">
-            <Tab.Group>
-              <div className="flex items-center gap-2">
-                <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Circle
-                </h4>
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                    <Tab>
-                      {({ selected }) => (
-                        <div className="focus:outline-none">
-                          {selected ? (
-                            <TabPreviewActive />
-                          ) : (
-                            <TabPreviewInactive />
-                          )}
-                        </div>
-                      )}
-                    </Tab>
-                    <Tab>
-                      {({ selected }) => (
-                        <div className="focus:outline-none">
-                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                        </div>
-                      )}
-                    </Tab>
-                  </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
-                  <StepCircleCopy />
-                </div>
-              </div>
-              <Tab.Panels>
-                <Tab.Panel>
-                  <div className="component-section">
-                    <div className="component-block">
-                      <StepCircle />
-                    </div>
-                  </div>
-                </Tab.Panel>
-                <Tab.Panel>
-                  <div className="component-section">
-                    <div className="component-block">
-                      <StepCircleCode />
-                    </div>
-                  </div>
-                </Tab.Panel>
-              </Tab.Panels>
-            </Tab.Group>
-          </div>
+          {/* End */}
 
-          {/* Mini Circle */}
+          {/* Start */}
           <div className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
-                <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Mini Circle
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
+                  Slash Breadcrumbs
                 </h4>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                    <Tab>
+                    <Tab as={Fragment}>
                       {({ selected }) => (
                         <div className="focus:outline-none">
                           {selected ? (
@@ -163,7 +102,7 @@ const Steper = () => {
                         </div>
                       )}
                     </Tab>
-                    <Tab>
+                    <Tab as={Fragment}>
                       {({ selected }) => (
                         <div className="focus:outline-none">
                           {selected ? <TabCodeActive /> : <TabCodeInactive />}
@@ -172,38 +111,35 @@ const Steper = () => {
                     </Tab>
                   </Tab.List>
                   <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
-                  <StepMiniCopy />
+                  <SlashBreadcrumbsCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block">
-                      <StepMini />
+                      <SlashBreadcrumbs />
                     </div>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>
-                  <div className="component-section">
-                    <div className="component-block">
-                      <StepMiniCode />
-                    </div>
-                  </div>
+                <Tab.Panel className="outline-none">
+                  <div className="overflow">{/* <TooltipsCode /> */}</div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
           </div>
+          {/* End */}
 
-          {/* Vertical Circle */}
+          {/* Start */}
           <div className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
-                <h4 className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Vertical Circle
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
+                  Solid Background
                 </h4>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                    <Tab>
+                    <Tab as={Fragment}>
                       {({ selected }) => (
                         <div className="focus:outline-none">
                           {selected ? (
@@ -214,7 +150,7 @@ const Steper = () => {
                         </div>
                       )}
                     </Tab>
-                    <Tab>
+                    <Tab as={Fragment}>
                       {({ selected }) => (
                         <div className="focus:outline-none">
                           {selected ? <TabCodeActive /> : <TabCodeInactive />}
@@ -223,32 +159,28 @@ const Steper = () => {
                     </Tab>
                   </Tab.List>
                   <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
-                  <StepVerticalCopy />
+                  <SolidBgBreadcrumbsCopy />
                 </div>
               </div>
               <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block">
-                      <StepVertical />
+                      <SolidBgBreadcrumbs />
                     </div>
                   </div>
                 </Tab.Panel>
-                <Tab.Panel>
-                  <div className="component-section">
-                    <div className="component-block">
-                      <VerticalCircleCode />
-                    </div>
-                  </div>
+                <Tab.Panel className="outline-none">
+                  <div className="overflow">{/* <TooltipsCode /> */}</div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
           </div>
+          {/* End */}
         </div>
       </div>
-      <div className="content-right"></div>
     </>
   );
 };
 
-export default Steper;
+export default Breadcrumbs;

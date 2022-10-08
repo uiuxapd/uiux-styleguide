@@ -59,7 +59,7 @@ const Header = () => {
         <div className="breadcrumbs">
           <span className="text-slate-400 category"></span>
           <ChevronRightIcon className="h-3 w-3 text-slate-400" />
-          <span className="text-primary page"></span>
+          <span className="page text-primary-main dark:text-neutral-50"></span>
         </div>
       </div>
     </nav>

@@ -17,7 +17,7 @@ const BasicTableCopy = () => {
   
     return (
       <CopyToClipboard text={basicTable} onCopy={onCopyBasic}>
-        <div className="hidden sm:flex items-center">
+        <div className="hidden md:flex items-center">
           {isBasicTableCopied ? <BtnCopied /> : <BtnCopy />}
         </div>
       </CopyToClipboard>
@@ -35,7 +35,7 @@ const ScrollingTableCopy = () => {
   
     return (
       <CopyToClipboard text={scrollingTable} onCopy={onCopyScrolling}>
-        <div className="hidden sm:flex items-center">
+        <div className="hidden md:flex items-center">
           {isScrollingTableCopied ? <BtnCopied /> : <BtnCopy />}
         </div>
       </CopyToClipboard>
