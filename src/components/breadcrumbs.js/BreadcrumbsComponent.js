@@ -80,7 +80,7 @@ export const SlashBreadcrumbs = () => {
       <li class="inline-flex items-center">
         <a
           href="#/breadcrumbs"
-          class="hover:text-primary-hover text-primary-main dark:text-sk4 dark:hover:text-sky-400"
+          class="hover:text-primary-hover text-primary-main dark:text-sky-300 dark:hover:text-sky-400"
         >
           Page 3
         </a>
