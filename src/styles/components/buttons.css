@@ -5,7 +5,7 @@
     @apply bg-neutral-50 text-primary-main text-base rounded-lg shadow transition-all hover:bg-neutral-100 hover:text-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none;
 }
 .btn-outlined {
-    @apply bg-white text-neutral-700  text-base outline outline-1 outline-neutral-300 rounded-lg shadow transition-all hover:bg-neutral-100 hover:text-neutral-900 focus:ring-4 focus:ring-neutral-300 focus:shadow-none focus:outline-none;
+    @apply bg-white text-neutral-700 text-base outline outline-1 outline-neutral-300 rounded-lg shadow transition-all hover:bg-neutral-100 hover:text-neutral-900 focus:ring-4 focus:ring-neutral-300 focus:shadow-none focus:outline-none;
 }
 .btn-error {
     @apply bg-error-main text-white text-base rounded-lg shadow transition-all hover:bg-error-hover focus:ring-4 focus:ring-error-focused focus:shadow-none focus:outline-none;

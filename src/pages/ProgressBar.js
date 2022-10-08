@@ -69,7 +69,7 @@ const ProgressBar = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <ProgressDefaultCopy />
                 </div>
               </div>
@@ -90,10 +90,7 @@ const ProgressBar = () => {
                             setProgressPercentage(e.target.value);
                           }}
                         />
-                        <div class="absolute hidden md:block bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 whitespace-nowrap rounded-lg bg-neutral-900 dark:bg-neutral-200 py-2 px-4 text-xs font-medium text-white dark:text-neutral-900 opacity-0 group-hover:opacity-100 transition-all delay-200">
-                          <span class="absolute -bottom-1 left-1/2 -z-10 h-6 w-6 -translate-x-1/2 rotate-45 rounded bg-neutral-900 dark:bg-neutral-200"></span>
-                          Slide me baby
-                        </div>
+                        <div class="tooltip-top">Slide me baby</div>
                       </div>
                     </div>
                   </div>
@@ -136,7 +133,7 @@ const ProgressBar = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <ProgressWithTextCopy />
                 </div>
               </div>
@@ -161,7 +158,7 @@ const ProgressBar = () => {
       </div>
 
       <div className="content-right">
-        <h6>on this page</h6>
+        <h6>On this page</h6>
         <ul>
           <li>
             <BtnIndex

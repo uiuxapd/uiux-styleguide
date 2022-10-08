@@ -67,7 +67,7 @@
   }
 
   .content-right h6 {
-    @apply capitalize font-semibold text-neutral-800 mb-6 dark:text-neutral-300;
+    @apply font-semibold text-xl text-neutral-800 mb-6 dark:text-neutral-300;
   }
 
   .content-right li {
@@ -197,7 +197,7 @@
   }
 
   aside li .menu-item {
-    @apply capitalize h-8 mb-2 w-full flex items-center px-5 relative before:absolute before:top-0 before:left-[3px] before:w-[3px] before:h-8 before:bg-primary-main before:hidden hover:before:block dark:text-white;
+    @apply capitalize h-8 mb-2 w-full flex items-center px-5 relative before:absolute before:top-0 before:left-[3px] before:w-[3px] before:h-8 before:bg-primary-main dark:before:bg-secondary-main before:hidden hover:before:block dark:text-white;
   }
 
   li a.active {

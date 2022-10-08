@@ -20,8 +20,8 @@ export const DefaultAccordion = ({ content, open, onToggle }) => {
     >
       <button
         onClick={onToggle}
-        className={`flex w-full bg-white px-4 py-3 hover:bg-primary-surface ${
-          open ? "bg-primary-surface text-primary-main " : "text-neutral-700"
+        className={`flex w-full bg-white px-4 py-3 hover:bg-primary-surface focus:outline-none ${
+          open ? "bg-primary-surface text-primary-main" : "text-neutral-700"
         }`}
       >
         <span className="flex flex-grow">{headerTitle}</span>
@@ -62,7 +62,7 @@ export const BorderedAccordion = ({ content, open, onToggle }) => {
     >
       <button
         onClick={onToggle}
-        className={`flex w-full px-4 py-3 bg-white hover:bg-primary-surface ${
+        className={`flex w-full px-4 py-3 bg-white hover:bg-primary-surface focus:outline-none ${
           open
             ? "border-b text-primary-main border-primary-border"
             : "text-neutral-700"

@@ -15,8 +15,11 @@ import Steps from "./pages/Steps";
 import Introduction from "./pages/Introduction";
 import ProgressBar from "./pages/ProgressBar";
 import Accordion from "./pages/Accordion";
+import Tooltips from "./pages/Tooltips";
+import Breadcrumbs from "./pages/Breadcrumbs";
 import Range from "./pages/Range";
 import Form from "./pages/Form";
+
 
 
 const App = () => {
@@ -106,11 +109,13 @@ const App = () => {
               <Route path="/documentation" element={<Documentation />} />
               <Route path="/accordions" element={<Accordion />} />
               <Route path="/alerts" element={<Alerts />} />
+              <Route path="/breadcrumbs" element={<Breadcrumbs />} />
               <Route path="/buttons" element={<Buttons />} />
               <Route path="/colors" element={<Colors />} />
               <Route path="/progressbar" element={<ProgressBar />} />
               <Route path="/typography" element={<Typography />} />
               <Route path="/tables" element={<Tables />} />
+              <Route path="/tooltips" element={<Tooltips />} />
               <Route path="/steps" element={<Steps />} />
               <Route path="/range" element={<Range />} />
               <Route path="/form" element={<Form />} />

@@ -104,14 +104,14 @@ const Buttons = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <BtnPrimaryCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-center">
+                    <div className="component-block lg:flex-row lg:justify-center">
                       <BtnPrimary />
                     </div>
                   </div>
@@ -156,14 +156,14 @@ const Buttons = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <BtnSecondaryCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-center">
+                    <div className="component-block lg:flex-row lg:justify-center">
                       <BtnSecondary />
                     </div>
                   </div>
@@ -208,14 +208,14 @@ const Buttons = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <BtnOutlinedCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-center">
+                    <div className="component-block lg:flex-row lg:justify-center">
                       <BtnOutlined />
                     </div>
                   </div>
@@ -260,14 +260,14 @@ const Buttons = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <BtnErrorCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-center">
+                    <div className="component-block lg:flex-row lg:justify-center">
                       <BtnError />
                     </div>
                   </div>
@@ -312,14 +312,14 @@ const Buttons = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <BtnTextCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-center">
+                    <div className="component-block lg:flex-row lg:justify-center">
                       <BtnText />
                     </div>
                   </div>
@@ -364,14 +364,14 @@ const Buttons = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <BtnLeadIconCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-center">
+                    <div className="component-block lg:flex-row lg:justify-center">
                       <BtnLeadIcon />
                     </div>
                   </div>
@@ -416,14 +416,14 @@ const Buttons = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <BtnTrailIconCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-center">
+                    <div className="component-block lg:flex-row lg:justify-center">
                       <BtnTrailIcon />
                     </div>
                   </div>
@@ -468,14 +468,14 @@ const Buttons = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <BtnDisableCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-center">
+                    <div className="component-block lg:flex-row lg:justify-center">
                       <BtnDisable />
                     </div>
                   </div>
@@ -520,14 +520,14 @@ const Buttons = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <BtnRoundedCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-center">
+                    <div className="component-block lg:flex-row lg:justify-center">
                       <BtnFullRounded />
                     </div>
                   </div>
@@ -572,14 +572,14 @@ const Buttons = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <BtnIconOnlyCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-center">
+                    <div className="component-block lg:flex-row lg:justify-center">
                       <BtnIconOnly />
                     </div>
                   </div>
@@ -624,14 +624,14 @@ const Buttons = () => {
                       )}
                     </Tab>
                   </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                   <BtnIconOnlyRoundedCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block sm:flex-row sm:justify-center">
+                    <div className="component-block lg:flex-row lg:justify-center">
                       <BtnIconOnlyRounded />
                     </div>
                   </div>
@@ -648,7 +648,7 @@ const Buttons = () => {
         </div>
       </div>
       <div className="content-right">
-        <h6>on this page</h6>
+        <h6>On this page</h6>
         <ul>
           <li>
             <BtnIndex reference={toPrimary} label="button primary" />
