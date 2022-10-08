@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/uiux-styleguide/static/css/main.f34352ce.css",
-    "main.js": "/uiux-styleguide/static/js/main.1fb268b3.js",
-    "static/media/background-fix.svg": "/uiux-styleguide/static/media/background-fix.27f01e193cdb9718fbd0.svg",
+    "main.css": "/uiux-styleguide/static/css/main.fb1315c7.css",
+    "main.js": "/uiux-styleguide/static/js/main.630fb95e.js",
+    "static/media/background-fix.svg": "/uiux-styleguide/static/media/background-fix.76a9da4aba238a92af6e.svg",
     "static/media/uiux-logo.svg": "/uiux-styleguide/static/media/uiux-logo.0ea065a716502c7261cadbd8e3b79745.svg",
     "index.html": "/uiux-styleguide/index.html",
-    "main.f34352ce.css.map": "/uiux-styleguide/static/css/main.f34352ce.css.map",
-    "main.1fb268b3.js.map": "/uiux-styleguide/static/js/main.1fb268b3.js.map"
+    "main.fb1315c7.css.map": "/uiux-styleguide/static/css/main.fb1315c7.css.map",
+    "main.630fb95e.js.map": "/uiux-styleguide/static/js/main.630fb95e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f34352ce.css",
-    "static/js/main.1fb268b3.js"
+    "static/css/main.fb1315c7.css",
+    "static/js/main.630fb95e.js"
   ]
 }
