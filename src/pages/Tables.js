@@ -27,7 +27,7 @@ const Tables = () => {
   return (
     <>
       <div className="content-left">
-        <div className="pb-4 mb-8 border-b border-neutral-200 dark:border-neutral-800">
+        <div className="pb-4 mb-10 border-b border-neutral-200 dark:border-neutral-800">
           <h1 className="mb-4">Table</h1>
           <p className="leading-relaxed dark:text-neutral-300">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit

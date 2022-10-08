@@ -21,7 +21,7 @@ export const DefaultAccordion = ({ content, open, onToggle }) => {
       <button
         onClick={onToggle}
         className={`flex w-full bg-white px-4 py-3 hover:bg-primary-surface ${
-          open ? "bg-primary-surface text-primary-main " : "text-neutral-600"
+          open ? "bg-primary-surface text-primary-main " : "text-neutral-700"
         }`}
       >
         <span className="flex flex-grow">{headerTitle}</span>
@@ -56,7 +56,7 @@ export const BorderedAccordion = ({ content, open, onToggle }) => {
 
   return (
     <div
-      className={`box-border rounded-lg border border-primary-border overflow-hidden ${
+      className={`box-border rounded-lg border border-primary-border overflow-hidden dark:border-none ${
         open ? "before:opacity-100 shadow" : "before:opacity-0"
       }`}
     >
@@ -65,7 +65,7 @@ export const BorderedAccordion = ({ content, open, onToggle }) => {
         className={`flex w-full px-4 py-3 bg-white hover:bg-primary-surface ${
           open
             ? "border-b text-primary-main border-primary-border"
-            : "text-neutral-600"
+            : "text-neutral-700"
         }`}
       >
         <span className="flex flex-grow">{headerTitle}</span>
@@ -79,7 +79,7 @@ export const BorderedAccordion = ({ content, open, onToggle }) => {
         className="h-0 overflow-hidden transition-all "
         style={{ height: open ? `${heightElement}` : "0px" }}
       >
-        <p className="flex flex-wrap px-4 py-3 bg-white text-neutral-600">
+        <p className="flex flex-wrap px-4 py-3 bg-white text-neutral-600 dark:text-neutral-600">
           {bodyContent}
         </p>
       </div>
