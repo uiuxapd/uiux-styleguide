@@ -90,10 +90,7 @@ const ProgressBar = () => {
                             setProgressPercentage(e.target.value);
                           }}
                         />
-                        <div class="absolute hidden md:block bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 whitespace-nowrap rounded-lg bg-neutral-900 dark:bg-neutral-200 py-2 px-4 text-xs font-medium text-white dark:text-neutral-900 opacity-0 group-hover:opacity-100 transition-all delay-200">
-                          <span class="absolute -bottom-1 left-1/2 -z-10 h-6 w-6 -translate-x-1/2 rotate-45 rounded bg-neutral-900 dark:bg-neutral-200"></span>
-                          Slide me baby
-                        </div>
+                        <div class="tooltip-top">Slide me baby</div>
                       </div>
                     </div>
                   </div>

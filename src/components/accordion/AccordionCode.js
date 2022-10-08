@@ -35,7 +35,7 @@ export const DefaultAccordionCode = () => {
               <span className="punctuation">"</span>
               <span className="attr-value">
                 flex w-full bg-white px-4 py-3 text-primary-main
-                hover:bg-primary-surface
+                hover:bg-primary-surface focus:outline-none
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
@@ -88,7 +88,7 @@ export const DefaultAccordionCode = () => {
               <span className="punctuation">"</span>
               <span className="attr-value">
                 flex w-full bg-primary-surface px-4 py-3 text-primary-main
-                hover:bg-primary-surface
+                hover:bg-primary-surface focus:outline-none
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
@@ -155,7 +155,7 @@ export const DefaultAccordionCode = () => {
               <span className="punctuation">"</span>
               <span className="attr-value">
                 flex w-full bg-white px-4 py-3 text-primary-main
-                hover:bg-primary-surface
+                hover:bg-primary-surface focus:outline-none
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
@@ -233,7 +233,7 @@ export const BorderedAccordionCode = () => {
               <span className="punctuation">"</span>
               <span className="attr-value">
                 box-border flex w-full rounded-lg border border-primary-border
-                bg-white px-4 py-3 text-neutral-600 hover:bg-primary-surface
+                bg-white px-4 py-3 text-neutral-600 hover:bg-primary-surface focus:outline-none
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
@@ -286,7 +286,7 @@ export const BorderedAccordionCode = () => {
               <span className="punctuation">"</span>
               <span className="attr-value">
                 flex w-full border-b border-primary-border px-4 py-3
-                text-primary-main hover:bg-primary-surface
+                text-primary-main hover:bg-primary-surface focus:outline-none
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
@@ -354,7 +354,7 @@ export const BorderedAccordionCode = () => {
               <span className="attr-value">
                 box-border flex w-full overflow-hidden rounded-lg border
                 border-primary-border bg-white px-4 py-3 text-neutral-600
-                hover:bg-primary-surface
+                hover:bg-primary-surface focus:outline-none
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>

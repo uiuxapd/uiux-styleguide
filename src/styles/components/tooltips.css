@@ -1,0 +1,12 @@
+.tooltip-top {
+  @apply absolute hidden md:block bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 whitespace-nowrap rounded-lg bg-neutral-900 dark:bg-neutral-200 py-2 px-4 text-xs font-medium text-white dark:text-neutral-900 opacity-0 group-hover:opacity-100 transition-all delay-200 after:absolute after:-bottom-1 after:left-1/2 after:-z-10 after:h-6 after:w-6 after:-translate-x-1/2 after:rotate-45 after:rounded after:bg-neutral-900 after:dark:bg-neutral-200;
+}
+.tooltip-left {
+  @apply absolute hidden md:block right-full top-1/2 z-20 mr-3 -translate-y-1/2 whitespace-nowrap rounded-lg bg-neutral-900 dark:bg-neutral-200 py-2 px-4 text-xs font-medium text-white dark:text-neutral-900 opacity-0 group-hover:opacity-100 transition-all delay-200 after:absolute after:-right-1 after:top-1/2 after:-z-10 after:h-6 after:w-6 after:-translate-y-1/2 after:rotate-45 after:rounded after:bg-neutral-900 after:dark:bg-neutral-200;
+}
+.tooltip-right {
+  @apply absolute hidden md:block left-full top-1/2 z-20 ml-3 -translate-y-1/2 whitespace-nowrap rounded-lg bg-neutral-900 dark:bg-neutral-200 py-2 px-4 text-xs font-medium text-white dark:text-neutral-900 opacity-0 group-hover:opacity-100 transition-all delay-200 after:absolute after:-left-1 after:top-1/2 after:-z-10 after:h-6 after:w-6 after:-translate-y-1/2 after:rotate-45 after:rounded after:bg-neutral-900 after:dark:bg-neutral-200;
+}
+.tooltip-bottom {
+  @apply absolute hidden md:block top-full left-1/2 z-20 mt-3 -translate-x-1/2 whitespace-nowrap rounded-lg bg-neutral-900 dark:bg-neutral-200 py-2 px-4 text-xs font-medium text-white dark:text-neutral-900 opacity-0 group-hover:opacity-100 transition-all delay-200 after:absolute after:-top-1 after:left-1/2 after:-z-10 after:h-6 after:w-6 after:-translate-x-1/2 after:rotate-45 after:rounded after:bg-neutral-900 after:dark:bg-neutral-200;
+}
