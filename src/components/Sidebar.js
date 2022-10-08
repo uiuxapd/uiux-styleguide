@@ -25,6 +25,8 @@ const Sidebar = () => {
         ["table", "/tables"],
         ["tooltips", "/tooltips"],
         ["steps", "/steps"],
+        ["range", "/range"],
+        ["form", "/form"],
       ],
     },
   ];

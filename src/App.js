@@ -17,6 +17,9 @@ import ProgressBar from "./pages/ProgressBar";
 import Accordion from "./pages/Accordion";
 import Tooltips from "./pages/Tooltips";
 import Breadcrumbs from "./pages/Breadcrumbs";
+import Range from "./pages/Range";
+import Form from "./pages/Form";
+
 
 
 const App = () => {
@@ -114,6 +117,8 @@ const App = () => {
               <Route path="/tables" element={<Tables />} />
               <Route path="/tooltips" element={<Tooltips />} />
               <Route path="/steps" element={<Steps />} />
+              <Route path="/range" element={<Range />} />
+              <Route path="/form" element={<Form />} />
             </Routes>
           </div>
         </div>
