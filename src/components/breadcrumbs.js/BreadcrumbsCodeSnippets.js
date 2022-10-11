@@ -53,7 +53,7 @@ export const slashBreadcrumbs = `
 </ul>`;
 
 export const solidBgBreadcrumbs = `
-<div class="bg-white py-2 px-4 box-border border border-primary-border rounded-lg shadow">
+<div class="bg-white py-2 px-4 w-fit box-border border border-primary-border rounded-lg shadow">
     <ul class="flex items-center">
         <li class="inline-flex items-center">
           <a class="text-neutral-400 hover:text-primary-hover transition-all">

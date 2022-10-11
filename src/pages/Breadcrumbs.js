@@ -1,6 +1,11 @@
 import { Tab } from "@headlessui/react";
 import React, { Fragment } from "react";
 import {
+  DefaultBreadcrumbsCode,
+  SlashBreadcrumbsCode,
+  SolidBgBreadcrumbsCode,
+} from "../components/breadcrumbs.js/BreadcrumbsCode";
+import {
   DefaultBreadcrumbs,
   SlashBreadcrumbs,
   SolidBgBreadcrumbs,
@@ -75,7 +80,9 @@ const Breadcrumbs = () => {
                   </div>
                 </Tab.Panel>
                 <Tab.Panel className="outline-none">
-                  <div className="overflow">{/* <TooltipsCode /> */}</div>
+                  <div className="overflow">
+                    <DefaultBreadcrumbsCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -123,7 +130,9 @@ const Breadcrumbs = () => {
                   </div>
                 </Tab.Panel>
                 <Tab.Panel className="outline-none">
-                  <div className="overflow">{/* <TooltipsCode /> */}</div>
+                  <div className="overflow">
+                    <SlashBreadcrumbsCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -171,7 +180,9 @@ const Breadcrumbs = () => {
                   </div>
                 </Tab.Panel>
                 <Tab.Panel className="outline-none">
-                  <div className="overflow">{/* <TooltipsCode /> */}</div>
+                  <div className="overflow">
+                    <SolidBgBreadcrumbsCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>

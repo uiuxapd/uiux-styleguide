@@ -3,40 +3,40 @@ import React from "react";
 
 export const DefaultBreadcrumbs = () => {
   return (
-    <ul class="flex items-center">
-      <li class="inline-flex items-center">
+    <ul className="flex items-center">
+      <li className="inline-flex items-center">
         <a
           href="#/breadcrumbs"
-          class="text-neutral-400 hover:text-primary-hover dark:hover:text-sky-400 transition-all"
+          className="text-neutral-400 hover:text-primary-hover dark:hover:text-sky-400 transition-all"
         >
           <HomeIcon className="icon24" />
         </a>
         <ChevronRightIcon className="icon16 mx-2 text-neutral-400" />
       </li>
 
-      <li class="inline-flex items-center">
+      <li className="inline-flex items-center">
         <a
           href="#/breadcrumbs"
-          class="text-neutral-600 hover:text-primary-hover dark:text-neutral-300 dark:hover:text-sky-400"
+          className="text-neutral-600 hover:text-primary-hover dark:text-neutral-300 dark:hover:text-sky-400"
         >
           Page 1
         </a>
         <ChevronRightIcon className="icon16 mx-2 text-neutral-400" />
       </li>
 
-      <li class="inline-flex items-center">
+      <li className="inline-flex items-center">
         <a
           href="#/breadcrumbs"
-          class="text-neutral-600 hover:text-primary-hover dark:text-neutral-300 dark:hover:text-sky-400"
+          className="text-neutral-600 hover:text-primary-hover dark:text-neutral-300 dark:hover:text-sky-400"
         >
           Page 2
         </a>
         <ChevronRightIcon className="icon16 mx-2 text-neutral-400" />
       </li>
-      <li class="inline-flex items-center">
+      <li className="inline-flex items-center">
         <a
           href="#/breadcrumbs"
-          class="hover:text-primary-hover text-primary-main dark:text-sky-300 dark:hover:text-sky-400"
+          className="hover:text-primary-hover text-primary-main dark:text-sky-300 dark:hover:text-sky-400"
         >
           Page 3
         </a>
@@ -47,40 +47,40 @@ export const DefaultBreadcrumbs = () => {
 
 export const SlashBreadcrumbs = () => {
   return (
-    <ul class="flex items-center">
-      <li class="inline-flex items-center">
+    <ul className="flex items-center">
+      <li className="inline-flex items-center">
         <a
           href="#/breadcrumbs"
-          class="text-neutral-400 hover:text-primary-hover dark:hover:text-sky-400 transition-all"
+          className="text-neutral-400 hover:text-primary-hover dark:hover:text-sky-400 transition-all"
         >
           <HomeIcon className="icon24" />
         </a>
-        <span className="mx-3 text-neutral-400">/</span>
+        <span className="mx-2 text-neutral-400">/</span>
       </li>
 
-      <li class="inline-flex items-center">
+      <li className="inline-flex items-center">
         <a
           href="#/breadcrumbs"
-          class="text-neutral-600 hover:text-primary-hover dark:text-neutral-300 dark:hover:text-sky-400"
+          className="text-neutral-600 hover:text-primary-hover dark:text-neutral-300 dark:hover:text-sky-400"
         >
           Page 1
         </a>
-        <span className="mx-3 text-neutral-400">/</span>
+        <span className="mx-2 text-neutral-400">/</span>
       </li>
 
-      <li class="inline-flex items-center">
+      <li className="inline-flex items-center">
         <a
           href="#/breadcrumbs"
-          class="text-neutral-600 hover:text-primary-hover dark:text-neutral-300 dark:hover:text-sky-400"
+          className="text-neutral-600 hover:text-primary-hover dark:text-neutral-300 dark:hover:text-sky-400"
         >
           Page 2
         </a>
-        <span className="mx-3 text-neutral-400">/</span>
+        <span className="mx-2 text-neutral-400">/</span>
       </li>
-      <li class="inline-flex items-center">
+      <li className="inline-flex items-center">
         <a
           href="#/breadcrumbs"
-          class="hover:text-primary-hover text-primary-main dark:text-sky-300 dark:hover:text-sky-400"
+          className="hover:text-primary-hover text-primary-main dark:text-sky-300 dark:hover:text-sky-400"
         >
           Page 3
         </a>
@@ -91,41 +91,41 @@ export const SlashBreadcrumbs = () => {
 
 export const SolidBgBreadcrumbs = () => {
   return (
-    <div className="bg-white py-2 px-4 box-border border border-primary-border rounded-lg shadow">
-      <ul class="flex items-center">
-        <li class="inline-flex items-center">
+    <div className="bg-white py-2 px-4 w-fit box-border border border-primary-border rounded-lg shadow">
+      <ul className="flex items-center">
+        <li className="inline-flex items-center">
           <a
             href="#/breadcrumbs"
-            class="text-neutral-400 hover:text-primary-hover transition-all"
+            className="text-neutral-400 hover:text-primary-hover transition-all"
           >
             <HomeIcon className="icon24" />
           </a>
           <ChevronRightIcon className="icon16 mx-2 text-neutral-400" />
         </li>
 
-        <li class="inline-flex items-center">
+        <li className="inline-flex items-center">
           <a
             href="#/breadcrumbs"
-            class="text-neutral-600 hover:text-primary-hover"
+            className="text-neutral-600 hover:text-primary-hover"
           >
             Page 1
           </a>
           <ChevronRightIcon className="icon16 mx-2 text-neutral-400" />
         </li>
 
-        <li class="inline-flex items-center">
+        <li className="inline-flex items-center">
           <a
             href="#/breadcrumbs"
-            class="text-neutral-600 hover:text-primary-hover"
+            className="text-neutral-600 hover:text-primary-hover"
           >
             Page 2
           </a>
           <ChevronRightIcon className="icon16 mx-2 text-neutral-400" />
         </li>
-        <li class="inline-flex items-center">
+        <li className="inline-flex items-center">
           <a
             href="#/breadcrumbs"
-            class="hover:text-primary-hover text-primary-main"
+            className="hover:text-primary-hover text-primary-main"
           >
             Page 3
           </a>

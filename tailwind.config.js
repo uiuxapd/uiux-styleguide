@@ -70,6 +70,9 @@ module.exports = {
       animation: {
         'waving-hand': 'wave 2s linear infinite'
       },
+      translate: {
+        200 : '200%',
+      }
     },
   },
   plugins: [],
