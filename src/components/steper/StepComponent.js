@@ -3,82 +3,76 @@ import { CheckIcon } from "@heroicons/react/24/solid";
 
 const SimpleStep = () => {
     return (
-        <div className="flex sm:justify-start lg:justify-center w-64 min-w-full overflow-x-auto">
-            <div className="flex justify-start p-4">
-                <ul className="flex items-center">
-                    <li>
-                        <div className="h-2 w-60 bg-primary-main border border-primary-main rounded-full mr-3.5 mb-4"></div>
-                        <label className="text-base font-bold text-primary-main">Step 1</label>
-                    </li>
-                    <li>
-                        <div className="h-2 w-60 bg-primary-main border border-primary-main rounded-full mr-3.5 mb-4"></div>
-                        <label className="text-base font-bold text-primary-main">Step 2</label>
-                    </li>
-                    <li>
-                        <div className="h-2 w-60 bg-primary-focused border border-primary-focused rounded-full mr-3.5 mb-4"></div>
-                        <label className="text-base font-normal text-primary-focused">Step 3</label>
-                    </li>
-                    <li>
-                        <div className="h-2 w-60 bg-primary-focused border border-primary-focused rounded-full mr-3.5 mb-4"></div>
-                        <label className="text-base font-normal text-primary-focused">Step 4</label>
-                    </li>
-                </ul>
-            </div>
-        </div>
+       
+        <ul className="flex items-center justify-start w-full gap-3.5 overflow-x-auto p-4">
+            <li className="flex-[1_0_200px]">
+                <div className="h-2 w-full bg-primary-main border border-primary-main rounded-full mb-4"></div>
+                <label className="text-base font-bold text-primary-main">Step 1</label>
+            </li>
+            <li className="flex-[1_0_200px]">
+                <div className="h-2 w-full bg-white border border-primary-main rounded-full mb-4"></div>
+                <label className="text-base font-bold text-primary-main">Step 2</label>
+            </li>
+            <li className="flex-[1_0_200px]">
+                <div className="h-2 w-full bg-primary-focused border border-primary-focused rounded-full mb-4"></div>
+                <label className="text-base font-normal text-primary-focused">Step 3</label>
+            </li>
+            <li className="flex-[1_0_200px]">
+                <div className="h-2 w-full bg-primary-focused border border-primary-focused rounded-full mb-4"></div>
+                <label className="text-base font-normal text-primary-focused">Step 4</label>
+            </li>
+        </ul>
+        
     );
 };  
 
 const StepCircle = () => {
     return (
-        <div className="flex sm:justify-start lg:justify-center w-64 min-w-full overflow-x-auto">
-            <div className="flex justify-start p-4">
-                <ul className="flex items-center">
-                    <li>
-                        <div className="flex justify-center items-center mb-5">
-                            <div className="flex items-center">
-                                <span className="h-8 w-8 flex justify-center items-center bg-white border border-solid rounded-full border-primary-main text-primary-main">
-                                    <CheckIcon className="icon16"/>
-                                </span>
-                                <span className="mx-3.5 text-primary-main text-base font-normal">Pertama</span>
-                            </div>
-                            <span className="h-px w-40 bg-primary-main border border-primary-main rounded-full mr-3.5"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="flex justify-center items-center mb-5">
-                            <div className="flex items-center">
-                                <span className="h-8 w-8 flex justify-center items-center bg-primary-main border border-solid rounded-full border-primary-main text-white">
-                                    2
-                                </span>
-                                <span className="mx-3.5 text-primary-main text-base font-bold">Kedua</span>
-                            </div>
-                            <span className="h-px w-40 bg-primary-focused border border-primary-focused rounded-full mr-3.5"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="flex justify-center items-center mb-5">
-                            <div className="flex items-center">
-                                <span className="h-8 w-8 flex justify-center items-center bg-primary-focused border border-solid rounded-full border-primary-focused text-white">
-                                    3
-                                </span>
-                                <span className="mx-3.5 text-primary-focused text-base font-normal">Ketiga</span>
-                            </div>
-                            <span className="h-px w-40 bg-primary-focused border border-primary-focused rounded-full mr-3.5"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="flex justify-center items-center mb-5">
-                            <div className="flex items-center">
-                                <span className="h-8 w-8 flex justify-center items-center bg-primary-focused border border-solid rounded-full border-primary-focused text-white">
-                                    4
-                                </span>
-                                <span className="mx-3.5 text-primary-focused text-base font-normal">Keempat</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        
+        <ul className="flex items-center justify-start w-full gap-3.5 overflow-x-auto p-4">
+            <li className="flex justify-center items-center">
+                <div className="flex items-center">
+                    <span className="h-8 w-8 flex justify-center items-center bg-white border border-solid rounded-full border-primary-main text-primary-main">
+                        <CheckIcon className="icon16"/>
+                    </span>
+                    <span className="mx-3.5 text-primary-main text-base font-normal">Pertama</span>
+                </div>
+                <span className="h-px w-40 bg-primary-main border border-primary-main rounded-full"></span>
+            </li>
+            <li className="flex justify-center items-center">
+                
+                    <div className="flex items-center">
+                        <span className="h-8 w-8 flex justify-center items-center bg-primary-main border border-solid rounded-full border-primary-main text-white">
+                            2
+                        </span>
+                        <span className="mx-3.5 text-primary-main text-base font-bold">Kedua</span>
+                    </div>
+                    <span className="h-px w-40 bg-primary-focused border border-primary-focused rounded-full mr-3.5"></span>
+                
+            </li>
+            <li className="flex justify-center items-center">
+                
+                    <div className="flex items-center">
+                        <span className="h-8 w-8 flex justify-center items-center bg-primary-focused border border-solid rounded-full border-primary-focused text-white">
+                            3
+                        </span>
+                        <span className="mx-3.5 text-primary-focused text-base font-normal">Ketiga</span>
+                    </div>
+                    <span className="h-px w-40 bg-primary-focused border border-primary-focused rounded-full mr-3.5"></span>
+                
+            </li>
+            <li className="flex justify-center items-center">
+                
+                    <div className="flex items-center">
+                        <span className="h-8 w-8 flex justify-center items-center bg-primary-focused border border-solid rounded-full border-primary-focused text-white">
+                            4
+                        </span>
+                        <span className="mx-3.5 text-primary-focused text-base font-normal">Keempat</span>
+                    </div>
+                
+            </li>
+        </ul>
+            
 
         
     );
