@@ -1,14 +1,55 @@
 import React from "react";
 import { PhotoIcon } from "@heroicons/react/24/solid";
 
-const FormGrid = () => {
-    return(
+const defaultState = {
+    name : '',
+    nameError : '',
+    label : '',
+    labelError : '',
+};
+class FormGrid extends React.Component   {
+    constructor() {
+        super();
+        this.state = defaultState;
+        this.handleInputChange = this.handleInputChange.bind(this);
+      }
+      handleInputChange(event) {
+        const target = event.target;
+        var value = target.value;
+        const name = target.name;
+        this.setState({
+          [name]: value,
+        });
+      }
+      validate() {
+        let nameError = '';
+        let labelError = '';
+        
+        if (nameError === '') {
+            nameError = "Label error bro(die)";
+        }
+        if (labelError === '') {
+            labelError = "Labelnya kosong bro(die)"
+        }
+        if (nameError || labelError) {
+            this.setState({ nameError, labelError });
+            return false;
+        }
+        return true;
+      }
+      
+    render() {
+    return (
         <div className="flex items-center justify-center w-full gap-3.5 overflow-x-auto p-4">
             <form className="w-full max-w-lg">
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full md:w-1/2 px-1 mb-6 md:mb-0">
                         <label className="block tracking-wide mb-2 text-base font-medium text-gray-700">Label</label>
-                        <input type="text" placeholder="Left" className="appearance-none block w-full py-2.5 px-4 text-sm bg-white border border-gray-400 rounded-xl leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"/>
+                        <input  type="text"
+                                placeholder="Left" 
+                                className=
+                                "appearance-none block w-full py-2.5 px-4 text-sm bg-white border border-gray-400 rounded-xl leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"/>
+                        
                     </div>
                     <div className="w-full md:w-1/2 px-1 mb-6 md:mb-0">
                         <label className="block tracking-wide mb-2 text-base font-medium text-gray-700">Label</label>
@@ -17,8 +58,13 @@ const FormGrid = () => {
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full px-1">
-                        <label className="block tracking-wide mb-2 text-base font-medium text-gray-700">Label</label>
-                        <input type="text" placeholder="Placeholder" className="appearance-none block w-full py-2.5 px-4 text-sm bg-white border border-gray-400 rounded-xl leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"/>
+                        <label className="block tracking-wide mb-2 text-base font-medium text-gray-700">Label<span className="text-base font-normal text-red-600 ml-1">*</span></label>
+                        <input  type="text"
+                                name="name"
+                                placeholder="Placeholder" 
+                                className={ this.state.nameError ? "appearance-none block w-full py-2.5 px-4 text-sm bg-white border border-red-600 rounded-xl leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-red-200" :
+                                "appearance-none block w-full py-2.5 px-4 text-sm bg-white border border-gray-400 rounded-xl leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"}/>
+                        <span className="text-xs font-normal text-red-600">{this.state.nameError}</span>
                     </div>
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
@@ -35,8 +81,13 @@ const FormGrid = () => {
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full md:w-1/3 px-1 mb-6 md:mb-0">
-                        <label className="block tracking-wide mb-2 text-base font-medium text-gray-700">Label</label>
-                        <input type="text" placeholder="Start" className="appearance-none block w-full py-2.5 px-4 text-sm bg-white border border-gray-400 rounded-xl leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"/>
+                        <label className="block tracking-wide mb-2 text-base font-medium text-gray-700">Label<span className="text-base font-normal text-red-600 ml-1">*</span></label>
+                        <input  type="text"
+                                name="label" 
+                                placeholder="Start" 
+                                className={this.state.labelError ? "appearance-none block w-full py-2.5 px-4 text-sm bg-white border border-red-600 rounded-xl leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-red-200" :
+                                "appearance-none block w-full py-2.5 px-4 text-sm bg-white border border-gray-400 rounded-xl leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"}/>
+                        <span className="text-xs font-normal text-red-600">{this.state.labelError}</span>
                     </div>
                     <div className="w-full md:w-1/3 px-1 mb-6 md:mb-0">
                         <label className="block tracking-wide mb-2 text-base font-medium text-gray-700">Label</label>
@@ -134,7 +185,7 @@ const FormGrid = () => {
                             <div className="flex items-center text-sm text-gray-600">
                                 <label for="file-upload" class="relative cursor-pointer rounded-md bg-white font-medium text-primary-main focus-within:outline-none focus-within:ring-2 focus-within:ring-primary-focused focus-within:ring-offset-2">
                                     <span className="px-1">Upload a file</span>
-                                    <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+                                    {/* <input id="file-upload" name="file-upload" type="file" class="sr-only" /> */}
                                 </label>
                                 <p className="pl-1">or drag and drop</p>
                             </div>
@@ -142,9 +193,16 @@ const FormGrid = () => {
                         </div>
                     </div>
                 </div>
+                <button 
+                    type="submit"
+                    onClick={ () => this.validate() }
+                    className="bg-primary-main text-white text-sm py-2 px-4 rounded-lg shadow transition-all border-none hover:bg-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none">
+                Submit</button>
             </form>
         </div>
     );
+    };
+    
 };
 
 export default FormGrid;

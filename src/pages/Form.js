@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {
     TabCodeActive,
     TabCodeInactive,
@@ -8,7 +8,21 @@ import {
 import {Tab} from "@headlessui/react";
 import FormGrid from "../components/form/FormComponent";
 
-const Form = () => {
+class Form extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            formValues : ''
+        };
+    }
+
+    onFormSubmit = event => {
+        console.log(event);
+        this.setState({formValues:JSON.stringify(event)})
+    }
+
+    render() {
     return(
         <div className="content-left">
             <div className="pb-4 mb-8 border-b border-slate-200 dark:border-slate-800">
@@ -58,7 +72,7 @@ const Form = () => {
                             <Tab.Panel>
                                 <div className="component-section">
                                     <div className="component-block">
-                                        <FormGrid />
+                                        <FormGrid onSubmit={this.onFormSubmit} />
                                     </div>
                                 </div>
                             </Tab.Panel>
@@ -76,6 +90,7 @@ const Form = () => {
             </div>
         </div>
     );
+    };
 };
 
 export default Form;
