@@ -23,6 +23,7 @@ const Sidebar = () => {
         ["progress bar", "/progressbar"],
         ["typography", "/typography"],
         ["table", "/tables"],
+        ["tabs", "/tabs"],
         ["tooltips", "/tooltips"],
         ["steps", "/steps"],
         ["range", "/range"],

@@ -19,6 +19,7 @@ import Tooltips from "./pages/Tooltips";
 import Breadcrumbs from "./pages/Breadcrumbs";
 import Range from "./pages/Range";
 import Form from "./pages/Form";
+import { Tabs } from "./pages/Tabs";
 
 
 
@@ -115,6 +116,7 @@ const App = () => {
               <Route path="/progressbar" element={<ProgressBar />} />
               <Route path="/typography" element={<Typography />} />
               <Route path="/tables" element={<Tables />} />
+              <Route path="/tabs" element={<Tabs />} />
               <Route path="/tooltips" element={<Tooltips />} />
               <Route path="/steps" element={<Steps />} />
               <Route path="/range" element={<Range />} />
