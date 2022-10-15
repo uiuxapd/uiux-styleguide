@@ -103,13 +103,7 @@ export const SolidBgTabs = () => {
                       <li>&middot;</li>
                       <li>{post.shareCount}</li>
                     </ul>
-                    <a
-                      href="#/tabs"
-                      className={classNames(
-                        "absolute inset-0 rounded-lg",
-                        "ring-primary-focused focus:z-10 focus:outline-none focus:ring-4"
-                      )}
-                    />
+                    <a href="#/tabs" className={classNames("absolute inset-0 rounded-lg", "ring-primary-focused focus:z-10 focus:outline-none focus:ring-4")}> </a>
                   </li>
                 ))}
               </ul>
