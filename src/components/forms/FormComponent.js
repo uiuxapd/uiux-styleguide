@@ -2,55 +2,26 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import React, { useEffect, useState } from "react";
 
 const FormComponent = () => {
-    const initValues = { fullname: "", email: ""}
-    const [formValues, setFormValues] = useState(initValues)
-    const [formErrors, setFormErrors] = useState({})
-    const [isSubmit, setIsSubmit] = useState(false)
-
-    const handleChange = (e) => {
-        const {name, value} = e.target
-        setFormValues({...formValues, [name]: value})
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setFormErrors(validate(formValues))
-        setIsSubmit(true)
-    }
-
-    useEffect(() => {
-        if (Object.keys(formErrors).length === 0 && isSubmit) {
-            console.log(formValues)
-        }
-    },[formErrors, formValues, isSubmit])
-
-    const validate = (values) => {
-        const error = {}
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
-
-        if (!values.fullname) {
-            error.fullname = "Username is required"
-        }
-        if (!values.email) {
-            error.email = "Email is required"
-        } else if (!regex.test(values.email)) {
-            error.email = "This is not valid email"
-        } 
+    
+    const handleSubmit = (ev) => {
+        ev.preventDefault();
+        const datas = new FormData(ev.target)
+        console.log(Object.fromEntries(datas.entries()))
     }
 
   return (
-    <form className="flex flex-col w-1/2 gap-4" onSubmit={handleSubmit}>
+    <form className="flex flex-col w-full md:w-1/2 gap-4" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="fullname" className="capitalize text-slate-700">
           fullname
         </label>
-        <input onChange={handleChange} value={formValues.fullname} type="text" id="fullname" className="block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" />
+        <input type="text" id="fullname" name="fullname" className="block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" />
       </div>
       <div>
         <label htmlFor="email" className="capitalize text-slate-700">
           email
         </label>
-        <input onChange={handleChange} value={formValues.email} type="email" id="email" className="block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" />
+        <input type="email" id="email" name="email" className="block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" />
       </div>
       <div>
         <label className="capitalize text-slate-700">gender</label>
