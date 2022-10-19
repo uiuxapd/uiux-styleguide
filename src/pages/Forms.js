@@ -1,5 +1,10 @@
 import React from "react";
+import CheckboxComponent from "../components/forms/CheckboxComponent";
+import DatepickerComponent from "../components/forms/DatepickerComponent";
 import InputComponent from "../components/forms/InputComponent";
+import RadioComponent from "../components/forms/RadioComponent";
+import SelectComponent from "../components/forms/SelectComponent";
+import ToggleComponent from "../components/forms/ToggleComponent";
 
 const Forms = () => {
   return (
@@ -18,6 +23,11 @@ const Forms = () => {
         </div>
         <div className="flex flex-col gap-24">
           <InputComponent />
+          <DatepickerComponent />
+          <SelectComponent />
+          <RadioComponent />
+          <CheckboxComponent />
+          <ToggleComponent />
         </div>
       </div>
       <div className="content-right"></div>

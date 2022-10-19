@@ -1,7 +1,9 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useState } from "react";
 
 const FormComponent = () => {
+  const [disable, setDisable] = useState(false)
     
     const handleSubmit = (ev) => {
         ev.preventDefault();
@@ -9,13 +11,18 @@ const FormComponent = () => {
         console.log(Object.fromEntries(datas.entries()))
     }
 
+    const handleDisable = () => {
+      setDisable(!disable)
+    }
+
   return (
+    <>
     <form className="flex flex-col w-full md:w-1/2 gap-4" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="fullname" className="capitalize text-slate-700">
           fullname
         </label>
-        <input type="text" id="fullname" name="fullname" className="block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" />
+        <input type="text" id="fullname" name="fullname" className="block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"  disabled={disable}/>
       </div>
       <div>
         <label htmlFor="email" className="capitalize text-slate-700">
@@ -28,8 +35,8 @@ const FormComponent = () => {
         <div className="flex items-center gap-8 mt-2">
           <div className="flex items-center gap-2">
             <div className="relative w-5 h-5">
-              <input type="radio" name="gender" id="male" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
-              <div className="w-full h-full bg-white peer-checked:bg-blue-600 border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible before:z-[2] before:absolute before:w-2 before:h-2 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:-rotate-45 peer-checked:before:visible"></div>
+              <input type="radio" name="gender" id="male" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]"/>
+              <div className="w-full h-full bg-white peer-checked:bg-blue-600 border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible before:z-[2] before:absolute before:w-2.5 before:h-2.5 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:-rotate-45 peer-checked:before:visible"></div>
             </div>
             <label htmlFor="male" className="capitalize">
               male
@@ -38,7 +45,7 @@ const FormComponent = () => {
           <div className="flex items-center gap-2">
             <div className="relative w-5 h-5">
               <input type="radio" name="gender" id="female" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
-              <div className="w-full h-full bg-white peer-checked:bg-blue-600 border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible before:z-[2] before:absolute before:w-2 before:h-2 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:-rotate-45 peer-checked:before:visible"></div>
+              <div className="w-full h-full bg-white peer-checked:bg-blue-600 border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible before:z-[2] before:absolute before:w-2.5 before:h-2.5 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:-rotate-45 peer-checked:before:visible"></div>
             </div>
             <label htmlFor="female" className="capitalize">
               female
@@ -75,7 +82,7 @@ const FormComponent = () => {
         <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
                 <div className="relative w-5 h-5">
-                <input type="checkbox" name="checkbox" id="" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
+                <input type="checkbox" name="checkbox" id="checkbox" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
                 <div className="w-full h-full bg-white peer-checked:bg-primary-main border-2 border-primary-border peer-hover:border-primary-main rounded-md peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible after:invisible before:absolute before:w-[2px] before:h-1.5 before:bg-white before:rounded-full before:top-[55%] before:-translate-y-1/2 before:left-1/2 before:-translate-x-1 before:-rotate-45 before:z-[2] after:absolute after:w-[2px] after:h-[10px] after:bg-white after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:rotate-45 after:z-[2] peer-checked:before:visible peer-checked:after:visible"></div>
                 </div>
                 <label htmlFor="checkbox" className="capitalize">I agree with all <strong className="text-primary-main">terms & conditions</strong></label>
@@ -83,10 +90,12 @@ const FormComponent = () => {
         </div>
       </div>
       <div className="flex gap-4 justify-center w-full pt-6">
-        <button className="bg-primary-main text-white text-base py-2 px-4 rounded-lg shadow transition-all border-none hover:bg-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none capitalize">disable</button>
-        <button className="bg-primary-main text-white text-base py-2 px-4 rounded-lg shadow transition-all border-none hover:bg-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none capitalize">submit</button>
+        <button className="w-full bg-primary-main text-white text-base py-2 px-4 rounded-lg shadow transition-all border-none hover:bg-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none capitalize">submit</button>
       </div>
     </form>
+    
+    <button onClick={handleDisable} className="bg-primary-main text-white text-base py-2 px-4 rounded-lg shadow transition-all border-none hover:bg-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none capitalize absolute top-8 left-8">disable</button>
+    </>
   );
 };
 
