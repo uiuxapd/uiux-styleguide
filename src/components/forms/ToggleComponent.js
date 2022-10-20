@@ -42,8 +42,8 @@ const ToggleComponent = () => {
                 <div className="grow shrink-0 basis-1/2 md:basis-1/4">
                     <div className="flex items-center gap-2">
                         <div className="relative w-8 h-5">
-                        <input type="checkbox" name="toggle" id="toggle" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
-                        <div className="w-full h-full bg-white border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-blue-600 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-blue-600 peer-checked:after:left-3 peer-checked:after:bg-white"></div>
+                            <input type="checkbox" id="toggle" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
+                            <div className="w-full h-full bg-white border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-blue-600 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-blue-600 peer-checked:after:left-3 peer-checked:after:bg-white"></div>
                         </div>
                         <label htmlFor="toggle" className="capitalize">toggle base</label>
                     </div>                   
@@ -51,8 +51,8 @@ const ToggleComponent = () => {
                 <div className="grow shrink-0 basis-1/2 md:basis-1/4">
                     <div className="flex items-center gap-2">
                         <div className="relative w-8 h-5">
-                        <input type="checkbox" name="toggledisable" id="toggledisable" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" checked disabled />
-                        <div className="w-full h-full bg-white border-2 border-primary-border peer-hover:border-slate-300 rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-slate-400 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-slate-400 peer-checked:after:left-3 peer-checked:after:bg-white"></div>
+                            <input type="checkbox" id="toggledisable" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" defaultChecked disabled />
+                            <div className="w-full h-full bg-white border-2 border-primary-border peer-hover:border-slate-300 rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-slate-400 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-slate-400 peer-checked:after:left-3 peer-checked:after:bg-white"></div>
                         </div>
                         <label htmlFor="toggledisable" className="capitalize">toggle disable</label>
                     </div>                   
@@ -60,8 +60,8 @@ const ToggleComponent = () => {
                 <div className="grow shrink-0 basis-1/2 md:basis-1/4">
                     <div className="flex items-center gap-2">
                         <div className="relative w-8 h-5">
-                        <input type="checkbox" name="toggleerror" id="toggleerror" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" checked />
-                        <div className="w-full h-full bg-white border-2 border-error-border peer-hover:border-error-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-error-main after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-error-main peer-checked:after:left-3 peer-checked:after:bg-error-border"></div>
+                            <input type="checkbox" id="toggleerror" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" defaultChecked />
+                            <div className="w-full h-full bg-white border-2 border-error-border peer-hover:border-error-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-error-main after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-error-main peer-checked:after:left-3 peer-checked:after:bg-error-border"></div>
                         </div>
                         <label htmlFor="toggleerror" className="capitalize text-error-main">toggle error</label>
                     </div>                   

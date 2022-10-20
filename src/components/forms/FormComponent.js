@@ -1,18 +1,56 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const FormComponent = () => {
-  const [disable, setDisable] = useState(false)
-    
-    const handleSubmit = (ev) => {
-        ev.preventDefault();
-        const datas = new FormData(ev.target)
-        console.log(Object.fromEntries(datas.entries()))
-    }
+  
+  const [ errorInput, setErrorInput ] = useState({
+    message: '',
+    state: false
+  })
+  const [ errorEmail, setErrorEmail ] = useState({
+    message: '',
+    state: false
+  })
 
-    const handleDisable = () => {
-      setDisable(!disable)
+  const baseClass = "block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"
+  const errorClass = "block w-full py-2.5 px-4 text-base text-error-main bg-error-surface border border-error-border hover:border-error-main rounded-lg leading-tight focus:outline-none focus:bg-error-surface focus:ring focus:ring-error-focused focus:border-error-main"
+  
+  const handleSubmit = (ev) => {
+        ev.preventDefault();
+
+        const validateEmail = email => /^[^@ ]+@[^@ ]+\.[^@ \.]+$/.test(email);
+
+        const datas = new FormData(ev.target)
+        const item = Object.fromEntries(datas.entries())
+        
+        if (item.fullname === "") {
+          setErrorInput({
+            message: "Fullname is required",
+            state: true
+          })
+        } else {
+          setErrorInput({
+            message: '',
+            state: false
+          })
+        }
+
+        if (item.email === "") {
+          setErrorEmail({
+            message: "Email is required",
+            state: true
+          })
+        } else if (!validateEmail(item.email)) {
+          setErrorEmail({
+            message: "Please enter a valid email adrress",
+            state: true
+          })
+        } else {
+          setErrorEmail({
+            message: '',
+            state: false
+          })
+        }
     }
 
   return (
@@ -22,13 +60,15 @@ const FormComponent = () => {
         <label htmlFor="fullname" className="capitalize text-slate-700">
           fullname
         </label>
-        <input type="text" id="fullname" name="fullname" className="block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"  disabled={disable}/>
+        <input type="text" id="fullname" name="fullname" className={errorInput.state ? errorClass : baseClass} />
+        <span className="relative text-error-main text-xs italic empty:hidden">{errorInput.message}</span>
       </div>
       <div>
         <label htmlFor="email" className="capitalize text-slate-700">
           email
         </label>
-        <input type="email" id="email" name="email" className="block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" />
+        <input type="text" id="email" name="email" className={errorEmail.state ? errorClass : baseClass} />
+        <span className="relative text-error-main text-xs italic empty:hidden">{errorEmail.message}</span>
       </div>
       <div>
         <label className="capitalize text-slate-700">gender</label>
@@ -93,8 +133,6 @@ const FormComponent = () => {
         <button className="w-full bg-primary-main text-white text-base py-2 px-4 rounded-lg shadow transition-all border-none hover:bg-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none capitalize">submit</button>
       </div>
     </form>
-    
-    <button onClick={handleDisable} className="bg-primary-main text-white text-base py-2 px-4 rounded-lg shadow transition-all border-none hover:bg-primary-hover focus:ring-4 focus:ring-primary-focused focus:shadow-none focus:outline-none capitalize absolute top-8 left-8">disable</button>
     </>
   );
 };

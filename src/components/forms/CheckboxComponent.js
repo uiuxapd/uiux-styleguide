@@ -42,7 +42,7 @@ const CheckboxComponent = () => {
                 <div className="grow shrink-0 basis-1/2 md:basis-1/4">
                     <div className="flex items-center gap-2">
                         <div className="relative w-5 h-5">
-                        <input type="checkbox" name="checkbox" id="checkbox" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
+                        <input type="checkbox" id="checkbox" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
                         <div className="w-full h-full bg-white peer-checked:bg-primary-main border-2 border-primary-border peer-hover:border-primary-main rounded-md peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible after:invisible before:absolute before:w-[2px] before:h-1.5 before:bg-white before:rounded-full before:top-[55%] before:-translate-y-1/2 before:left-1/2 before:-translate-x-1 before:-rotate-45 before:z-[2] after:absolute after:w-[2px] after:h-[10px] after:bg-white after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:rotate-45 after:z-[2] peer-checked:before:visible peer-checked:after:visible"></div>
                         </div>
                         <label htmlFor="checkbox" className="capitalize">checkbox base</label>
@@ -51,7 +51,7 @@ const CheckboxComponent = () => {
                 <div className="grow shrink-0 basis-1/2 md:basis-1/4">
                     <div className="flex items-center gap-2">
                         <div className="relative w-5 h-5">
-                        <input type="checkbox" name="checkboxdisable" id="checkboxdisable" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" disabled checked />
+                        <input type="checkbox" id="checkboxdisable" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" disabled defaultChecked />
                         <div className="w-full h-full bg-white peer-checked:bg-slate-400 border-2 border-primary-border peer-hover:border-slate-400 rounded-md peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible after:invisible before:absolute before:w-[2px] before:h-1.5 before:bg-white before:rounded-full before:top-[55%] before:-translate-y-1/2 before:left-1/2 before:-translate-x-1 before:-rotate-45 before:z-[2] after:absolute after:w-[2px] after:h-[10px] after:bg-white after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:rotate-45 after:z-[2] peer-checked:before:visible peer-checked:after:visible"></div>
                         </div>
                         <label htmlFor="checkboxdisable" className="capitalize">checkbox disable</label>
@@ -60,7 +60,7 @@ const CheckboxComponent = () => {
                 <div className="grow shrink-0 basis-1/2 md:basis-1/4">
                     <div className="flex items-center gap-2">
                         <div className="relative w-5 h-5">
-                        <input type="checkbox" name="checkboxerror" id="checkboxerror" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" checked />
+                        <input type="checkbox" id="checkboxerror" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" defaultChecked />
                         <div className="w-full h-full bg-white peer-checked:bg-error-main border-2 border-error-border peer-hover:border-error-main rounded-md peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible after:invisible before:absolute before:w-[2px] before:h-1.5 before:bg-white before:rounded-full before:top-[55%] before:-translate-y-1/2 before:left-1/2 before:-translate-x-1 before:-rotate-45 before:z-[2] after:absolute after:w-[2px] after:h-[10px] after:bg-white after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:rotate-45 after:z-[2] peer-checked:before:visible peer-checked:after:visible"></div>
                         </div>
                         <label htmlFor="checkboxerror" className="capitalize text-error-main">checkbox error</label>

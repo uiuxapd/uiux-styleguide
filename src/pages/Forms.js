@@ -1,9 +1,11 @@
 import React from "react";
 import CheckboxComponent from "../components/forms/CheckboxComponent";
 import DatepickerComponent from "../components/forms/DatepickerComponent";
+import FormGroupComponent from "../components/forms/FormGroupComponent";
 import InputComponent from "../components/forms/InputComponent";
 import RadioComponent from "../components/forms/RadioComponent";
 import SelectComponent from "../components/forms/SelectComponent";
+import TextareaComponent from "../components/forms/TextareaComponent";
 import ToggleComponent from "../components/forms/ToggleComponent";
 
 const Forms = () => {
@@ -28,6 +30,8 @@ const Forms = () => {
           <RadioComponent />
           <CheckboxComponent />
           <ToggleComponent />
+          <TextareaComponent />
+          <FormGroupComponent />
         </div>
       </div>
       <div className="content-right"></div>
