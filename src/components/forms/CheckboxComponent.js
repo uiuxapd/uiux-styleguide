@@ -6,10 +6,11 @@ import {
   TabPreviewInactive,
 } from "../BtnCond";
 import { Tab } from "@headlessui/react";
+import { CheckboxBaseCode, CheckboxDisableCode, CheckboxErrorCode } from "./FormCode";
 
-const CheckboxComponent = () => {
+const CheckboxComponent = (props) => {
   return (
-    <div>
+    <div ref={props.refer}>
       <Tab.Group>
         <div className="flex items-center gap-2 mb-4">
           <h4 className="text-lg capitalize sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
@@ -43,7 +44,7 @@ const CheckboxComponent = () => {
                     <div className="flex items-center gap-2">
                         <div className="relative w-5 h-5">
                         <input type="checkbox" id="checkbox" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
-                        <div className="w-full h-full bg-white peer-checked:bg-primary-main border-2 border-primary-border peer-hover:border-primary-main rounded-md peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible after:invisible before:absolute before:w-[2px] before:h-1.5 before:bg-white before:rounded-full before:top-[55%] before:-translate-y-1/2 before:left-1/2 before:-translate-x-1 before:-rotate-45 before:z-[2] after:absolute after:w-[2px] after:h-[10px] after:bg-white after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:rotate-45 after:z-[2] peer-checked:before:visible peer-checked:after:visible"></div>
+                        <div className="w-full h-full bg-white peer-checked:bg-primary-main border-2 border-primary-border peer-hover:border-primary-main rounded-md peer-hover:ring-2 peer-hover:ring-primary-focused before:invisible after:invisible before:absolute before:w-[2px] before:h-1.5 before:bg-white before:rounded-full before:top-[55%] before:-translate-y-1/2 before:left-1/2 before:-translate-x-1 before:-rotate-45 before:z-[2] after:absolute after:w-[2px] after:h-[10px] after:bg-white after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:rotate-45 after:z-[2] peer-checked:before:visible peer-checked:after:visible"></div>
                         </div>
                         <label htmlFor="checkbox" className="capitalize">checkbox base</label>
                     </div>                    
@@ -52,7 +53,7 @@ const CheckboxComponent = () => {
                     <div className="flex items-center gap-2">
                         <div className="relative w-5 h-5">
                         <input type="checkbox" id="checkboxdisable" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" disabled defaultChecked />
-                        <div className="w-full h-full bg-white peer-checked:bg-slate-400 border-2 border-primary-border peer-hover:border-slate-400 rounded-md peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible after:invisible before:absolute before:w-[2px] before:h-1.5 before:bg-white before:rounded-full before:top-[55%] before:-translate-y-1/2 before:left-1/2 before:-translate-x-1 before:-rotate-45 before:z-[2] after:absolute after:w-[2px] after:h-[10px] after:bg-white after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:rotate-45 after:z-[2] peer-checked:before:visible peer-checked:after:visible"></div>
+                        <div className="w-full h-full bg-white peer-checked:bg-slate-400 border-2 border-primary-border peer-hover:border-slate-400 rounded-md peer-hover:ring-2 peer-hover:ring-primary-focused before:invisible after:invisible before:absolute before:w-[2px] before:h-1.5 before:bg-white before:rounded-full before:top-[55%] before:-translate-y-1/2 before:left-1/2 before:-translate-x-1 before:-rotate-45 before:z-[2] after:absolute after:w-[2px] after:h-[10px] after:bg-white after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:rotate-45 after:z-[2] peer-checked:before:visible peer-checked:after:visible"></div>
                         </div>
                         <label htmlFor="checkboxdisable" className="capitalize">checkbox disable</label>
                     </div>                                       
@@ -61,7 +62,7 @@ const CheckboxComponent = () => {
                     <div className="flex items-center gap-2">
                         <div className="relative w-5 h-5">
                         <input type="checkbox" id="checkboxerror" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" defaultChecked />
-                        <div className="w-full h-full bg-white peer-checked:bg-error-main border-2 border-error-border peer-hover:border-error-main rounded-md peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible after:invisible before:absolute before:w-[2px] before:h-1.5 before:bg-white before:rounded-full before:top-[55%] before:-translate-y-1/2 before:left-1/2 before:-translate-x-1 before:-rotate-45 before:z-[2] after:absolute after:w-[2px] after:h-[10px] after:bg-white after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:rotate-45 after:z-[2] peer-checked:before:visible peer-checked:after:visible"></div>
+                        <div className="w-full h-full bg-white peer-checked:bg-error-main border-2 border-error-border peer-hover:border-error-main rounded-md peer-hover:ring-2 peer-hover:ring-error-focused before:invisible after:invisible before:absolute before:w-[2px] before:h-1.5 before:bg-white before:rounded-full before:top-[55%] before:-translate-y-1/2 before:left-1/2 before:-translate-x-1 before:-rotate-45 before:z-[2] after:absolute after:w-[2px] after:h-[10px] after:bg-white after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:rotate-45 after:z-[2] peer-checked:before:visible peer-checked:after:visible"></div>
                         </div>
                         <label htmlFor="checkboxerror" className="capitalize text-error-main">checkbox error</label>
                     </div>                                        
@@ -70,7 +71,11 @@ const CheckboxComponent = () => {
             </div>
           </Tab.Panel>
           <Tab.Panel className="outline-none">
-            <div className="overflow"></div>
+            <div className="overflow gap-4">
+              <CheckboxBaseCode />
+              <CheckboxDisableCode />
+              <CheckboxErrorCode />
+            </div>
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>

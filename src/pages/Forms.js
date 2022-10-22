@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import CheckboxComponent from "../components/forms/CheckboxComponent";
 import DatepickerComponent from "../components/forms/DatepickerComponent";
 import FormGroupComponent from "../components/forms/FormGroupComponent";
@@ -7,8 +7,18 @@ import RadioComponent from "../components/forms/RadioComponent";
 import SelectComponent from "../components/forms/SelectComponent";
 import TextareaComponent from "../components/forms/TextareaComponent";
 import ToggleComponent from "../components/forms/ToggleComponent";
+import BtnIndex from "../components/BtnIndex";
 
 const Forms = () => {
+  const toInput = useRef(null),
+    toDatepicker = useRef(null),
+    toSelect = useRef(null),
+    toRadio = useRef(null),
+    toCheckbox = useRef(null),
+    toToggle = useRef(null),
+    toTextarea = useRef(null),
+    toFormGroup = useRef(null);
+
   return (
     <>
       <div className="content-left">
@@ -24,17 +34,31 @@ const Forms = () => {
           </p>
         </div>
         <div className="flex flex-col gap-24">
-          <InputComponent />
-          <DatepickerComponent />
-          <SelectComponent />
-          <RadioComponent />
-          <CheckboxComponent />
-          <ToggleComponent />
-          <TextareaComponent />
-          <FormGroupComponent />
+          <InputComponent refer={toInput} />
+          <DatepickerComponent refer={toDatepicker} />
+          <SelectComponent refer={toSelect} />
+          <RadioComponent refer={toRadio} />
+          <CheckboxComponent refer={toCheckbox} />
+          <ToggleComponent refer={toToggle} />
+          <TextareaComponent refer={toTextarea} />
+          <FormGroupComponent refer={toFormGroup} />
         </div>
       </div>
-      <div className="content-right"></div>
+      <div className="content-right">
+        <h6 onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="cursor-pointer" >
+          <span className="text-primary-main">#</span> On this page
+        </h6>
+        <ul>
+          <li><BtnIndex reference={toInput} label="input text" /></li>
+          <li><BtnIndex reference={toDatepicker} label="datepicker" /></li>
+          <li><BtnIndex reference={toSelect} label="select" /></li>
+          <li><BtnIndex reference={toRadio} label="radio button" /></li>
+          <li><BtnIndex reference={toCheckbox} label="checkbox" /></li>
+          <li><BtnIndex reference={toToggle} label="toggle" /></li>
+          <li><BtnIndex reference={toTextarea} label="textarea" /></li>
+          <li><BtnIndex reference={toFormGroup} label="form group" /></li>
+        </ul>
+      </div>
     </>
   );
 };

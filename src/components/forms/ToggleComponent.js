@@ -6,10 +6,11 @@ import {
   TabPreviewInactive,
 } from "../BtnCond";
 import { Tab } from "@headlessui/react";
+import { ToggleBaseCode, ToggleDisableCode, ToggleErrorCode } from "./FormCode";
 
-const ToggleComponent = () => {
+const ToggleComponent = (props) => {
   return (
-    <div>
+    <div ref={props.refer}>
       <Tab.Group>
         <div className="flex items-center gap-2 mb-4">
           <h4 className="text-lg capitalize sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
@@ -43,7 +44,7 @@ const ToggleComponent = () => {
                     <div className="flex items-center gap-2">
                         <div className="relative w-8 h-5">
                             <input type="checkbox" id="toggle" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
-                            <div className="w-full h-full bg-white border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-blue-600 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-blue-600 peer-checked:after:left-3 peer-checked:after:bg-white"></div>
+                            <div className="w-full h-full bg-white border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-primary-focused relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-blue-600 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-blue-600 peer-checked:after:left-3 peer-checked:after:bg-white"></div>
                         </div>
                         <label htmlFor="toggle" className="capitalize">toggle base</label>
                     </div>                   
@@ -52,7 +53,7 @@ const ToggleComponent = () => {
                     <div className="flex items-center gap-2">
                         <div className="relative w-8 h-5">
                             <input type="checkbox" id="toggledisable" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" defaultChecked disabled />
-                            <div className="w-full h-full bg-white border-2 border-primary-border peer-hover:border-slate-300 rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-slate-400 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-slate-400 peer-checked:after:left-3 peer-checked:after:bg-white"></div>
+                            <div className="w-full h-full bg-white border-2 border-primary-border peer-hover:border-slate-300 rounded-full peer-hover:ring-2 peer-hover:ring-primary-focused relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-slate-400 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-slate-400 peer-checked:after:left-3 peer-checked:after:bg-white"></div>
                         </div>
                         <label htmlFor="toggledisable" className="capitalize">toggle disable</label>
                     </div>                   
@@ -61,7 +62,7 @@ const ToggleComponent = () => {
                     <div className="flex items-center gap-2">
                         <div className="relative w-8 h-5">
                             <input type="checkbox" id="toggleerror" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" defaultChecked />
-                            <div className="w-full h-full bg-white border-2 border-error-border peer-hover:border-error-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-error-main after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-error-main peer-checked:after:left-3 peer-checked:after:bg-error-border"></div>
+                            <div className="w-full h-full bg-white border-2 border-error-border peer-hover:border-error-main rounded-full peer-hover:ring-2 peer-hover:ring-error-focused relative overflow-hidden after:absolute after:w-3.5 after:h-3.5 after:bg-error-main after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-0.5 after:rotate-45 after:z-[2] after:ease-in-out after:duration-300 peer-checked:bg-error-main peer-checked:after:left-3 peer-checked:after:bg-error-border"></div>
                         </div>
                         <label htmlFor="toggleerror" className="capitalize text-error-main">toggle error</label>
                     </div>                   
@@ -70,7 +71,11 @@ const ToggleComponent = () => {
             </div>
           </Tab.Panel>
           <Tab.Panel className="outline-none">
-            <div className="overflow"></div>
+            <div className="overflow gap-4">
+              <ToggleBaseCode />
+              <ToggleDisableCode />
+              <ToggleErrorCode />
+            </div>
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>

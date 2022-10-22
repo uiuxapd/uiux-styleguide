@@ -121,7 +121,6 @@ const App = () => {
               <Route path="/tooltips" element={<Tooltips />} />
               <Route path="/steps" element={<Steps />} />
               <Route path="/range" element={<Range />} />
-              <Route path="/form" element={<Form />} />
               <Route path="/forms" element={<Forms />} />
             </Routes>
           </div>

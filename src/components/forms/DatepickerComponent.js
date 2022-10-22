@@ -6,10 +6,11 @@ import {
   TabPreviewInactive,
 } from "../BtnCond";
 import { Tab } from "@headlessui/react";
+import { DatepickerBaseCode, DatepickerDisableCode, DatepickerErrorCode } from "./FormCode";
 
-const DatepickerComponent = () => {
+const DatepickerComponent = (props) => {
   return (
-    <div>
+    <div ref={props.refer}>
       <Tab.Group>
         <div className="flex items-center gap-2 mb-4">
           <h4 className="text-lg capitalize sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
@@ -43,7 +44,7 @@ const DatepickerComponent = () => {
                   <label htmlFor="datepicker" className="capitalize text-slate-700">
                     datepicker base
                   </label>
-                  <input type="date" id="datepicker" className="appearance-none block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" />
+                  <input type="date" id="datepicker" className="block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" />
                 </div>
                 <div className="grow shrink-0 basis-1/2 md:basis-1/4">
                   <label htmlFor="datepickerdisable" className="capitalize text-slate-700">
@@ -62,7 +63,11 @@ const DatepickerComponent = () => {
             </div>
           </Tab.Panel>
           <Tab.Panel className="outline-none">
-            <div className="overflow"></div>
+            <div className="overflow gap-4">
+              <DatepickerBaseCode />
+              <DatepickerDisableCode />
+              <DatepickerErrorCode />
+            </div>
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>

@@ -6,10 +6,11 @@ import {
   TabPreviewInactive,
 } from "../BtnCond";
 import { Tab } from "@headlessui/react";
+import { TextareaBaseCode, TextareaDisableCode, TextareaErrorCode } from "./FormCode";
 
-const TextareaComponent = () => {
+const TextareaComponent = (props) => {
   return (
-    <div>
+    <div ref={props.refer}>
       <Tab.Group>
         <div className="flex items-center gap-2 mb-4">
           <h4 className="text-lg capitalize sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
@@ -61,7 +62,11 @@ const TextareaComponent = () => {
             </div>
           </Tab.Panel>
           <Tab.Panel className="outline-none">
-            <div className="overflow"></div>
+            <div className="overflow gap-4">
+              <TextareaBaseCode />
+              <TextareaDisableCode />
+              <TextareaErrorCode />
+            </div>
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
