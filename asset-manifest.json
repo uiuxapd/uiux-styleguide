@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/uiux-styleguide/static/css/main.6da24d2f.css",
-    "main.js": "/uiux-styleguide/static/js/main.ef8bf1be.js",
+    "main.css": "/uiux-styleguide/static/css/main.6d7b083f.css",
+    "main.js": "/uiux-styleguide/static/js/main.0bc979b5.js",
     "static/media/background-fix.svg": "/uiux-styleguide/static/media/background-fix.76a9da4aba238a92af6e.svg",
     "static/media/uiux-logo.svg": "/uiux-styleguide/static/media/uiux-logo.1bbc499eecca7649a0a9f1e2e33fb0bd.svg",
     "index.html": "/uiux-styleguide/index.html",
-    "main.6da24d2f.css.map": "/uiux-styleguide/static/css/main.6da24d2f.css.map",
-    "main.ef8bf1be.js.map": "/uiux-styleguide/static/js/main.ef8bf1be.js.map"
+    "main.6d7b083f.css.map": "/uiux-styleguide/static/css/main.6d7b083f.css.map",
+    "main.0bc979b5.js.map": "/uiux-styleguide/static/js/main.0bc979b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.6da24d2f.css",
-    "static/js/main.ef8bf1be.js"
+    "static/css/main.6d7b083f.css",
+    "static/js/main.0bc979b5.js"
   ]
 }
