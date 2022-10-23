@@ -158,7 +158,12 @@ const ProgressBar = () => {
       </div>
 
       <div className="content-right">
-        <h6>On this page</h6>
+        <h6
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="cursor-pointer"
+        >
+          <span className="text-primary-main">#</span> On this page
+        </h6>
         <ul>
           <li>
             <BtnIndex

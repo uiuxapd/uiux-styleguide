@@ -1,21 +1,34 @@
 import { Tab } from "@headlessui/react";
-import React, { Fragment } from "react";
+import React, { Fragment, useRef } from "react";
 import {
   TabCodeActive,
   TabCodeInactive,
   TabPreviewActive,
   TabPreviewInactive,
 } from "../components/BtnCond";
-import { RoundedTopTabCode, TabWithBgCode, UnderlineTabCode } from "../components/tabs/TabsCode";
+import BtnIndex from "../components/BtnIndex";
+import {
+  RoundedTopTabCode,
+  TabWithBgCode,
+  UnderlineTabCode,
+} from "../components/tabs/TabsCode";
 import {
   InteractiveTab,
   RoundedTopTab,
   TabWithBg,
   UnderlineTab,
 } from "../components/tabs/TabsComponent";
-import { RoundedTopTabCopy, TabWithBgCopy, UnderlineTabCopy } from "../components/tabs/TabsCopyAction";
+import {
+  RoundedTopTabCopy,
+  TabWithBgCopy,
+  UnderlineTabCopy,
+} from "../components/tabs/TabsCopyAction";
 
 export const Tabs = () => {
+  const toTabWithBg = useRef(null),
+    toRoundedTopTab = useRef(null),
+    toUndelineTab = useRef(null),
+    toInteractiveTab = useRef(null);
   return (
     <>
       <div className="content-left">
@@ -33,7 +46,7 @@ export const Tabs = () => {
 
         <div className="flex flex-col gap-24">
           {/* Start */}
-          <div className="flex flex-col gap-4">
+          <div ref={toTabWithBg} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
                 <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
@@ -83,7 +96,7 @@ export const Tabs = () => {
           {/* End */}
 
           {/* Start */}
-          <div className="flex flex-col gap-4">
+          <div ref={toRoundedTopTab} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
                 <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
@@ -133,7 +146,7 @@ export const Tabs = () => {
           {/* End */}
 
           {/* Start */}
-          <div className="flex flex-col gap-4">
+          <div ref={toUndelineTab} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
                 <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
@@ -183,7 +196,7 @@ export const Tabs = () => {
           {/* End */}
 
           {/* Start */}
-          <div className="flex flex-col gap-4">
+          <div ref={toInteractiveTab} className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
               <h3 className="flex-grow">Interactive Tabs</h3>
             </div>
@@ -193,6 +206,28 @@ export const Tabs = () => {
           </div>
           {/* End */}
         </div>
+      </div>
+      <div className="content-right">
+        <h6
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="cursor-pointer"
+        >
+          <span className="text-primary-main">#</span> On this page
+        </h6>
+        <ul>
+          <li>
+            <BtnIndex reference={toTabWithBg} label="tabs with background" />
+          </li>
+          <li>
+            <BtnIndex reference={toRoundedTopTab} label="rounded top tabs" />
+          </li>
+          <li>
+            <BtnIndex reference={toUndelineTab} label="underline tabs" />
+          </li>
+          <li>
+            <BtnIndex reference={toInteractiveTab} label="interactive tabs" />
+          </li>
+        </ul>
       </div>
     </>
   );

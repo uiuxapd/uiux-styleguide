@@ -8,20 +8,20 @@ function classNames(...classes) {
 
 export const TabWithBg = () => {
   return (
-    <div className="bg-primary-surface border-primary-border box-border flex w-full space-x-1 rounded-xl border p-1">
-      <button className="bg-primary-main ring-primary-focused w-full rounded-lg py-2 text-sm font-medium text-white ring-offset-2 transition-all focus:outline-none focus:ring-4">
+    <div className="bg-primary-surface border-primary-border box-border flex w-full flex-wrap sm:flex-nowrap space-x-1 rounded-xl border p-1">
+      <button className="bg-primary-main ring-primary-focused rounded-lg py-2 px-4 sm:w-full text-sm font-medium text-white ring-offset-2 transition-all focus:outline-none focus:ring-4">
         Dashboard
       </button>
-      <button className="hover:bg-primary-border ring-primary-focused w-full rounded-lg py-2 text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
+      <button className="hover:bg-primary-border ring-primary-focused rounded-lg py-2 px-4 sm:w-full text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
         Profile
       </button>
-      <button className="hover:bg-primary-border ring-primary-focused w-full rounded-lg py-2 text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
+      <button className="hover:bg-primary-border ring-primary-focused rounded-lg py-2 px-4 sm:w-full text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
         Transaction
       </button>
-      <button className="hover:bg-primary-border ring-primary-focused w-full rounded-lg py-2 text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
+      <button className="hover:bg-primary-border ring-primary-focused rounded-lg py-2 px-4 sm:w-full text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
         History
       </button>
-      <button className="hover:bg-primary-border ring-primary-focused w-full rounded-lg py-2 text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
+      <button className="hover:bg-primary-border ring-primary-focused rounded-lg py-2 px-4 sm:w-full text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
         Settings
       </button>
     </div>
@@ -30,20 +30,20 @@ export const TabWithBg = () => {
 
 export const RoundedTopTab = () => {
   return (
-    <div className="box-border flex w-full space-x-1 border-b border-neutral-300">
-      <button className="bg-primary-main ring-primary-focused w-full rounded-tl-lg rounded-tr-lg py-2 text-sm font-medium text-white ring-offset-2 transition-all focus:outline-none focus:ring-4">
+    <div className="box-border flex flex-wrap sm:flex-nowrap w-full space-y-1 space-x-1 border-b border-neutral-300">
+      <button className="bg-primary-main ring-primary-focused rounded-tl-lg rounded-tr-lg py-2 px-4 sm:w-full text-sm font-medium text-white ring-offset-2 transition-all focus:outline-none focus:ring-4">
         Dashboard
       </button>
-      <button className="hover:bg-primary-border bg-primary-surface ring-primary-focused w-full rounded-tl-lg rounded-tr-lg py-2 text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
+      <button className="hover:bg-primary-border bg-primary-surface ring-primary-focused rounded-tl-lg rounded-tr-lg py-2 px-4 sm:w-full text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
         Profile
       </button>
-      <button className="hover:bg-primary-border bg-primary-surface ring-primary-focused w-full rounded-tl-lg rounded-tr-lg py-2 text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
+      <button className="hover:bg-primary-border bg-primary-surface ring-primary-focused rounded-tl-lg rounded-tr-lg py-2 px-4 sm:w-full text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
         Transaction
       </button>
-      <button className="hover:bg-primary-border bg-primary-surface ring-primary-focused w-full rounded-tl-lg rounded-tr-lg py-2 text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
+      <button className="hover:bg-primary-border bg-primary-surface ring-primary-focused rounded-tl-lg rounded-tr-lg py-2 px-4 sm:w-full text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
         History
       </button>
-      <button className="hover:bg-primary-border bg-primary-surface ring-primary-focused w-full rounded-tl-lg rounded-tr-lg py-2 text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
+      <button className="hover:bg-primary-border bg-primary-surface ring-primary-focused rounded-tl-lg rounded-tr-lg py-2 px-4 sm:w-full text-sm font-medium text-neutral-600 ring-offset-2 transition-all hover:text-neutral-900 focus:outline-none focus:ring-4">
         Settings
       </button>
     </div>
@@ -53,19 +53,19 @@ export const RoundedTopTab = () => {
 export const UnderlineTab = () => {
   return (
     <div className="flex flex-wrap w-full border-b border-neutral-300">
-      <button className="w-full py-2 text-sm font-medium text-primary-main box-border border-b-2 border-current ring-offset-2 transition-all focus:outline-none">
+      <button className="py-2 px-4 text-sm font-medium text-primary-main box-border border-b-2 border-current ring-offset-2 transition-all focus:outline-none">
         Dashboard
       </button>
-      <button className="w-full py-2 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
+      <button className="py-2 px-4 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
         Profile
       </button>
-      <button className="w-full py-2 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
+      <button className="py-2 px-4 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
         Transaction
       </button>
-      <button className="w-full py-2 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
+      <button className="py-2 px-4 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
         History
       </button>
-      <button className="w-full py-2 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
+      <button className="py-2 px-4 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
         Settings
       </button>
     </div>

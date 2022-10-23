@@ -23,7 +23,7 @@ export const TabWithBgCode = () => {
               <span class="punctuation">=</span>
               <span class="punctuation">"</span>
               <span class="attr-value">
-                bg-primary-main ring-primary-focused w-full rounded-lg py-2
+                bg-primary-main ring-primary-focused rounded-lg py-2 px-4 w-full
                 text-sm font-medium text-white ring-offset-2 transition-all
                 focus:outline-none focus:ring-4
               </span>
@@ -43,13 +43,13 @@ export const TabWithBgCode = () => {
               <span class="punctuation">=</span>
               <span class="punctuation">"</span>
               <span class="attr-value">
-                hover:bg-primary-border ring-primary-focused w-full rounded-lg
-                py-2 text-sm font-medium text-neutral-600 ring-offset-2
+                hover:bg-primary-border ring-primary-focused rounded-lg py-2
+                px-4 w-full text-sm font-medium text-neutral-600 ring-offset-2
                 transition-all hover:text-neutral-900 focus:outline-none
                 focus:ring-4
               </span>
               <span class="punctuation">"</span>
-              <span class="punctuation">{">"}</span>
+              <span class="punctuation mr-4">{">"}</span>
               <br />
               <span className="ml-8">Profile</span>
               <br />
@@ -64,8 +64,8 @@ export const TabWithBgCode = () => {
               <span class="punctuation">=</span>
               <span class="punctuation">"</span>
               <span class="attr-value">
-                hover:bg-primary-border ring-primary-focused w-full rounded-lg
-                py-2 text-sm font-medium text-neutral-600 ring-offset-2
+                hover:bg-primary-border ring-primary-focused rounded-lg py-2
+                px-4 w-full text-sm font-medium text-neutral-600 ring-offset-2
                 transition-all hover:text-neutral-900 focus:outline-none
                 focus:ring-4
               </span>
@@ -85,8 +85,8 @@ export const TabWithBgCode = () => {
               <span class="punctuation">=</span>
               <span class="punctuation">"</span>
               <span class="attr-value">
-                hover:bg-primary-border ring-primary-focused w-full rounded-lg
-                py-2 text-sm font-medium text-neutral-600 ring-offset-2
+                hover:bg-primary-border ring-primary-focused rounded-lg py-2
+                px-4 w-full text-sm font-medium text-neutral-600 ring-offset-2
                 transition-all hover:text-neutral-900 focus:outline-none
                 focus:ring-4
               </span>
@@ -107,8 +107,8 @@ export const TabWithBgCode = () => {
               <span class="punctuation">=</span>
               <span class="punctuation">"</span>
               <span class="attr-value">
-                hover:bg-primary-border ring-primary-focused w-full rounded-lg
-                py-2 text-sm font-medium text-neutral-600 ring-offset-2
+                hover:bg-primary-border ring-primary-focused rounded-lg py-2
+                px-4 w-full text-sm font-medium text-neutral-600 ring-offset-2
                 transition-all hover:text-neutral-900 focus:outline-none
                 focus:ring-4
               </span>
@@ -158,8 +158,8 @@ export const RoundedTopTabCode = () => {
               <span class="punctuation">=</span>
               <span class="punctuation">"</span>
               <span class="attr-value">
-                bg-primary-main ring-primary-focused w-full rounded-tl-lg
-                rounded-tr-lg py-2 text-sm font-medium text-white ring-offset-2
+                bg-primary-main ring-primary-focused rounded-tl-lg rounded-tr-lg
+                py-2 px-4 w-full text-sm font-medium text-white ring-offset-2
                 transition-all focus:outline-none focus:ring-4
               </span>
               <span class="punctuation">"</span>
@@ -179,12 +179,12 @@ export const RoundedTopTabCode = () => {
               <span class="punctuation">"</span>
               <span class="attr-value">
                 hover:bg-primary-border bg-primary-surface ring-primary-focused
-                w-full rounded-tl-lg rounded-tr-lg py-2 text-sm font-medium
-                text-neutral-600 ring-offset-2 transition-all
+                rounded-tl-lg rounded-tr-lg py-2 px-4 w-full sm:w-full text-sm
+                font-medium text-neutral-600 ring-offset-2 transition-all
                 hover:text-neutral-900 focus:outline-none focus:ring-4
               </span>
               <span class="punctuation">"</span>
-              <span class="punctuation">{">"}</span>
+              <span class="punctuation mr-4">{">"}</span>
               <br />
               <span className="ml-8">Profile</span>
               <br />
@@ -200,8 +200,8 @@ export const RoundedTopTabCode = () => {
               <span class="punctuation">"</span>
               <span class="attr-value">
                 hover:bg-primary-border bg-primary-surface ring-primary-focused
-                w-full rounded-tl-lg rounded-tr-lg py-2 text-sm font-medium
-                text-neutral-600 ring-offset-2 transition-all
+                rounded-tl-lg rounded-tr-lg py-2 px-4 w-full sm:w-full text-sm
+                font-medium text-neutral-600 ring-offset-2 transition-all
                 hover:text-neutral-900 focus:outline-none focus:ring-4
               </span>
               <span class="punctuation">"</span>
@@ -221,8 +221,8 @@ export const RoundedTopTabCode = () => {
               <span class="punctuation">"</span>
               <span class="attr-value">
                 hover:bg-primary-border bg-primary-surface ring-primary-focused
-                w-full rounded-tl-lg rounded-tr-lg py-2 text-sm font-medium
-                text-neutral-600 ring-offset-2 transition-all
+                rounded-tl-lg rounded-tr-lg py-2 px-4 w-full sm:w-full text-sm
+                font-medium text-neutral-600 ring-offset-2 transition-all
                 hover:text-neutral-900 focus:outline-none focus:ring-4
               </span>
               <span class="punctuation">"</span>
@@ -243,8 +243,8 @@ export const RoundedTopTabCode = () => {
               <span class="punctuation">"</span>
               <span class="attr-value">
                 hover:bg-primary-border bg-primary-surface ring-primary-focused
-                w-full rounded-tl-lg rounded-tr-lg py-2 text-sm font-medium
-                text-neutral-600 ring-offset-2 transition-all
+                rounded-tl-lg rounded-tr-lg py-2 px-4 w-full sm:w-full text-sm
+                font-medium text-neutral-600 ring-offset-2 transition-all
                 hover:text-neutral-900 focus:outline-none focus:ring-4
               </span>
               <span class="punctuation">"</span>
@@ -293,7 +293,7 @@ export const UnderlineTabCode = () => {
               <span class="punctuation">=</span>
               <span class="punctuation">"</span>
               <span class="attr-value">
-                w-full py-2 text-sm font-medium text-primary-main box-border
+                py-2 px-4 text-sm font-medium text-primary-main box-border
                 border-b-2 border-current ring-offset-2 transition-all
                 focus:outline-none
               </span>
@@ -313,12 +313,12 @@ export const UnderlineTabCode = () => {
               <span class="punctuation">=</span>
               <span class="punctuation">"</span>
               <span class="attr-value">
-                w-full py-2 text-sm font-medium text-neutral-600 box-border
+                py-2 px-4 text-sm font-medium text-neutral-600 box-border
                 border-b-2 border-transparent ring-offset-2 transition-all
                 focus:outline-none hover:box-border hover:text-primary-main
               </span>
               <span class="punctuation">"</span>
-              <span class="punctuation">{">"}</span>
+              <span class="punctuation mr-4">{">"}</span>
               <br />
               <span className="ml-8">Profile</span>
               <br />
@@ -333,7 +333,7 @@ export const UnderlineTabCode = () => {
               <span class="punctuation">=</span>
               <span class="punctuation">"</span>
               <span class="attr-value">
-                w-full py-2 text-sm font-medium text-neutral-600 box-border
+                py-2 px-4 text-sm font-medium text-neutral-600 box-border
                 border-b-2 border-transparent ring-offset-2 transition-all
                 focus:outline-none hover:box-border hover:text-primary-main
               </span>
@@ -353,7 +353,7 @@ export const UnderlineTabCode = () => {
               <span class="punctuation">=</span>
               <span class="punctuation">"</span>
               <span class="attr-value">
-                w-full py-2 text-sm font-medium text-neutral-600 box-border
+                py-2 px-4 text-sm font-medium text-neutral-600 box-border
                 border-b-2 border-transparent ring-offset-2 transition-all
                 focus:outline-none hover:box-border hover:text-primary-main
               </span>
@@ -374,7 +374,7 @@ export const UnderlineTabCode = () => {
               <span class="punctuation">=</span>
               <span class="punctuation">"</span>
               <span class="attr-value">
-                w-full py-2 text-sm font-medium text-neutral-600 box-border
+                py-2 px-4 text-sm font-medium text-neutral-600 box-border
                 border-b-2 border-transparent ring-offset-2 transition-all
                 focus:outline-none hover:box-border hover:text-primary-main
               </span>
