@@ -246,7 +246,14 @@ const Steper = () => {
           </div>
         </div>
       </div>
-      <div className="content-right"></div>
+      <div className="content-right">
+        <h6
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="cursor-pointer"
+        >
+          <span className="text-primary-main">#</span> On this page
+        </h6>
+      </div>
     </>
   );
 };

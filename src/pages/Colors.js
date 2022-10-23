@@ -1,7 +1,7 @@
 import { React, useRef, createRef } from "react";
 import BtnIndex from "../components/BtnIndex";
 
-const Colors = () => {  
+const Colors = () => {
   const colorList = [
     {
       title: "neutral colors",
@@ -65,8 +65,10 @@ const Colors = () => {
   ];
 
   const reference = useRef([]);
-  reference.current = colorList.map((_, i) => reference.current[i] ?? createRef());
-  
+  reference.current = colorList.map(
+    (_, i) => reference.current[i] ?? createRef()
+  );
+
   return (
     <>
       <div className="content-left">
@@ -85,7 +87,7 @@ const Colors = () => {
         {colorList.map((itemList, indexList) => {
           return (
             <div
-              key={indexList += 2}
+              key={(indexList += 2)}
               ref={reference.current[indexList]}
               className="mb-8"
             >
@@ -95,10 +97,16 @@ const Colors = () => {
               <div className="flex flex-wrap gap-3 text-xs sm:gap-4 md:text-sm">
                 {itemList.listColor.map(([className, colorName, hex]) => (
                   <div
-                    key={indexList += 2}
-                    className={`flex-1 ${itemList.title === "neutral colors" ? 'basis-1/6' : 'basis-1/4 md:first:basis-full'} md:basis-1/6 `}
+                    key={(indexList += 2)}
+                    className={`flex-1 ${
+                      itemList.title === "neutral colors"
+                        ? "basis-1/6"
+                        : "basis-1/4 md:first:basis-full"
+                    } md:basis-1/6 `}
                   >
-                    <div className={`w-full h-10 mb-2 md:h-16 rounded-lg ${className}`}></div>
+                    <div
+                      className={`w-full h-10 mb-2 md:h-16 rounded-lg ${className}`}
+                    ></div>
                     <div className="flex flex-col md:flex md:justify-between">
                       <div className="font-medium text-neutral-900 dark:text-neutral-200">
                         {colorName}
@@ -115,11 +123,16 @@ const Colors = () => {
         })}
       </div>
       <div className="content-right">
-        <h6>On this page</h6>
+        <h6
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="cursor-pointer"
+        >
+          <span className="text-primary-main">#</span> On this page
+        </h6>
         <ul>
           {colorList.map((itemRef, indexRef) => {
             return (
-              <li key={indexRef += 4}>
+              <li key={(indexRef += 4)}>
                 <BtnIndex
                   reference={reference.current[indexRef]}
                   label={itemRef.title}

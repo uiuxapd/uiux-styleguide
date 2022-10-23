@@ -4,16 +4,13 @@ import {
   TabPreviewActive,
   TabPreviewInactive,
 } from "../components/BtnCond";
-import {Tab} from "@headlessui/react";
-import {
-  BasicTable,
-  ScrollingTable,
-} from "../components/Table/TableComponent";
+import { Tab } from "@headlessui/react";
+import { BasicTable, ScrollingTable } from "../components/Table/TableComponent";
 import {
   BasicTableCode,
   ScrollingTableCode,
 } from "../components/Table/TableCode";
-import { 
+import {
   BasicTableCopy,
   ScrollingTableCopy,
 } from "../components/Table/TableCopyAction";
@@ -22,7 +19,7 @@ import BtnIndex from "../components/BtnIndex";
 
 const Tables = () => {
   const toBasicTable = useRef(null),
-  toScrollingTable = useRef(null);
+    toScrollingTable = useRef(null);
 
   return (
     <>
@@ -44,55 +41,54 @@ const Tables = () => {
           <div>
             <div ref={toBasicTable} className="flex flex-col gap-4">
               <Tab.Group>
-              <div className="flex items-center justify-between">
-                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                <div className="flex items-center justify-between">
+                  <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                     Basic Table
-                </h4>
-                <div className="flex items-center">
-                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                  </h4>
+                  <div className="flex items-center">
+                    <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                       <Tab>
-                          {({ selected }) => (
+                        {({ selected }) => (
                           <div className="focus:outline-none">
-                              {selected ? (
+                            {selected ? (
                               <TabPreviewActive />
-                              ) : (
+                            ) : (
                               <TabPreviewInactive />
-                              )}
+                            )}
                           </div>
-                          )}
+                        )}
                       </Tab>
                       <Tab>
-                          {({ selected }) => (
+                        {({ selected }) => (
                           <div className="focus:outline-none">
-                              {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                            {selected ? <TabCodeActive /> : <TabCodeInactive />}
                           </div>
-                          )}
+                        )}
                       </Tab>
-                  </Tab.List>
-                  <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
+                    </Tab.List>
+                    <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
                     <BasicTableCopy />
+                  </div>
                 </div>
-              </div>
-              <Tab.Panels>
-                <Tab.Panel>
+                <Tab.Panels>
+                  <Tab.Panel>
                     <div className="component-section">
                       <BasicTable />
                     </div>
-                </Tab.Panel>
-                <Tab.Panel>
-                  <div className="component-section">
-                    <div className="component-block">
+                  </Tab.Panel>
+                  <Tab.Panel>
+                    <div className="component-section">
+                      <div className="component-block">
                         <BasicTableCode />
+                      </div>
                     </div>
-                  </div>
-                </Tab.Panel>
-              </Tab.Panels>
+                  </Tab.Panel>
+                </Tab.Panels>
               </Tab.Group>
             </div>
           </div>
           {/* Table End */}
-          
-          
+
           {/* Table Start */}
           <div ref={toScrollingTable} className="flex flex-col gap-4">
             <div className="flex flex-col gap-4">
@@ -103,43 +99,43 @@ const Tables = () => {
                   </h4>
                   <div className="flex items-center">
                     <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                        <Tab>
-                            {({ selected }) => (
-                            <div className="focus:outline-none">
-                                {selected ? (
-                                <TabPreviewActive />
-                                ) : (
-                                <TabPreviewInactive />
-                                )}
-                            </div>
+                      <Tab>
+                        {({ selected }) => (
+                          <div className="focus:outline-none">
+                            {selected ? (
+                              <TabPreviewActive />
+                            ) : (
+                              <TabPreviewInactive />
                             )}
-                        </Tab>
-                        <Tab>
-                            {({ selected }) => (
-                            <div className="focus:outline-none">
-                                {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                            </div>
-                            )}
-                        </Tab>
+                          </div>
+                        )}
+                      </Tab>
+                      <Tab>
+                        {({ selected }) => (
+                          <div className="focus:outline-none">
+                            {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                          </div>
+                        )}
+                      </Tab>
                     </Tab.List>
                     <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
-                      <ScrollingTableCopy />
-                    </div>
+                    <ScrollingTableCopy />
                   </div>
-                  <Tab.Panels>
-                    <Tab.Panel>
-                      <div className="component-section">
-                          <ScrollingTable />
+                </div>
+                <Tab.Panels>
+                  <Tab.Panel>
+                    <div className="component-section">
+                      <ScrollingTable />
+                    </div>
+                  </Tab.Panel>
+                  <Tab.Panel>
+                    <div className="component-section">
+                      <div className="component-block">
+                        <ScrollingTableCode />
                       </div>
-                    </Tab.Panel>
-                    <Tab.Panel>
-                      <div className="component-section">
-                        <div className="component-block">
-                          <ScrollingTableCode />
-                        </div>
-                      </div>
-                    </Tab.Panel>
-                  </Tab.Panels>
+                    </div>
+                  </Tab.Panel>
+                </Tab.Panels>
               </Tab.Group>
             </div>
             {/* Table End */}
@@ -148,10 +144,19 @@ const Tables = () => {
       </div>
 
       <div className="content-right">
-      <h6>On this page</h6>
+        <h6
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="cursor-pointer"
+        >
+          <span className="text-primary-main">#</span> On this page
+        </h6>
         <ul>
-          <li><BtnIndex reference={toBasicTable} label="basic table" /></li>
-          <li><BtnIndex reference={toScrollingTable} label="scrolling table" /></li>
+          <li>
+            <BtnIndex reference={toBasicTable} label="basic table" />
+          </li>
+          <li>
+            <BtnIndex reference={toScrollingTable} label="scrolling table" />
+          </li>
         </ul>
       </div>
     </>
