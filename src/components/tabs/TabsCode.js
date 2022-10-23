@@ -49,7 +49,7 @@ export const TabWithBgCode = () => {
                 focus:ring-4
               </span>
               <span class="punctuation">"</span>
-              <span class="punctuation">{">"}</span>
+              <span class="punctuation mr-4">{">"}</span>
               <br />
               <span className="ml-8">Profile</span>
               <br />
@@ -184,7 +184,7 @@ export const RoundedTopTabCode = () => {
                 hover:text-neutral-900 focus:outline-none focus:ring-4
               </span>
               <span class="punctuation">"</span>
-              <span class="punctuation">{">"}</span>
+              <span class="punctuation mr-4">{">"}</span>
               <br />
               <span className="ml-8">Profile</span>
               <br />
@@ -318,7 +318,7 @@ export const UnderlineTabCode = () => {
                 focus:outline-none hover:box-border hover:text-primary-main
               </span>
               <span class="punctuation">"</span>
-              <span class="punctuation">{">"}</span>
+              <span class="punctuation mr-4">{">"}</span>
               <br />
               <span className="ml-8">Profile</span>
               <br />
