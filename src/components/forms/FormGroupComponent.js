@@ -8,13 +8,13 @@ import {
 import { Tab } from "@headlessui/react";
 import FormComponent from "./FormComponent";
 
-const FormGroupComponent = () => {
+const FormGroupComponent = (props) => {
   return (
-    <div>
+    <div ref={props.refer}>
       <Tab.Group>
         <div className="flex items-center gap-2 mb-4">
           <h4 className="text-lg capitalize sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-            textarea
+            form group
           </h4>
           <div className="flex items-center gap-2 sm:gap-3">
             <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
@@ -22,13 +22,6 @@ const FormGroupComponent = () => {
                 {({ selected }) => (
                   <div className="focus:outline-none">
                     {selected ? <TabPreviewActive /> : <TabPreviewInactive />}
-                  </div>
-                )}
-              </Tab>
-              <Tab as={Fragment}>
-                {({ selected }) => (
-                  <div className="focus:outline-none">
-                    {selected ? <TabCodeActive /> : <TabCodeInactive />}
                   </div>
                 )}
               </Tab>
@@ -43,9 +36,6 @@ const FormGroupComponent = () => {
                 <FormComponent />
               </div>
             </div>
-          </Tab.Panel>
-          <Tab.Panel className="outline-none">
-            <div className="overflow"></div>
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>

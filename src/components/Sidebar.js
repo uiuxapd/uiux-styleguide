@@ -27,7 +27,6 @@ const Sidebar = () => {
         ["tooltips", "/tooltips"],
         ["steps", "/steps"],
         ["range", "/range"],
-        ["form", "/form"],
         ["forms", "/forms"],
       ],
     },

@@ -76,7 +76,7 @@ const FormComponent = () => {
           <div className="flex items-center gap-2">
             <div className="relative w-5 h-5">
               <input type="radio" name="gender" id="male" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]"/>
-              <div className="w-full h-full bg-white peer-checked:bg-blue-600 border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible before:z-[2] before:absolute before:w-2.5 before:h-2.5 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:-rotate-45 peer-checked:before:visible"></div>
+              <div className="w-full h-full bg-white peer-checked:bg-blue-600 border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible before:z-[2] before:absolute before:w-2 before:h-2 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:-rotate-45 peer-checked:before:visible"></div>
             </div>
             <label htmlFor="male" className="capitalize">
               male
@@ -85,7 +85,7 @@ const FormComponent = () => {
           <div className="flex items-center gap-2">
             <div className="relative w-5 h-5">
               <input type="radio" name="gender" id="female" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
-              <div className="w-full h-full bg-white peer-checked:bg-blue-600 border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible before:z-[2] before:absolute before:w-2.5 before:h-2.5 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:-rotate-45 peer-checked:before:visible"></div>
+              <div className="w-full h-full bg-white peer-checked:bg-blue-600 border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible before:z-[2] before:absolute before:w-2 before:h-2 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:-rotate-45 peer-checked:before:visible"></div>
             </div>
             <label htmlFor="female" className="capitalize">
               female
@@ -122,10 +122,10 @@ const FormComponent = () => {
         <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
                 <div className="relative w-5 h-5">
-                <input type="checkbox" name="checkbox" id="checkbox" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
+                <input type="checkbox" name="tc" id="tc" className="peer w-full h-full absolute opacity-0 cursor-pointer z-[3]" />
                 <div className="w-full h-full bg-white peer-checked:bg-primary-main border-2 border-primary-border peer-hover:border-primary-main rounded-md peer-hover:ring-2 peer-hover:ring-[#F0F5FF] before:invisible after:invisible before:absolute before:w-[2px] before:h-1.5 before:bg-white before:rounded-full before:top-[55%] before:-translate-y-1/2 before:left-1/2 before:-translate-x-1 before:-rotate-45 before:z-[2] after:absolute after:w-[2px] after:h-[10px] after:bg-white after:rounded-full after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:rotate-45 after:z-[2] peer-checked:before:visible peer-checked:after:visible"></div>
                 </div>
-                <label htmlFor="checkbox" className="capitalize">I agree with all <strong className="text-primary-main">terms & conditions</strong></label>
+                <label htmlFor="tc" className="capitalize">I agree with all <strong className="text-primary-main">terms & conditions</strong></label>
             </div>
         </div>
       </div>

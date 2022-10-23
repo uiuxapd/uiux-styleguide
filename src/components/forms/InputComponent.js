@@ -5,11 +5,12 @@ import {
   TabPreviewActive,
   TabPreviewInactive,
 } from "../BtnCond";
+import { InputBaseCode, InputDisableCode, InputErrorCode } from "./FormCode";
 import { Tab } from "@headlessui/react";
 
-const InputComponent = () => {
+const InputComponent = (props) => {
   return (
-    <div>
+    <div ref={props.refer}>
       <Tab.Group>
         <div className="flex items-center gap-2 mb-4">
           <h4 className="text-lg capitalize sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
@@ -62,7 +63,11 @@ const InputComponent = () => {
             </div>
           </Tab.Panel>
           <Tab.Panel className="outline-none">
-            <div className="overflow"></div>
+            <div className="overflow gap-4">
+              <InputBaseCode />
+              <InputDisableCode />
+              <InputErrorCode />
+            </div>
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
