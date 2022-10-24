@@ -18,9 +18,9 @@ import Accordion from "./pages/Accordion";
 import Tooltips from "./pages/Tooltips";
 import Breadcrumbs from "./pages/Breadcrumbs";
 import Range from "./pages/Range";
-import Form from "./pages/Form";
 import Forms from "./pages/Forms";
 import { Tabs } from "./pages/Tabs";
+import Badges from "./pages/Badges";
 
 
 
@@ -111,9 +111,11 @@ const App = () => {
               <Route path="/documentation" element={<Documentation />} />
               <Route path="/accordions" element={<Accordion />} />
               <Route path="/alerts" element={<Alerts />} />
+              <Route path="/badges" element={<Badges />} />
               <Route path="/breadcrumbs" element={<Breadcrumbs />} />
               <Route path="/buttons" element={<Buttons />} />
               <Route path="/colors" element={<Colors />} />
+              <Route path="/forms" element={<Forms />} />
               <Route path="/progressbar" element={<ProgressBar />} />
               <Route path="/typography" element={<Typography />} />
               <Route path="/tables" element={<Tables />} />
@@ -121,7 +123,6 @@ const App = () => {
               <Route path="/tooltips" element={<Tooltips />} />
               <Route path="/steps" element={<Steps />} />
               <Route path="/range" element={<Range />} />
-              <Route path="/forms" element={<Forms />} />
             </Routes>
           </div>
         </div>
