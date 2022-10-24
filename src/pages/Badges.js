@@ -1,6 +1,6 @@
 import { Tab } from '@headlessui/react';
 import React, { Fragment, useRef } from 'react';
-import { DefaultBadges } from '../components/badges/BadgesComponent';
+import { BadgeWithIcon, DefaultBadges, DismissableBadges } from '../components/badges/BadgesComponent';
 import { DefaultBadgesCopy } from '../components/badges/BadgesCopyAction';
 import { TabCodeActive, TabCodeInactive, TabPreviewActive, TabPreviewInactive } from '../components/BtnCond';
 import BtnIndex from '../components/BtnIndex';
@@ -78,11 +78,61 @@ const Badges = () => {
           {/* End */}
 
           {/* Start */}
+          <div ref={toDefaultAlert} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center gap-2">
+              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
+                  Badges With Icon
+                </h4>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
+                  <DefaultBadgesCopy />
+                </div>
+              </div>
+              <Tab.Panels>
+                <Tab.Panel className="outline-none">
+                  <div className="component-section">
+                    <div className="component-block">
+                      <BadgeWithIcon />
+                    </div>
+                  </div>
+                </Tab.Panel>
+                <Tab.Panel className="outline-none">
+                  <div className="overflow">
+                    {/* <DefaultAlertCode /> */}
+                  </div>
+                </Tab.Panel>
+              </Tab.Panels>
+            </Tab.Group>
+          </div>
+          {/* End */}
+
+          {/* Start */}
           <div ref={toAlertWithDescription} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
                 <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Badges With Icon
+                  Dismisable Badges
                 </h4>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
@@ -113,7 +163,7 @@ const Badges = () => {
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
                     <div className="component-block">
-                      {/* <AlertWithDescription /> */}
+                      <DismissableBadges />
                     </div>
                   </div>
                 </Tab.Panel>
