@@ -56,16 +56,16 @@ export const UnderlineTab = () => {
       <button className="py-2 px-4 text-sm font-medium text-primary-main box-border border-b-2 border-current ring-offset-2 transition-all focus:outline-none">
         Dashboard
       </button>
-      <button className="py-2 px-4 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
+      <button className="py-2 px-4 text-sm font-medium text-neutral-600 dark:text-neutral-400 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
         Profile
       </button>
-      <button className="py-2 px-4 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
+      <button className="py-2 px-4 text-sm font-medium text-neutral-600 dark:text-neutral-400 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
         Transaction
       </button>
-      <button className="py-2 px-4 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
+      <button className="py-2 px-4 text-sm font-medium text-neutral-600 dark:text-neutral-400 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
         History
       </button>
-      <button className="py-2 px-4 text-sm font-medium text-neutral-600 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
+      <button className="py-2 px-4 text-sm font-medium text-neutral-600 dark:text-neutral-400 box-border border-b-2 border-transparent ring-offset-2 transition-all focus:outline-none hover:box-border hover:text-primary-main">
         Settings
       </button>
     </div>

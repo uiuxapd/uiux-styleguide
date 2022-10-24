@@ -17,9 +17,11 @@ const Sidebar = () => {
       listMenu: [
         ["accordions", "/accordions"],
         ["alerts", "/alerts"],
+        ["badges", "/badges"],
         ["breadcrumbs", "/breadcrumbs"],
         ["buttons", "/buttons"],
         ["colors", "/colors"],
+        ["forms", "/forms"],
         ["progress bar", "/progressbar"],
         ["typography", "/typography"],
         ["table", "/tables"],
@@ -27,7 +29,6 @@ const Sidebar = () => {
         ["tooltips", "/tooltips"],
         ["steps", "/steps"],
         ["range", "/range"],
-        ["forms", "/forms"],
       ],
     },
   ];
