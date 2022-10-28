@@ -1,12 +1,27 @@
-import { Tab } from '@headlessui/react';
-import React, { Fragment, useRef } from 'react';
-import { BadgeWithIcon, DefaultBadges, DismissableBadges } from '../components/badges/BadgesComponent';
-import { DefaultBadgesCopy } from '../components/badges/BadgesCopyAction';
-import { TabCodeActive, TabCodeInactive, TabPreviewActive, TabPreviewInactive } from '../components/BtnCond';
-import BtnIndex from '../components/BtnIndex';
+import { Tab } from "@headlessui/react";
+import React, { Fragment, useRef } from "react";
+import {
+  BadgeWithIcon,
+  DefaultBadges,
+  DismissableBadges,
+  NotificationBadge,
+} from "../components/badges/BadgesComponent";
+import {
+  BadgesWithIconCopy,
+  DefaultBadgesCopy,
+  DismissableBadgesCopy,
+  NotificationBadgesCopy,
+} from "../components/badges/BadgesCopyAction";
+import {
+  TabCodeActive,
+  TabCodeInactive,
+  TabPreviewActive,
+  TabPreviewInactive,
+} from "../components/BtnCond";
+import BtnIndex from "../components/BtnIndex";
 
 const Badges = () => {
-    const toDefaultAlert = useRef(null),
+  const toDefaultAlert = useRef(null),
     toAlertWithDescription = useRef(null);
   return (
     <>
@@ -28,11 +43,14 @@ const Badges = () => {
           <div ref={toDefaultAlert} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex gap-4">
-                <div className='flex flex-col gap-2 flex-grow'>
-                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Default Badges
-                </h4>
-                <p className='text-sm sm:text-base text-neutral-500 dark:text-neutral-500 tracking-wide'>Use the <span className='text-primary-main'>text-sm</span> if you want to create a large variant of the badges.</p>
+                <div className="flex flex-col gap-2 flex-grow">
+                  <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
+                    Default Badges
+                  </h4>
+                  <p className="text-sm sm:text-base text-neutral-500 dark:text-neutral-500 tracking-wide">
+                    Use the <span className="text-primary-main">text-sm</span>{" "}
+                    if you want to create a large variant of the badges.
+                  </p>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
@@ -62,15 +80,13 @@ const Badges = () => {
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block">
+                    <div className="component-block flex-row flex-wrap">
                       <DefaultBadges />
                     </div>
                   </div>
                 </Tab.Panel>
                 <Tab.Panel className="outline-none">
-                  <div className="overflow">
-                    {/* <DefaultAlertCode /> */}
-                  </div>
+                  <div className="overflow">{/* <DefaultAlertCode /> */}</div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -81,7 +97,7 @@ const Badges = () => {
           <div ref={toDefaultAlert} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
-              <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
                   Badges With Icon
                 </h4>
                 <div className="flex items-center gap-2 sm:gap-3">
@@ -106,21 +122,19 @@ const Badges = () => {
                     </Tab>
                   </Tab.List>
                   <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
-                  <DefaultBadgesCopy />
+                  <BadgesWithIconCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block">
+                    <div className="component-block flex-row flex-wrap justify-center">
                       <BadgeWithIcon />
                     </div>
                   </div>
                 </Tab.Panel>
                 <Tab.Panel className="outline-none">
-                  <div className="overflow">
-                    {/* <DefaultAlertCode /> */}
-                  </div>
+                  <div className="overflow">{/* <DefaultAlertCode /> */}</div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -156,14 +170,64 @@ const Badges = () => {
                     </Tab>
                   </Tab.List>
                   <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                  {/* <AlertWithDescriptionCopy /> */}
+                  <DismissableBadgesCopy />
                 </div>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
                   <div className="component-section">
-                    <div className="component-block">
+                    <div className="component-block flex-row flex-wrap">
                       <DismissableBadges />
+                    </div>
+                  </div>
+                </Tab.Panel>
+                <Tab.Panel className="outline-none">
+                  <div className="overflow">
+                    {/* <AlertWithDescriptionCode /> */}
+                  </div>
+                </Tab.Panel>
+              </Tab.Panels>
+            </Tab.Group>
+          </div>
+          {/* End */}
+
+          {/* Start */}
+          <div ref={toAlertWithDescription} className="flex flex-col gap-4">
+            <Tab.Group>
+              <div className="flex items-center gap-2">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
+                  Notification Badges
+                </h4>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {selected ? (
+                            <TabPreviewActive />
+                          ) : (
+                            <TabPreviewInactive />
+                          )}
+                        </div>
+                      )}
+                    </Tab>
+                    <Tab as={Fragment}>
+                      {({ selected }) => (
+                        <div className="focus:outline-none">
+                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                        </div>
+                      )}
+                    </Tab>
+                  </Tab.List>
+                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
+                  <NotificationBadgesCopy />
+                </div>
+              </div>
+              <Tab.Panels>
+                <Tab.Panel className="outline-none">
+                  <div className="component-section">
+                    <div className="component-block flex-row justify-center gap-8">
+                      <NotificationBadge />
                     </div>
                   </div>
                 </Tab.Panel>
@@ -202,4 +266,4 @@ const Badges = () => {
   );
 };
 
-export default Badges
+export default Badges;
