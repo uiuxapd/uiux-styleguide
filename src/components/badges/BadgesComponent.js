@@ -1,4 +1,4 @@
-import { ClockIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { ClockIcon, EnvelopeIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { useState } from "react";
 
@@ -8,58 +8,56 @@ export const DefaultBadges = () => {
 
   return (
     <>
-      <div className="flex flex-wrap gap-2">
         <span
           className={`${baseStyle} border-primary-border bg-primary-surface text-primary-main`}
         >
           Default
         </span>
         <span
-          class={`${baseStyle} border-secondary-border bg-secondary-surface text-secondary-pressed`}
+          className={`${baseStyle} border-secondary-border bg-secondary-surface text-secondary-pressed`}
         >
           Warning
         </span>
         <span
-          class={`${baseStyle} border-error-border bg-error-surface text-error-main`}
+          className={`${baseStyle} border-error-border bg-error-surface text-error-main`}
         >
           Error
         </span>
         <span
-          class={`${baseStyle} border-success-border bg-success-surface text-success-hover`}
+          className={`${baseStyle} border-success-border bg-success-surface text-success-hover`}
         >
           Success
         </span>
         <span
-          class={`${baseStyle}border-neutral-300 bg-neutral-100  text-neutral-600`}
+          className={`${baseStyle}border-neutral-300 bg-neutral-100  text-neutral-600`}
         >
           Dark
         </span>
         <span
-          class={`${baseStyle} border-transparent bg-primary-main text-white`}
+          className={`${baseStyle} border-transparent bg-primary-main text-white`}
         >
           Default
         </span>
         <span
-          class={`${baseStyle} border-transparent bg-secondary-pressed text-white`}
+          className={`${baseStyle} border-transparent bg-secondary-pressed text-white`}
         >
           Warning
         </span>
         <span
-          class={`${baseStyle} border-transparent bg-error-main  text-white `}
+          className={`${baseStyle} border-transparent bg-error-main  text-white `}
         >
           Error
         </span>
         <span
-          class={`${baseStyle} border-transparent bg-success-main text-white`}
+          className={`${baseStyle} border-transparent bg-success-main text-white`}
         >
           Success
         </span>
         <span
-          class={`${baseStyle} border-transparent bg-neutral-700 text-white`}
+          className={`${baseStyle} border-transparent bg-neutral-700 text-white`}
         >
           Dark
         </span>
-      </div>
     </>
   );
 };
@@ -67,14 +65,12 @@ export const DefaultBadges = () => {
 export const BadgeWithIcon = () => {
   return (
     <>
-      <div className="flex flex-wrap gap-2">
-        <span class="flex gap-1 items-center box-border rounded-lg border border-primary-border bg-primary-surface px-2 py-0.5 text-xs font-medium text-primary-main">
+        <span className="flex gap-1 items-center box-border rounded-lg border border-primary-border bg-primary-surface px-2 py-0.5 text-xs font-medium text-primary-main">
           <ClockIcon className="icon16" />3 weeks ago
         </span>
         <span class="flex gap-1 items-center box-border rounded-lg border border-transparent bg-primary-main px-2 py-0.5 text-xs font-medium text-white">
           <ClockIcon className="icon16" />3 weeks ago
         </span>
-      </div>
     </>
   );
 };
@@ -86,7 +82,6 @@ export const DismissableBadges = () => {
 
   return (
     <>
-      <div className="flex flex-wrap gap-2">
         {closeBadge && (
           <span
             className={`${baseStyle} border-primary-border bg-primary-surface text-primary-main`}
@@ -172,7 +167,21 @@ export const DismissableBadges = () => {
             <XMarkIcon className="icon16" />
           </button>
         </span>
-      </div>
+    </>
+  );
+};
+
+export const NotificationBadge = () => {
+  return (
+    <>
+      <button className="btn-primary p-2.5 inline-flex relative">
+        <EnvelopeIcon className="icon24" />
+        <div className="inline-flex absolute -top-2 -right-2 justify-center items-center w-6 h-6 text-white text-xs bg-error-main rounded-full border-2 border-white dark:border-neutral-900">50</div>
+      </button>
+      <button className="btn-primary p-2.5 inline-flex relative rounded-full">
+        <EnvelopeIcon className="icon24" />
+        <div className="inline-flex absolute -top-2 -right-2 justify-center items-center w-6 h-6 text-white text-xs bg-error-main rounded-full border-2 border-white dark:border-neutral-900">50</div>
+      </button>
     </>
   );
 };
