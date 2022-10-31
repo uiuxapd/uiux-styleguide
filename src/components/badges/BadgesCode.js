@@ -33,7 +33,9 @@ export const DefaultBadgesCode = () => {
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value">
-              box-border rounded-lg border border-secondary-border bg-secondary-surface px-2 py-0.5 text-xs font-medium text-secondary-pressed
+                box-border rounded-lg border border-secondary-border
+                bg-secondary-surface px-2 py-0.5 text-xs font-medium
+                text-secondary-pressed
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
