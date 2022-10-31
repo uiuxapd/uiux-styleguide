@@ -29,9 +29,3 @@
 .mid-section {
   @apply grid grid-cols-2 w-full border-x border-neutral-200 dark:border-neutral-600;
 }
-.example {
-  @apply flex text-sm p-2 font-medium text-center text-neutral-700 bg-neutral-50 border-r border-neutral-200 dark:text-white dark:bg-neutral-900 dark:border-neutral-600;
-}
-.code-section {
-  @apply text-neutral-500 dark:text-neutral-400;
-}
