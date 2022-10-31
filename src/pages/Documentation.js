@@ -90,13 +90,13 @@ const Documentation = () => {
                 <span>&nbsp;=&nbsp;</span>
                 <span>{"{"}</span>
                 <br />
-                  <span className="tag">content:</span>
-                  <span className="punctuation">&nbsp;["</span>
-                  <span className="attr-value">
-                    {"./src/**/*.{js,jsx,ts,tsx}"}
-                  </span>
-                  <span className="punctuation">"],</span>
-                  <br />
+                <span className="tag">content:</span>
+                <span className="punctuation">&nbsp;["</span>
+                <span className="attr-value">
+                  {"./src/**/*.{js,jsx,ts,tsx}"}
+                </span>
+                <span className="punctuation">"],</span>
+                <br />
                 <span className="tag ml-4">theme: </span>
                 <span className="punctuation">{"{"}</span>
                 <br />
