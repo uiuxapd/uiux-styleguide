@@ -45,9 +45,12 @@ const ProgressBar = () => {
           <div ref={toDefaultProgressbar} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
-                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Default Progress Bar
-                </h4>
+              <div className="flex gap-2 flex-grow items-center">
+                  <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                    Default Progress Bar
+                  </h4>
+                  <span class="warning-badge">Require JS</span>
+                </div>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                     <Tab as={Fragment}>
@@ -109,9 +112,12 @@ const ProgressBar = () => {
           <div ref={toProgressbarWithText} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
-                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Progress Bar with Text
-                </h4>
+              <div className="flex gap-2 flex-grow items-center">
+                  <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                    Progress Bar with Text
+                  </h4>
+                  <span class="warning-badge">Require JS</span>
+                </div>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                     <Tab as={Fragment}>
