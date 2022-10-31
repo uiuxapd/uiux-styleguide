@@ -1,6 +1,12 @@
 import { Tab } from "@headlessui/react";
 import React, { Fragment, useRef } from "react";
 import {
+  BadgesWithIconCode,
+  DefaultBadgesCode,
+  DismissableBadgesCode,
+  NotificationBadgesCode,
+} from "../components/badges/BadgesCode";
+import {
   BadgeWithIcon,
   DefaultBadges,
   DismissableBadges,
@@ -21,8 +27,10 @@ import {
 import BtnIndex from "../components/BtnIndex";
 
 const Badges = () => {
-  const toDefaultAlert = useRef(null),
-    toAlertWithDescription = useRef(null);
+  const toDefaultBadges = useRef(null),
+    toBadgesWithIcon = useRef(null),
+    toDismissableBadges = useRef(null),
+    toNotificationBadges = useRef(null);
   return (
     <>
       <div className="content-left">
@@ -40,42 +48,44 @@ const Badges = () => {
 
         <div className="flex flex-col gap-24">
           {/* Start */}
-          <div ref={toDefaultAlert} className="flex flex-col gap-4">
+          <div ref={toDefaultBadges} className="flex flex-col gap-4">
             <Tab.Group>
-              <div className="flex gap-4">
-                <div className="flex flex-col gap-2 flex-grow">
-                  <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                    Default Badges
-                  </h4>
-                  <p className="text-sm sm:text-base text-neutral-500 dark:text-neutral-500 tracking-wide">
-                    Use the <span className="text-primary-main">text-sm</span>{" "}
-                    if you want to create a large variant of the badges.
-                  </p>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2">
+                  <div className="flex flex-col gap-2 flex-grow">
+                    <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
+                      Default Badges
+                    </h4>
+                  </div>
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
+                      <Tab as={Fragment}>
+                        {({ selected }) => (
+                          <div className="focus:outline-none">
+                            {selected ? (
+                              <TabPreviewActive />
+                            ) : (
+                              <TabPreviewInactive />
+                            )}
+                          </div>
+                        )}
+                      </Tab>
+                      <Tab as={Fragment}>
+                        {({ selected }) => (
+                          <div className="focus:outline-none">
+                            {selected ? <TabCodeActive /> : <TabCodeInactive />}
+                          </div>
+                        )}
+                      </Tab>
+                    </Tab.List>
+                    <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
+                    <DefaultBadgesCopy />
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
-                    <Tab as={Fragment}>
-                      {({ selected }) => (
-                        <div className="focus:outline-none">
-                          {selected ? (
-                            <TabPreviewActive />
-                          ) : (
-                            <TabPreviewInactive />
-                          )}
-                        </div>
-                      )}
-                    </Tab>
-                    <Tab as={Fragment}>
-                      {({ selected }) => (
-                        <div className="focus:outline-none">
-                          {selected ? <TabCodeActive /> : <TabCodeInactive />}
-                        </div>
-                      )}
-                    </Tab>
-                  </Tab.List>
-                  <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
-                  <DefaultBadgesCopy />
-                </div>
+                <p className="text-sm sm:text-base text-neutral-500 dark:text-neutral-500 tracking-wide">
+                  Use the <span className="text-primary-main">text-sm</span> if
+                  you want to create a large variant of the badges.
+                </p>
               </div>
               <Tab.Panels>
                 <Tab.Panel className="outline-none">
@@ -86,7 +96,9 @@ const Badges = () => {
                   </div>
                 </Tab.Panel>
                 <Tab.Panel className="outline-none">
-                  <div className="overflow">{/* <DefaultAlertCode /> */}</div>
+                  <div className="overflow">
+                    <DefaultBadgesCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -94,7 +106,7 @@ const Badges = () => {
           {/* End */}
 
           {/* Start */}
-          <div ref={toDefaultAlert} className="flex flex-col gap-4">
+          <div ref={toBadgesWithIcon} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
                 <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
@@ -134,7 +146,9 @@ const Badges = () => {
                   </div>
                 </Tab.Panel>
                 <Tab.Panel className="outline-none">
-                  <div className="overflow">{/* <DefaultAlertCode /> */}</div>
+                  <div className="overflow">
+                    <BadgesWithIconCode />
+                  </div>
                 </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
@@ -142,11 +156,11 @@ const Badges = () => {
           {/* End */}
 
           {/* Start */}
-          <div ref={toAlertWithDescription} className="flex flex-col gap-4">
+          <div ref={toDismissableBadges} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
                 <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Dismisable Badges
+                  Dismissable Badges
                 </h4>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
@@ -183,7 +197,7 @@ const Badges = () => {
                 </Tab.Panel>
                 <Tab.Panel className="outline-none">
                   <div className="overflow">
-                    {/* <AlertWithDescriptionCode /> */}
+                    <DismissableBadgesCode />
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
@@ -192,7 +206,7 @@ const Badges = () => {
           {/* End */}
 
           {/* Start */}
-          <div ref={toAlertWithDescription} className="flex flex-col gap-4">
+          <div ref={toNotificationBadges} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
                 <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
@@ -233,7 +247,7 @@ const Badges = () => {
                 </Tab.Panel>
                 <Tab.Panel className="outline-none">
                   <div className="overflow">
-                    {/* <AlertWithDescriptionCode /> */}
+                    <NotificationBadgesCode />
                   </div>
                 </Tab.Panel>
               </Tab.Panels>
@@ -252,12 +266,21 @@ const Badges = () => {
         </h6>
         <ul>
           <li>
-            <BtnIndex reference={toDefaultAlert} label="default alert" />
+            <BtnIndex reference={toDefaultBadges} label="default badges" />
+          </li>
+          <li>
+            <BtnIndex reference={toBadgesWithIcon} label="badges with icon" />
           </li>
           <li>
             <BtnIndex
-              reference={toAlertWithDescription}
-              label="alert with description"
+              reference={toDismissableBadges}
+              label="dismissable badges"
+            />
+          </li>
+          <li>
+            <BtnIndex
+              reference={toNotificationBadges}
+              label="notification badges"
             />
           </li>
         </ul>
