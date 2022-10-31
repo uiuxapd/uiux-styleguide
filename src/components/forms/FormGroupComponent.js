@@ -13,9 +13,12 @@ const FormGroupComponent = (props) => {
     <div ref={props.refer}>
       <Tab.Group>
         <div className="flex items-center gap-2 mb-4">
-          <h4 className="text-lg capitalize sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-            form group
-          </h4>
+          <div className="flex gap-2 flex-grow items-center">
+            <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+              Form Group
+            </h4>
+            <span class="warning-badge">Require JS</span>
+          </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
               <Tab as={Fragment}>
@@ -40,7 +43,7 @@ const FormGroupComponent = (props) => {
         </Tab.Panels>
       </Tab.Group>
     </div>
-  )
-}
+  );
+};
 
-export default FormGroupComponent
+export default FormGroupComponent;

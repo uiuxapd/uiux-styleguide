@@ -78,9 +78,12 @@ const Accordion = () => {
           <div ref={toDefaultAccordion} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
-                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Default Accordion
-                </h4>
+                <div className="flex gap-2 flex-grow items-center">
+                  <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                    Default Accordion
+                  </h4>
+                  <span class="warning-badge">Require JS</span>
+                </div>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                     <Tab as={Fragment}>
@@ -142,9 +145,12 @@ const Accordion = () => {
           <div ref={toBorderedAccordion} className="flex flex-col gap-4">
             <Tab.Group>
               <div className="flex items-center gap-2">
-                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
-                  Bordered Accordion
-                </h4>
+                <div className="flex gap-2 flex-grow items-center">
+                  <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                    Bordered Accordion
+                  </h4>
+                  <span class="warning-badge">Require JS</span>
+                </div>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Tab.List className="flex bg-neutral-100 rounded-lg p-0.5 dark:bg-neutral-700">
                     <Tab as={Fragment}>

@@ -198,7 +198,12 @@ export const Tabs = () => {
           {/* Start */}
           <div ref={toInteractiveTab} className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
-              <h3 className="flex-grow">Interactive Tabs</h3>
+              <div className="flex gap-2 flex-grow items-center">
+                <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                  Interactive Tabs
+                </h4>
+                <span class="warning-badge">Require JS</span>
+              </div>
             </div>
             <div className="component-section items-center">
               <InteractiveTab />

@@ -52,8 +52,8 @@ const Badges = () => {
             <Tab.Group>
               <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-2">
-                  <div className="flex flex-col gap-2 flex-grow">
-                    <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50 flex-grow">
+                  <div className="flex gap-2 flex-grow">
+                    <h4 className="text-lg sm:text-xl font-medium text-neutral-800 dark:text-neutral-50">
                       Default Badges
                     </h4>
                   </div>

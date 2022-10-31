@@ -2,3 +2,8 @@
 @import "./components/code-preview.css";
 @import "./components/icons.css";
 @import "./components/tooltips.css";
+
+.warning-badge {
+  @apply box-border rounded-lg border border-secondary-border bg-secondary-surface px-2 py-0.5 text-xs font-medium text-secondary-pressed;
+}
+
