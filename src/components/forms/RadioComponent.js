@@ -7,6 +7,7 @@ import {
 } from "../BtnCond";
 import { Tab } from "@headlessui/react";
 import { RadioBaseCode, RadioDisableCode, RadioErrorCode } from "./FormCode";
+import { FormRadioCopy } from "./FormCopyAction";
 
 const RadioComponent = (props) => {
   return (
@@ -34,6 +35,7 @@ const RadioComponent = (props) => {
               </Tab>
             </Tab.List>
             <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
+            <FormRadioCopy/>
           </div>
         </div>
         <Tab.Panels>

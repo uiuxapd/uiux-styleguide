@@ -11,6 +11,7 @@ import {
   CheckboxDisableCode,
   CheckboxErrorCode,
 } from "./FormCode";
+import { FormCheckboxCopy } from "./FormCopyAction";
 
 const CheckboxComponent = (props) => {
   return (
@@ -38,6 +39,7 @@ const CheckboxComponent = (props) => {
               </Tab>
             </Tab.List>
             <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
+            <FormCheckboxCopy/>
           </div>
         </div>
         <Tab.Panels>
@@ -89,8 +91,7 @@ const CheckboxComponent = (props) => {
                     </div>
                     <label
                       htmlFor="checkboxerror"
-                      className="capitalize text-error-main"
-                    >
+                      className="capitalize text-error-main">
                       checkbox error
                     </label>
                   </div>

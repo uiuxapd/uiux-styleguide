@@ -7,6 +7,7 @@ import {
 } from "../BtnCond";
 import { InputBaseCode, InputDisableCode, InputErrorCode } from "./FormCode";
 import { Tab } from "@headlessui/react";
+import { FormInputCopy }  from "./FormCopyAction";
 
 const InputComponent = (props) => {
   return (
@@ -34,6 +35,7 @@ const InputComponent = (props) => {
               </Tab>
             </Tab.List>
             <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
+            <FormInputCopy />
           </div>
         </div>
         <Tab.Panels>
@@ -44,19 +46,19 @@ const InputComponent = (props) => {
                   <label htmlFor="fullname" className="capitalize text-slate-700">
                     input base
                   </label>
-                  <input type="text" id="fullname" className="block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" placeholder="This is base input" />
+                  <input type="text" id="fullname" className="mt-2 block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" placeholder="This is base input" />
                 </div>
                 <div className="grow shrink-0 basis-1/2 md:basis-1/4">
                   <label htmlFor="fullnamedisable" className="capitalize text-slate-700">
                     input disable
                   </label>
-                  <input type="text" id="fullnamedisable" className="block w-full py-2.5 px-4 text-base text-slate-500 bg-slate-200 border border-slate-300 hover:border-slate-300 rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" disabled defaultValue="This input is disabled"/>
+                  <input type="text" id="fullnamedisable" className="mt-2 block w-full py-2.5 px-4 text-base text-slate-500 bg-slate-200 border border-slate-300 hover:border-slate-300 rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main" disabled defaultValue="This input is disabled"/>
                 </div>
                 <div className="grow shrink-0 basis-1/2 md:basis-1/4">
                   <label htmlFor="fullnameerror" className="capitalize text-slate-700">
                     input error
                   </label>
-                  <input type="text" id="fullnameerror" className="block w-full py-2.5 px-4 text-base text-error-main bg-error-surface border border-error-border hover:border-error-main rounded-lg leading-tight focus:outline-none focus:bg-error-surface focus:ring focus:ring-error-focused focus:border-error-main" defaultValue="This input is error"  />
+                  <input type="text" id="fullnameerror" className="mt-2 block w-full py-2.5 px-4 text-base text-error-main bg-error-surface border border-error-border hover:border-error-main rounded-lg leading-tight focus:outline-none focus:bg-error-surface focus:ring focus:ring-error-focused focus:border-error-main" defaultValue="This input is error"  />
                   <span className="relative text-error-main text-xs italic">this input has an error</span>
                 </div>
               </div>

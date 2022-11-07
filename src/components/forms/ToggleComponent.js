@@ -7,6 +7,7 @@ import {
 } from "../BtnCond";
 import { Tab } from "@headlessui/react";
 import { ToggleBaseCode, ToggleDisableCode, ToggleErrorCode } from "./FormCode";
+import { FormToggleCopy } from "./FormCopyAction";
 
 const ToggleComponent = (props) => {
   return (
@@ -34,6 +35,7 @@ const ToggleComponent = (props) => {
               </Tab>
             </Tab.List>
             <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
+            <FormToggleCopy/>
           </div>
         </div>
         <Tab.Panels>

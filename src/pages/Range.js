@@ -8,6 +8,7 @@ import {
 import { Tab } from "@headlessui/react";
 import RangeSimple from "../components/range/RangeComponent";
 import SimpleRangeCode from "../components/range/RangeCode";
+import { SimpleRangeCopy } from "../components/range/RangeCopyAction";
 
 const Range = () => {
   return (
@@ -55,7 +56,7 @@ const Range = () => {
                   </Tab>
                 </Tab.List>
                 <div className="mx-2 md:mx-4 h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden sm:block"></div>
-                {/* <SimpleStepCopy /> */}
+                <SimpleRangeCopy/>
               </div>
             </div>
             <Tab.Panels>

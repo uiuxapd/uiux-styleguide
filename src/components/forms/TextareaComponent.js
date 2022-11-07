@@ -7,6 +7,7 @@ import {
 } from "../BtnCond";
 import { Tab } from "@headlessui/react";
 import { TextareaBaseCode, TextareaDisableCode, TextareaErrorCode } from "./FormCode";
+import { FormTextareaCopy } from "./FormCopyAction";
 
 const TextareaComponent = (props) => {
   return (
@@ -34,6 +35,7 @@ const TextareaComponent = (props) => {
               </Tab>
             </Tab.List>
             <div className="h-5 w-px bg-neutral-200 dark:bg-neutral-700 hidden md:block"></div>
+            <FormTextareaCopy/>
           </div>
         </div>
         <Tab.Panels>
