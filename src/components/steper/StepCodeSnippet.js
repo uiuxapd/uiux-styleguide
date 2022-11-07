@@ -1,66 +1,58 @@
 const simpleStep = `
-    <ul class="flex items-center">
-        <li>
-            <div class="h-2 w-60 bg-primary-main border border-primary-main rounded-full mr-3.5 mb-4"></div>
-            <label class="text-base font-bold text-primary-main">Step 1</label>
-        </li>
-        <li>
-            <div class="h-2 w-60 bg-primary-main border border-primary-main rounded-full mr-3.5 mb-4"></div>
-            <label class="text-base font-bold text-primary-main">Step 2</label>
-        </li>
-        <li>
-            <div class="h-2 w-60 bg-primary-focused border border-primary-focused rounded-full mr-3.5 mb-4"></div>
-            <label class="text-base font-normal text-primary-focused">Step 3</label>
-        </li>
-        <li>
-            <div class="h-2 w-60 bg-primary-focused border border-primary-focused rounded-full mr-3.5 mb-4"></div>
-            <label class="text-base font-normal text-primary-focused">Step 4</label>
-        </li>
-    </ul>
+<ul class="flex items-center justify-start w-full gap-3.5 overflow-x-auto p-4">
+    <li class="flex-[1_0_200px]">
+        <div class="h-2 w-full bg-primary-main border border-primary-main rounded-full mb-4"></div>
+        <label class="text-base font-bold text-primary-main">Step 1</label>
+    </li>
+    <li class="flex-[1_0_200px]">
+        <div class="h-2 w-full bg-white border border-primary-main rounded-full mb-4"></div>
+        <label class="text-base font-bold text-primary-main">Step 2</label>
+    </li>
+    <li class="flex-[1_0_200px]">
+        <div class="h-2 w-full bg-primary-focused border border-primary-focused rounded-full mb-4"></div>
+        <label class="text-base font-normal text-primary-focused">Step 3</label>
+    </li>
+    <li class="flex-[1_0_200px]">
+        <div class="h-2 w-full bg-primary-focused border border-primary-focused rounded-full mb-4"></div>
+        <label class="text-base font-normal text-primary-focused">Step 4</label>
+    </li>
+</ul>
 `;
 const stepCircle = `
-<ul class="flex items-center">
-    <li>
-        <div class="flex justify-center items-center mb-5">
-            <div class="flex items-center">
-                <span class="h-8 w-8 flex justify-center items-center bg-white border border-solid rounded-full border-primary-main text-primary-main">
-                    <CheckIcon class="icon16"/>
-                </span>
-                <span class="mx-3.5 text-primary-main text-base font-normal">Pertama</span>
-            </div>
-            <span class="h-px w-40 bg-primary-main border border-primary-main rounded-full mr-3.5"></span>
+<ul class="flex items-center justify-start w-full gap-3.5 overflow-x-auto p-4">
+    <li class="flex justify-center items-center">
+        <div class="flex items-center">
+            <span class="h-8 w-8 flex justify-center items-center bg-white border border-solid rounded-full border-primary-main text-primary-main">
+                <CheckIcon class="icon16"/>
+            </span>
+            <span class="mx-3.5 text-primary-main text-base font-normal">Pertama</span>
         </div>
+        <span class="h-px w-40 bg-primary-main border border-primary-main rounded-full"></span>
     </li>
-    <li>
-        <div class="flex justify-center items-center mb-5">
-            <div class="flex items-center">
-                <span class="h-8 w-8 flex justify-center items-center bg-primary-main border border-solid rounded-full border-primary-main text-white">
-                    2
-                </span>
-                <span class="mx-3.5 text-primary-main text-base font-bold">Kedua</span>
-            </div>
-            <span class="h-px w-40 bg-primary-focused border border-primary-focused rounded-full mr-3.5"></span>
+    <li class="flex justify-center items-center">
+        <div class="flex items-center">
+            <span class="h-8 w-8 flex justify-center items-center bg-primary-main border border-solid rounded-full border-primary-main text-white">
+                2
+            </span>
+            <span class="mx-3.5 text-primary-main text-base font-bold">Kedua</span>
         </div>
+        <span class="h-px w-40 bg-primary-focused border border-primary-focused rounded-full mr-3.5"></span>
     </li>
-    <li>
-        <div class="flex justify-center items-center mb-5">
-            <div class="flex items-center">
-                <span class="h-8 w-8 flex justify-center items-center bg-primary-focused border border-solid rounded-full border-primary-focused text-white">
-                    3
-                </span>
-                <span class="mx-3.5 text-primary-focused text-base font-normal">Ketiga</span>
-            </div>
-            <span class="h-px w-40 bg-primary-focused border border-primary-focused rounded-full mr-3.5"></span>
+    <li class="flex justify-center items-center">
+        <div class="flex items-center">
+            <span class="h-8 w-8 flex justify-center items-center bg-primary-focused border border-solid rounded-full border-primary-focused text-white">
+                3
+            </span>
+            <span class="mx-3.5 text-primary-focused text-base font-normal">Ketiga</span>
         </div>
+        <span class="h-px w-40 bg-primary-focused border border-primary-focused rounded-full mr-3.5"></span>
     </li>
-    <li>
-        <div class="flex justify-center items-center mb-5">
-            <div class="flex items-center">
-                <span class="h-8 w-8 flex justify-center items-center bg-primary-focused border border-solid rounded-full border-primary-focused text-white">
-                    4
-                </span>
-                <span class="mx-3.5 text-primary-focused text-base font-normal">Keempat</span>
-            </div>
+    <li class="flex justify-center items-center">
+        <div class="flex items-center">
+            <span class="h-8 w-8 flex justify-center items-center bg-primary-focused border border-solid rounded-full border-primary-focused text-white">
+                4
+            </span>
+            <span class="mx-3.5 text-primary-focused text-base font-normal">Keempat</span>
         </div>
     </li>
 </ul>

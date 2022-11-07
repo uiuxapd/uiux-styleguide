@@ -1,8 +1,8 @@
 import React from 'react'
 
-const classBase = "block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"
-const classDisable = "block w-full py-2.5 px-4 text-base text-slate-500 bg-slate-200 border border-slate-300 hover:border-slate-300 rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"
-const classError = "block w-full py-2.5 px-4 text-base text-error-main bg-error-surface border border-error-border hover:border-error-main rounded-lg leading-tight focus:outline-none focus:bg-error-surface focus:ring focus:ring-error-focused focus:border-error-main"
+const classBase = "mt-2 block w-full py-2.5 px-4 text-base bg-white border border-slate-300 hover:border-primary-main rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"
+const classDisable = "mt-2 block w-full py-2.5 px-4 text-base text-slate-500 bg-slate-200 border border-slate-300 hover:border-slate-300 rounded-lg leading-tight focus:outline-none focus:bg-white focus:ring focus:ring-primary-focused focus:border-primary-main"
+const classError = "mt-2 block w-full py-2.5 px-4 text-base text-error-main bg-error-surface border border-error-border hover:border-error-main rounded-lg leading-tight focus:outline-none focus:bg-error-surface focus:ring focus:ring-error-focused focus:border-error-main"
 
 export const InputBaseCode = () => {
   return (
@@ -12,7 +12,29 @@ export const InputBaseCode = () => {
           <div className="flex flex-col">
             <span className="comment">{"<!-- Input Base -->"}</span>
             <span className="token">
-            <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                fullname
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">input base</span>
+              <span className="punctuation">{"</"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
+              <br/>
+              <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
               <span className="punctuation">=</span>
@@ -46,6 +68,28 @@ export const InputDisableCode = () => {
           <div className="flex flex-col">
             <span className="comment">{"<!-- Input Disable -->"}</span>
             <span className="token">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                fullname
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">input disable</span>
+              <span className="punctuation">{"</"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
+              <br/>
             <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
@@ -81,6 +125,28 @@ export const InputErrorCode = () => {
           <div className="flex flex-col">
             <span className="comment">{"<!-- Input Error -->"}</span>
             <span className="token">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                fullname
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">input error</span>
+              <span className="punctuation">{"</"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
+              <br/>
             <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
@@ -99,6 +165,21 @@ export const InputErrorCode = () => {
               <span className="punctuation">"&nbsp;</span>
               <span className="punctuation">{"/"}</span>
               <span className="punctuation mr-4">{">"}</span>
+              <br/>
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">span&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                relative text-error-main text-xs italic
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">this input has an error</span>
+              <span className="punctuation">{"</"}</span>
+              <span className="tag">span</span>
+              <span className="punctuation">{">"}</span>
             </span>
           </div>
         </div>
@@ -115,6 +196,28 @@ export const DatepickerBaseCode = () => {
           <div className="flex flex-col">
             <span className="comment">{"<!-- Datepicker Base -->"}</span>
             <span className="token">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                fullname
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">datepicker base</span>
+              <span className="punctuation">{"</"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
+              <br/>
             <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
@@ -149,6 +252,28 @@ export const DatepickerDisableCode = () => {
           <div className="flex flex-col">
             <span className="comment">{"<!-- Datepicker Disable -->"}</span>
             <span className="token">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                fullname
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">datepicker disable</span>
+              <span className="punctuation">{"</"}</span>
+              <span className="tag">label</span>
+              <br/>
+              <span className="punctuation">{">"}</span>
             <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
@@ -185,6 +310,28 @@ export const DatepickerErrorCode = () => {
             <span className="comment">{"<!-- Datepicker Error -->"}</span>
             <span className="token">
             <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                fullname
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">datepicker error</span>
+              <span className="punctuation">{"</"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
+              <br/>
+            <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
               <span className="punctuation">=</span>
@@ -202,6 +349,21 @@ export const DatepickerErrorCode = () => {
               <span className="punctuation">"&nbsp;</span>
               <span className="punctuation">{"/"}</span>
               <span className="punctuation mr-4">{">"}</span>
+              <br/>
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">span&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                relative text-error-main text-xs italic
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">this input has an error</span>
+              <span className="punctuation">{"</"}</span>
+              <span className="tag">span</span>
+              <span className="punctuation">{">"}</span>
             </span>
           </div>
         </div>
@@ -218,13 +380,35 @@ export const SelectBaseCode = () => {
           <div className="flex flex-col">
             <span className="comment">{"<!-- Select Base -->"}</span>
             <span className="token">
+            <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                fullname
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">select base</span>
+              <span className="punctuation">{"</"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
+              <br/>
               <span className="punctuation">{"<"}</span>
               <span className="tag">div&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value">
-                group relative
+                mt-2 group relative
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
@@ -307,6 +491,28 @@ export const SelectDisableCode = () => {
           <div className="flex flex-col">
             <span className="comment">{"<!-- Select Disable -->"}</span>
             <span className="token">
+            <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                fullname
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">select disable</span>
+              <span className="punctuation">{"</"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
+              <br/>
               <span className="punctuation">{"<"}</span>
               <span className="tag">div&nbsp;</span>
               <span className="attr-name">class</span>
@@ -397,6 +603,28 @@ export const SelectErrorCode = () => {
           <div className="flex flex-col">
             <span className="comment">{"<!-- Select Error -->"}</span>
             <span className="token">
+            <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                fullname
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">select error</span>
+              <span className="punctuation">{"</"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
+              <br/>
               <span className="punctuation">{"<"}</span>
               <span className="tag">div&nbsp;</span>
               <span className="attr-name">class</span>
@@ -492,15 +720,34 @@ export const RadioBaseCode = () => {
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value">
-                relative w-5 h-5
+                flex items-center gap-2
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
             <span className="token ml-6">
               <span className="punctuation">{"<"}</span>
+              <span className="tag">div&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                relative w-5 h-5
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-12">
+              <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                radio
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">id</span>
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value">
@@ -517,20 +764,53 @@ export const RadioBaseCode = () => {
               <span className="punctuation">{"/"}</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
-            <span className="token ml-6">
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">div&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value whitespace-pre-wrap">
-                w-full h-full bg-white peer-checked:bg-blue-600 border-2 border-primary-border peer-hover:border-primary-main rounded-full peer-hover:ring-2 peer-hover:ring-primary-focused before:invisible before:z-[2] before:absolute before:w-2 before:h-2 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:-rotate-45 peer-checked:before:visible
+                w-full h-full bg-white peer-checked:bg-blue-600 border-2 border-primary-border peer-hover:border-primary-main 
+                rounded-full peer-hover:ring-2 peer-hover:ring-primary-focused before:invisible before:z-[2] before:absolute before:w-2 
+                before:h-2 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 
+                before:-rotate-45 peer-checked:before:visible
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
               <span className="punctuation">{"<"}</span>
               <span className="punctuation">{"/"}</span>
               <span className="tag">div</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">div</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value whitespace-pre-wrap">
+                radio
+              </span>
+              <span className="punctuation">"</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value whitespace-pre-wrap">
+                capitalize
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">radio base</span>
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">label</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
             <span className="token">
@@ -560,12 +840,24 @@ export const RadioDisableCode = () => {
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value">
-                relative w-5 h-5
+                flex items-center gap-2
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
             <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">div&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                relative w-5 h-5
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
@@ -575,6 +867,13 @@ export const RadioDisableCode = () => {
                 radio
               </span>
               <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">id</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                radiodisable
+              </span>
+              <span className="punctuation">"&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
@@ -582,24 +881,57 @@ export const RadioDisableCode = () => {
                 peer w-full h-full absolute opacity-0 cursor-pointer z-[3]
               </span>
               <span className="punctuation">"&nbsp;</span>
-              <span className="attr-name">disabled</span>
+              <span className="punctuation">disabled Checked</span>
               <span className="punctuation">{"/"}</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
-            <span className="token ml-6">
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">div&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value whitespace-pre-wrap">
-                w-full h-full bg-white peer-checked:bg-slate-400 border-2 border-primary-border peer-hover:border-slate-400 rounded-full peer-hover:ring-2 peer-hover:ring-primary-focused before:invisible before:z-[2] before:absolute before:w-2 before:h-2 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:-rotate-45 peer-checked:before:visible
+                w-full h-full bg-white peer-checked:bg-slate-400 border-2 border-primary-border peer-hover:border-slate-400 
+                rounded-full peer-hover:ring-2 peer-hover:ring-primary-focused before:invisible before:z-[2] before:absolute before:w-2 
+                before:h-2 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 
+                before:-rotate-45 peer-checked:before:visible
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
               <span className="punctuation">{"<"}</span>
               <span className="punctuation">{"/"}</span>
               <span className="tag">div</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">div</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value whitespace-pre-wrap">
+                radiodisable
+              </span>
+              <span className="punctuation">"</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value whitespace-pre-wrap">
+                capitalize
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">radio disable</span>
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">label</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
             <span className="token">
@@ -629,12 +961,24 @@ export const RadioErrorCode = () => {
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value">
-                relative w-5 h-5
+                flex items-center gap-2
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
             <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">div&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                relative w-5 h-5
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
@@ -644,30 +988,71 @@ export const RadioErrorCode = () => {
                 radio
               </span>
               <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">id</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                radioerror
+              </span>
+              <span className="punctuation">"&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value">
                 peer w-full h-full absolute opacity-0 cursor-pointer z-[3]
               </span>
-              <span className="punctuation">"</span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="punctuation">defaultChecked</span>
               <span className="punctuation">{"/"}</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
-            <span className="token ml-6">
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">div&nbsp;</span>
               <span className="attr-name">class</span>
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value whitespace-pre-wrap">
-                w-full h-full bg-white peer-checked:bg-error-main border-2 border-error-border peer-hover:border-error-border rounded-full peer-hover:ring-2 peer-hover:ring-error-focused before:invisible before:z-[2] before:absolute before:w-2 before:h-2 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:-rotate-45 peer-checked:before:visible
+                w-full h-full bg-white peer-checked:bg-error-main border-2 border-error-border peer-hover:border-error-border 
+                rounded-full peer-hover:ring-2 peer-hover:ring-error-focused before:invisible before:z-[2] before:absolute before:w-2 
+                before:h-2 before:bg-white before:rounded-full before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 
+                before:-rotate-45 peer-checked:before:visible
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation">{">"}</span>
               <span className="punctuation">{"<"}</span>
               <span className="punctuation">{"/"}</span>
               <span className="tag">div</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">div</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value whitespace-pre-wrap">
+                radioerror
+              </span>
+              <span className="punctuation">"</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value whitespace-pre-wrap">
+                capitalize text-error-main
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">radio error</span>
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">label</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
             <span className="token">
@@ -697,15 +1082,34 @@ export const CheckboxBaseCode = () => {
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value">
-                relative w-5 h-5
+                flex items-center gap-2
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
             <span className="token ml-6">
               <span className="punctuation">{"<"}</span>
+              <span className="tag">div&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                relative w-5 h-5
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-12">
+              <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                checkbox
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">id</span>
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value">
@@ -722,7 +1126,7 @@ export const CheckboxBaseCode = () => {
               <span className="punctuation">{"/"}</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
-            <span className="token ml-6">
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">div&nbsp;</span>
               <span className="attr-name">class</span>
@@ -737,6 +1141,36 @@ export const CheckboxBaseCode = () => {
               <span className="punctuation">{"/"}</span>
               <span className="tag">div</span>
               <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">div</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                checkbox
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">checkbox base</span>
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
             </span>
             <span className="token">
               <span className="punctuation">{"<"}</span>
@@ -765,12 +1199,24 @@ export const CheckboxDisableCode = () => {
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value">
-                relative w-5 h-5
+                flex items-center gap-2
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
             <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">div&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                relative w-5 h-5
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
@@ -778,6 +1224,13 @@ export const CheckboxDisableCode = () => {
               <span className="punctuation">"</span>
               <span className="attr-value">
                 checkbox
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">id</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                checkboxdisable
               </span>
               <span className="punctuation">"&nbsp;</span>
               <span className="attr-name">class</span>
@@ -791,7 +1244,7 @@ export const CheckboxDisableCode = () => {
               <span className="punctuation">{"/"}</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
-            <span className="token ml-6">
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">div&nbsp;</span>
               <span className="attr-name">class</span>
@@ -806,6 +1259,36 @@ export const CheckboxDisableCode = () => {
               <span className="punctuation">{"/"}</span>
               <span className="tag">div</span>
               <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">div</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                checkboxdisable
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">checkbox disable</span>
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
             </span>
             <span className="token">
               <span className="punctuation">{"<"}</span>
@@ -834,12 +1317,24 @@ export const CheckboxErrorCode = () => {
               <span className="punctuation">=</span>
               <span className="punctuation">"</span>
               <span className="attr-value">
-                relative w-5 h-5
+                flex items-center gap-2
               </span>
               <span className="punctuation">"</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
             <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">div&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                relative w-5 h-5
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
@@ -847,6 +1342,13 @@ export const CheckboxErrorCode = () => {
               <span className="punctuation">"</span>
               <span className="attr-value">
                 checkbox
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">id</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                checkboxerror
               </span>
               <span className="punctuation">"&nbsp;</span>
               <span className="attr-name">class</span>
@@ -859,7 +1361,7 @@ export const CheckboxErrorCode = () => {
               <span className="punctuation">{"/"}</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
-            <span className="token ml-6">
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">div&nbsp;</span>
               <span className="attr-name">class</span>
@@ -874,6 +1376,36 @@ export const CheckboxErrorCode = () => {
               <span className="punctuation">{"/"}</span>
               <span className="tag">div</span>
               <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">div</span>
+              <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token ml-6">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                checkboxerror
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                capitalize text-error-main
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">checkbox error</span>
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
             </span>
             <span className="token">
               <span className="punctuation">{"<"}</span>
@@ -907,7 +1439,7 @@ export const ToggleBaseCode = () => {
               <span className="punctuation">"</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
-            <span className="token ml-6">
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">input&nbsp;</span>
               <span className="attr-name">type</span>
@@ -927,7 +1459,7 @@ export const ToggleBaseCode = () => {
               <span className="punctuation">{"/"}</span>
               <span className="punctuation mr-4">{">"}</span>
             </span>
-            <span className="token ml-6">
+            <span className="token ml-12">
               <span className="punctuation">{"<"}</span>
               <span className="tag">div&nbsp;</span>
               <span className="attr-name">class</span>
@@ -1101,6 +1633,30 @@ export const TextareaBaseCode = () => {
           <div className="flex flex-col">
             <span className="comment">{"<!-- Textarea Base -->"}</span>
             <span className="token">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                textarea
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value whitespace-pre-wrap">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">textarea base</span>
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
+            </span>
+            <span className="token">
             <span className="punctuation">{"<"}</span>
               <span className="tag">textarea&nbsp;</span>
               <span className="attr-name">rows</span>
@@ -1139,6 +1695,30 @@ export const TextareaDisableCode = () => {
         <div className="flex flex-col gap-4">
           <div className="flex flex-col">
             <span className="comment">{"<!-- Textarea Disable -->"}</span>
+            <span className="token">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                textarea
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value whitespace-pre-wrap">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">textarea disable</span>
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
+            </span>
             <span className="token">
             <span className="punctuation">{"<"}</span>
               <span className="tag">textarea&nbsp;</span>
@@ -1180,6 +1760,30 @@ export const TextareaErrorCode = () => {
           <div className="flex flex-col">
             <span className="comment">{"<!-- Textarea Error -->"}</span>
             <span className="token">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">label&nbsp;</span>
+              <span className="attr-name">htmlFor</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value">
+                textarea
+              </span>
+              <span className="punctuation">"&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value whitespace-pre-wrap">
+                capitalize text-slate-700
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">textarea error</span>
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">label</span>
+              <span className="punctuation">{">"}</span>
+            </span>
+            <span className="token">
             <span className="punctuation">{"<"}</span>
               <span className="tag">textarea&nbsp;</span>
               <span className="attr-name">rows</span>
@@ -1203,6 +1807,23 @@ export const TextareaErrorCode = () => {
               <span className="punctuation">{"/"}</span>
               <span className="tag">textarea</span>
               <span className="punctuation mr-4">{">"}</span>
+            </span>
+            <span className="token">
+              <span className="punctuation">{"<"}</span>
+              <span className="tag">span&nbsp;</span>
+              <span className="attr-name">class</span>
+              <span className="punctuation">=</span>
+              <span className="punctuation">"</span>
+              <span className="attr-value whitespace-pre-wrap">
+                relative text-error-main text-xs italic
+              </span>
+              <span className="punctuation">"</span>
+              <span className="punctuation">{">"}</span>
+              <span className="punctuation">this input has an error</span>
+              <span className="punctuation">{"<"}</span>
+              <span className="punctuation">{"/"}</span>
+              <span className="tag">span</span>
+              <span className="punctuation">{">"}</span>
             </span>
           </div>
         </div>
